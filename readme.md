@@ -18,7 +18,23 @@ rdfs:range definitions for XML and rdfs datatypes are included.
 Added support for OWL constructions is planned.
 
 
- 
+ * * * * *
+
+Usage (Updated for custom use)
+------------
+Pre Req:
+Maybe you need to do this: 
+Follow the guide on https://www.jetbrains.com/help/pycharm/creating-and-running-setup-py.html 
+
+or Run : 
+
+    python3 setup.py develop
+
+Now just run the execute.py file like this for an ontology :
+
+    
+    python3 execute.py resources/yago-wd-schema-graphdb.ttl --ontology -ns http://yago.shacl.io/ shape >> yagoSHACL.ttl
+
     
     
 
@@ -36,7 +52,6 @@ Command line use:
 -----------------
 
     $ shaclgen [graph] [optional arguments]
-
 Example usage: :
 
     $ shaclgen https://www.lib.washington.edu/static/public/cams/data/datasets/uwSemWebParts/webResource-1-0-0.nt 

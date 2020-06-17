@@ -23,7 +23,7 @@ class schema():
         self.CLASSES = collections.OrderedDict()
         self.PROPS = collections.OrderedDict()    
         self.REST = collections.OrderedDict()   
-       
+
         self.namespaces = []
         self.datatypes = [XSD.string, XSD.boolean, XSD.time, XSD.date, XSD.dateTime, XSD.integer, XSD.decimal, 
                           XSD.nonNegativeInteger, XSD.negativeInteger, RDFS.Literal, XSD.positiveInteger, XSD.nonPositiveInteger]
@@ -113,7 +113,7 @@ class schema():
             self.PROPS[prop]['range_value']= None
 
             self.PROPS[prop]['e_prop'] = []
-            self.PROPS[prop]['label'] = self.sh_label_gen(prop)
+            self.PROPS[prop]['label'] = self.sh_label_gen(prop)+"ShapeProperty"
             self.PROPS[prop]['shape_name'] = None
             self.PROPS[prop]['definition'] = None
             self.PROPS[prop]['type'] = []
@@ -184,7 +184,7 @@ class schema():
         for c in sorted(classes):
             self.CLASSES[c] = {}
         for c in self.CLASSES.keys():
-            self.CLASSES[c]['label'] = self.sh_label_gen(c)
+            self.CLASSES[c]['label'] = self.sh_label_gen(c)+"Shape"
             self.CLASSES[c]['definition'] = None    
             s = URIRef(c)           
             for name in self.G.objects(subject=s, predicate=RDFS.label):

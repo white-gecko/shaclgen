@@ -1,0 +1,2762 @@
+@prefix ex:    <http://www.example.org/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix shape: <http://yago.shacl.io/> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+shape:BioChemEntityShape
+    a              sh:NodeShape ;
+    sh:description
+                   "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical."@en ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:bioChemInteractionShapeProperty, shape:hasMolecularFunctionShapeProperty,
+                   shape:isEncodedByBioChemEntityShapeProperty, shape:isInvolvedInBiologicalProcessShapeProperty,
+                   shape:isLocatedInSubcellularLocationShapeProperty ;
+    sh:targetClass <http://bioschemas.org/BioChemEntity> .
+
+shape:ChemicalSubstanceShape
+    a              sh:NodeShape ;
+    sh:description "A chemical substance."@en ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://bioschemas.org/ChemicalSubstance> .
+
+shape:GeneShape
+    a              sh:NodeShape ;
+    sh:description "A discrete unit of inheritance which affects one or more biological traits ."@en ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:encodesBioChemEntityShapeProperty, shape:expressedInShapeProperty ;
+    sh:targetClass <http://bioschemas.org/Gene> .
+
+shape:MolecularEntityShape
+    a              sh:NodeShape ;
+    sh:description
+                   "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity."@en ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:inChIKeyShapeProperty, shape:inChIShapeProperty, shape:molecularFormulaShapeProperty,
+                   shape:smilesShapeProperty ;
+    sh:targetClass <http://bioschemas.org/MolecularEntity> .
+
+shape:ProteinShape
+    a              sh:NodeShape ;
+    sh:description
+                   "Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type schema:Protein. A protein can thus be a subclass of another protein, e.g. schema:Protein as a UniProt record can have multiple isoforms inside it which would also be schema:Protein. They can be imagined, synthetic, hypothetical or naturally occurring."@en ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://bioschemas.org/Protein> .
+
+shape:TaxonShape
+    a              sh:NodeShape ;
+    sh:description "A set of organisms asserted to represent a natural cohesive biological unit."@en ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:parentTaxonShapeProperty, shape:taxonRankShapeProperty ;
+    sh:targetClass <http://bioschemas.org/Taxon> .
+
+shape:schema_AccommodationShape
+    a              sh:NodeShape ;
+    sh:description """An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
+For more specific types of accommodations not defined in schema.org, one can use additionalType with external vocabularies.
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Accommodation> .
+
+shape:schema_AdministrativeAreaShape
+    a              sh:NodeShape ;
+    sh:description "A geographical region, typically under the jurisdiction of a particular government." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/AdministrativeArea> .
+
+shape:schema_AirlineShape
+    a              sh:NodeShape ;
+    sh:description "An organization that provides flights for passengers." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_iataCodeShapeProperty, shape:schema_icaoCodeShapeProperty ;
+    sh:targetClass <http://schema.org/Airline> .
+
+shape:schema_AirportShape
+    a              sh:NodeShape ;
+    sh:description "An airport." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_iataCodeShapeProperty, shape:schema_icaoCodeShapeProperty ;
+    sh:targetClass <http://schema.org/Airport> .
+
+shape:schema_AmusementParkShape
+    a              sh:NodeShape ;
+    sh:description "An amusement park." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/AmusementPark> .
+
+shape:schema_AnatomicalStructureShape
+    a              sh:NodeShape ;
+    sh:description
+                   "Any part of the human body, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical structures." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_connectedToShapeProperty ;
+    sh:targetClass <http://schema.org/AnatomicalStructure> .
+
+shape:schema_AnimalShelterShape
+    a              sh:NodeShape ;
+    sh:description "Animal shelter." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/AnimalShelter> .
+
+shape:schema_ApartmentShape
+    a              sh:NodeShape ;
+    sh:description
+                   "An apartment (in American English) or flat (in British English) is a self-contained housing unit (a type of residential real estate) that occupies only part of a building (Source: Wikipedia, the free encyclopedia, see <a href=\"http://en.wikipedia.org/wiki/Apartment\">http://en.wikipedia.org/wiki/Apartment</a>)." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Apartment> .
+
+shape:schema_AquariumShape
+    a              sh:NodeShape ;
+    sh:description "Aquarium." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Aquarium> .
+
+shape:schema_ArchiveOrganizationShape
+    a              sh:NodeShape ;
+    sh:description
+                   "An organization with archival holdings. An organization which keeps and preserves archival material and typically makes it accessible to the public." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/ArchiveOrganization> .
+
+shape:schema_ArtGalleryShape
+    a              sh:NodeShape ;
+    sh:description "An art gallery." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/ArtGallery> .
+
+shape:schema_ArteryShape
+    a              sh:NodeShape ;
+    sh:description "A type of blood vessel that specifically carries blood away from the heart." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Artery> .
+
+shape:schema_ArticleShape
+    a              sh:NodeShape ;
+    sh:description """An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.<br/><br/>
+
+See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_paginationShapeProperty ;
+    sh:targetClass <http://schema.org/Article> .
+
+shape:schema_AtlasShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A collection or bound volume of maps, charts, plates or tables, physical or in media form illustrating any subject." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Atlas> .
+
+shape:schema_AudioObjectShape
+    a              sh:NodeShape ;
+    sh:description "An audio file." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/AudioObject> .
+
+shape:schema_AutoRentalShape
+    a              sh:NodeShape ;
+    sh:description "A car rental business." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/AutoRental> .
+
+shape:schema_AutomotiveBusinessShape
+    a              sh:NodeShape ;
+    sh:description "Car repair, sales, or parts." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/AutomotiveBusiness> .
+
+shape:schema_BakeryShape
+    a              sh:NodeShape ;
+    sh:description "A bakery." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Bakery> .
+
+shape:schema_BankOrCreditUnionShape
+    a              sh:NodeShape ;
+    sh:description "Bank or credit union." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/BankOrCreditUnion> .
+
+shape:schema_BarOrPubShape
+    a              sh:NodeShape ;
+    sh:description "A bar or pub." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/BarOrPub> .
+
+shape:schema_BeachShape
+    a              sh:NodeShape ;
+    sh:description "Beach." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Beach> .
+
+shape:schema_BeautySalonShape
+    a              sh:NodeShape ;
+    sh:description "Beauty salon." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/BeautySalon> .
+
+shape:schema_BedAndBreakfastShape
+    a              sh:NodeShape ;
+    sh:description """Bed and breakfast.
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/BedAndBreakfast> .
+
+shape:schema_BlogPostingShape
+    a              sh:NodeShape ;
+    sh:description "A blog post." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/BlogPosting> .
+
+shape:schema_BlogShape
+    a              sh:NodeShape ;
+    sh:description "A blog." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Blog> .
+
+shape:schema_BloodTestShape
+    a              sh:NodeShape ;
+    sh:description "A medical test performed on a sample of a patient's blood." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/BloodTest> .
+
+shape:schema_BodyOfWaterShape
+    a              sh:NodeShape ;
+    sh:description "A body of water, such as a sea, ocean, or lake." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/BodyOfWater> .
+
+shape:schema_BoneShape
+    a              sh:NodeShape ;
+    sh:description "Rigid connective tissue that comprises up the skeletal structure of the human body." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Bone> .
+
+shape:schema_BookSeriesShape
+    a              sh:NodeShape ;
+    sh:description "A series of books. Included books can be indicated with the hasPart property." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/BookSeries> .
+
+shape:schema_BookShape
+    a              sh:NodeShape ;
+    sh:description "A book." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_illustratorShapeProperty, shape:schema_isbnShapeProperty,
+                   shape:schema_numberOfPagesShapeProperty ;
+    sh:targetClass <http://schema.org/Book> .
+
+shape:schema_BookStoreShape
+    a              sh:NodeShape ;
+    sh:description "A bookstore." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/BookStore> .
+
+shape:schema_BowlingAlleyShape
+    a              sh:NodeShape ;
+    sh:description "A bowling alley." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/BowlingAlley> .
+
+shape:schema_BrandShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A brand is a name used by an organization or business person for labeling a product, product group, or similar." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_logoShapeProperty ;
+    sh:targetClass <http://schema.org/Brand> .
+
+shape:schema_BreweryShape
+    a              sh:NodeShape ;
+    sh:description "Brewery." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Brewery> .
+
+shape:schema_BridgeShape
+    a              sh:NodeShape ;
+    sh:description "A bridge." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Bridge> .
+
+shape:schema_BroadcastChannelShape
+    a              sh:NodeShape ;
+    sh:description "A unique instance of a BroadcastService on a CableOrSatelliteService lineup." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_broadcastChannelIdShapeProperty ;
+    sh:targetClass <http://schema.org/BroadcastChannel> .
+
+shape:schema_BroadcastServiceShape
+    a              sh:NodeShape ;
+    sh:description "A delivery service through which content is provided via broadcast over the air or online." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_callSignShapeProperty ;
+    sh:targetClass <http://schema.org/BroadcastService> .
+
+shape:schema_BuddhistTempleShape
+    a              sh:NodeShape ;
+    sh:description "A Buddhist temple." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/BuddhistTemple> .
+
+shape:schema_BusOrCoachShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A bus (also omnibus or autobus) is a road vehicle designed to carry passengers. Coaches are luxury busses, usually in service for long distance travel." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/BusOrCoach> .
+
+shape:schema_BusStationShape
+    a              sh:NodeShape ;
+    sh:description "A bus station." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/BusStation> .
+
+shape:schema_BusStopShape
+    a              sh:NodeShape ;
+    sh:description "A bus stop." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/BusStop> .
+
+shape:schema_CafeOrCoffeeShopShape
+    a              sh:NodeShape ;
+    sh:description "A cafe or coffee shop." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/CafeOrCoffeeShop> .
+
+shape:schema_CampgroundShape
+    a              sh:NodeShape ;
+    sh:description """A camping site, campsite, or <a class="localLink" href="http://schema.org/Campground">Campground</a> is a place used for overnight stay in the outdoors, typically containing individual <a class="localLink" href="http://schema.org/CampingPitch">CampingPitch</a> locations. <br/><br/>
+
+In British English a campsite is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or park a camper; a campground may contain many campsites (Source: Wikipedia see <a href="https://en.wikipedia.org/wiki/Campsite">https://en.wikipedia.org/wiki/Campsite</a>).<br/><br/>
+
+See also the dedicated <a href="/docs/hotels.html">document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Campground> .
+
+shape:schema_CanalShape
+    a              sh:NodeShape ;
+    sh:description "A canal, like the Panama Canal." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Canal> .
+
+shape:schema_CarShape
+    a              sh:NodeShape ;
+    sh:description "A car is a wheeled, self-powered motor vehicle used for transportation." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Car> .
+
+shape:schema_CasinoShape
+    a              sh:NodeShape ;
+    sh:description "A casino." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Casino> .
+
+shape:schema_CatholicChurchShape
+    a              sh:NodeShape ;
+    sh:description "A Catholic church." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/CatholicChurch> .
+
+shape:schema_CemeteryShape
+    a              sh:NodeShape ;
+    sh:description "A graveyard." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Cemetery> .
+
+shape:schema_ChapterShape
+    a              sh:NodeShape ;
+    sh:description
+                   "One of the sections into which a book is divided. A chapter usually has a section number or a name." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Chapter> .
+
+shape:schema_ChildCareShape
+    a              sh:NodeShape ;
+    sh:description "A Childcare center." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/ChildCare> .
+
+shape:schema_ChurchShape
+    a              sh:NodeShape ;
+    sh:description "A church." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Church> .
+
+shape:schema_CityHallShape
+    a              sh:NodeShape ;
+    sh:description "A city hall." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/CityHall> .
+
+shape:schema_CityShape
+    a              sh:NodeShape ;
+    sh:description "A city or town." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_iataCodeShapeProperty ;
+    sh:targetClass <http://schema.org/City> .
+
+shape:schema_CivicStructureShape
+    a              sh:NodeShape ;
+    sh:description "A public structure, such as a town hall or concert hall." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/CivicStructure> .
+
+shape:schema_CollectionShape
+    a              sh:NodeShape ;
+    sh:description "A created collection of Creative Works or other artefacts." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Collection> .
+
+shape:schema_CollegeOrUniversityShape
+    a              sh:NodeShape ;
+    sh:description "A college, university, or other third-level educational institution." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/CollegeOrUniversity> .
+
+shape:schema_ComedyClubShape
+    a              sh:NodeShape ;
+    sh:description "A comedy club." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/ComedyClub> .
+
+shape:schema_ComicSeriesShape
+    a              sh:NodeShape ;
+    sh:description """A sequential publication of comic stories under a
+    unifying title, for example "The Amazing Spider-Man" or "Groo the
+    Wanderer".""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/ComicSeries> .
+
+shape:schema_ComicStoryShape
+    a              sh:NodeShape ;
+    sh:description """The term "story" is any indivisible, re-printable
+    unit of a comic, including the interior stories, covers, and backmatter. Most
+    comics have at least two stories: a cover (ComicCoverArt) and an interior story.""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_coloristShapeProperty ;
+    sh:targetClass <http://schema.org/ComicStory> .
+
+shape:schema_ComputerLanguageShape
+    a              sh:NodeShape ;
+    sh:description
+                   "This type covers computer programming languages such as Scheme and Lisp, as well as other language-like computer representations. Natural languages are best represented with the <a class=\"localLink\" href=\"http://schema.org/Language\">Language</a> type." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/ComputerLanguage> .
+
+shape:schema_ContinentShape
+    a              sh:NodeShape ;
+    sh:description "One of the continents (for example, Europe or Africa)." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Continent> .
+
+shape:schema_CorporationShape
+    a              sh:NodeShape ;
+    sh:description "Organization: A business corporation." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Corporation> .
+
+shape:schema_CountryShape
+    a              sh:NodeShape ;
+    sh:description "A country." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Country> .
+
+shape:schema_CourseShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A description of an educational course which may be offered as distinct instances at which take place at different times or take place at different locations, or be offered through different media or modes of study. An educational course is a sequence of one or more educational events and/or creative works which aims to build knowledge, competence or ability of learners." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Course> .
+
+shape:schema_CourthouseShape
+    a              sh:NodeShape ;
+    sh:description "A courthouse." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Courthouse> .
+
+shape:schema_CreativeWorkSeasonShape
+    a              sh:NodeShape ;
+    sh:description "A media season e.g. tv, radio, video game etc." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_actorShapeProperty, shape:schema_numberOfEpisodesShapeProperty,
+                   shape:schema_partOfSeriesShapeProperty, shape:schema_productionCompanyShapeProperty ;
+    sh:targetClass <http://schema.org/CreativeWorkSeason> .
+
+shape:schema_CreativeWorkSeriesShape
+    a              sh:NodeShape ;
+    sh:description """A CreativeWorkSeries in schema.org is a group of related items, typically but not necessarily of the same kind. CreativeWorkSeries are usually organized into some order, often chronological. Unlike <a class="localLink" href="http://schema.org/ItemList">ItemList</a> which is a general purpose data structure for lists of things, the emphasis with CreativeWorkSeries is on published materials (written e.g. books and periodicals, or media such as tv, radio and games).<br/><br/>
+
+Specific subtypes are available for describing <a class="localLink" href="http://schema.org/TVSeries">TVSeries</a>, <a class="localLink" href="http://schema.org/RadioSeries">RadioSeries</a>, <a class="localLink" href="http://schema.org/MovieSeries">MovieSeries</a>, <a class="localLink" href="http://schema.org/BookSeries">BookSeries</a>, <a class="localLink" href="http://schema.org/Periodical">Periodical</a> and <a class="localLink" href="http://schema.org/VideoGameSeries">VideoGameSeries</a>. In each case, the <a class="localLink" href="http://schema.org/hasPart">hasPart</a> / <a class="localLink" href="http://schema.org/isPartOf">isPartOf</a> properties can be used to relate the CreativeWorkSeries to its parts. The general CreativeWorkSeries type serves largely just to organize these more specific and practical subtypes.<br/><br/>
+
+It is common for properties applicable to an item from the series to be usefully applied to the containing group. Schema.org attempts to anticipate some of these cases, but publishers should be free to apply properties of the series parts to the series as a whole wherever they seem appropriate.""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_issnShapeProperty ;
+    sh:targetClass <http://schema.org/CreativeWorkSeries> .
+
+shape:schema_CreativeWorkShape
+    a              sh:NodeShape ;
+    sh:description
+                   "The most generic kind of creative work, including books, movies, photographs, software programs, etc." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_aboutShapeProperty, shape:schema_authorShapeProperty, shape:schema_awardShapeProperty,
+                   shape:schema_characterShapeProperty, shape:schema_citationShapeProperty,
+                   shape:schema_contentLocationShapeProperty, shape:schema_contentRatingShapeProperty,
+                   shape:schema_contributorShapeProperty, shape:schema_copyrightHolderShapeProperty,
+                   shape:schema_creatorShapeProperty, shape:schema_dateCreatedShapeProperty,
+                   shape:schema_datePublishedShapeProperty, shape:schema_editorShapeProperty,
+                   shape:schema_encodingFormatShapeProperty, shape:schema_exampleOfWorkShapeProperty,
+                   shape:schema_genreShapeProperty, shape:schema_hasPartShapeProperty,
+                   shape:schema_inLanguageShapeProperty, shape:schema_isBasedOnShapeProperty,
+                   shape:schema_isPartOfShapeProperty, shape:schema_licenseShapeProperty,
+                   shape:schema_locationCreatedShapeProperty, shape:schema_materialShapeProperty,
+                   shape:schema_positionShapeProperty, shape:schema_producerShapeProperty,
+                   shape:schema_providerShapeProperty, shape:schema_publisherShapeProperty,
+                   shape:schema_sponsorShapeProperty, shape:schema_translatorShapeProperty,
+                   shape:schema_workExampleShapeProperty ;
+    sh:targetClass <http://schema.org/CreativeWork> .
+
+shape:schema_CrematoriumShape
+    a              sh:NodeShape ;
+    sh:description "A crematorium." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Crematorium> .
+
+shape:schema_DanceGroupShape
+    a              sh:NodeShape ;
+    sh:description "A dance group&#x2014;for example, the Alvin Ailey Dance Theater or Riverdance." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/DanceGroup> .
+
+shape:schema_DataCatalogShape
+    a              sh:NodeShape ;
+    sh:description "A collection of datasets." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/DataCatalog> .
+
+shape:schema_DatasetShape
+    a              sh:NodeShape ;
+    sh:description "A body of structured information describing some topic(s) of interest." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Dataset> .
+
+shape:schema_DaySpaShape
+    a              sh:NodeShape ;
+    sh:description "A day spa." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/DaySpa> .
+
+shape:schema_DefenceEstablishmentShape
+    a              sh:NodeShape ;
+    sh:description "A defence establishment, such as an army or navy base." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/DefenceEstablishment> .
+
+shape:schema_DiagnosticProcedureShape
+    a              sh:NodeShape ;
+    sh:description "A medical procedure intended primarily for diagnostic, as opposed to therapeutic, purposes." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/DiagnosticProcedure> .
+
+shape:schema_DistilleryShape
+    a              sh:NodeShape ;
+    sh:description "A distillery." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Distillery> .
+
+shape:schema_DrawingShape
+    a              sh:NodeShape ;
+    sh:description "A picture or diagram made with a pencil, pen, or crayon rather than paint." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Drawing> .
+
+shape:schema_DrugLegalStatusShape
+    a              sh:NodeShape ;
+    sh:description "The legal availability status of a medical drug." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/DrugLegalStatus> .
+
+shape:schema_DrugShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism. Here the term drug is used interchangeably with the term medicine although clinical knowledge make a clear difference between them." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Drug> .
+
+shape:schema_EducationalOrganizationShape
+    a              sh:NodeShape ;
+    sh:description "An educational organization." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/EducationalOrganization> .
+
+shape:schema_ElementarySchoolShape
+    a              sh:NodeShape ;
+    sh:description "An elementary school." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/ElementarySchool> .
+
+shape:schema_EmbassyShape
+    a              sh:NodeShape ;
+    sh:description "An embassy." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Embassy> .
+
+shape:schema_EmergencyServiceShape
+    a              sh:NodeShape ;
+    sh:description "An emergency service, such as a fire station or ER." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/EmergencyService> .
+
+shape:schema_EmploymentAgencyShape
+    a              sh:NodeShape ;
+    sh:description "An employment agency." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/EmploymentAgency> .
+
+shape:schema_EntertainmentBusinessShape
+    a              sh:NodeShape ;
+    sh:description "A business providing entertainment." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/EntertainmentBusiness> .
+
+shape:schema_EpisodeShape
+    a              sh:NodeShape ;
+    sh:description "A media episode (e.g. TV, radio, video game) which can be part of a series or season." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_actorShapeProperty, shape:schema_directorShapeProperty,
+                   shape:schema_musicByShapeProperty, shape:schema_partOfSeasonShapeProperty,
+                   shape:schema_partOfSeriesShapeProperty, shape:schema_productionCompanyShapeProperty ;
+    sh:targetClass <http://schema.org/Episode> .
+
+shape:schema_EventSeriesShape
+    a              sh:NodeShape ;
+    sh:description """A series of <a class="localLink" href="http://schema.org/Event">Event</a>s. Included events can relate with the series using the <a class="localLink" href="http://schema.org/superEvent">superEvent</a> property.<br/><br/>
+
+An EventSeries is a collection of events that share some unifying characteristic. For example, "The Olympic Games" is a series, which
+is repeated regularly. The "2012 London Olympics" can be presented both as an <a class="localLink" href="http://schema.org/Event">Event</a> in the series "Olympic Games", and as an
+<a class="localLink" href="http://schema.org/EventSeries">EventSeries</a> that included a number of sporting competitions as Events.<br/><br/>
+
+The nature of the association between the events in an <a class="localLink" href="http://schema.org/EventSeries">EventSeries</a> can vary, but typical examples could
+include a thematic event series (e.g. topical meetups or classes), or a series of regular events that share a location, attendee group and/or organizers.<br/><br/>
+
+EventSeries has been defined as a kind of Event to make it easy for publishers to use it in an Event context without
+worrying about which kinds of series are really event-like enough to call an Event. In general an EventSeries
+may seem more Event-like when the period of time is compact and when aspects such as location are fixed, but
+it may also sometimes prove useful to describe a longer-term series as an Event.""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/EventSeries> .
+
+shape:schema_EventShape
+    a              sh:NodeShape ;
+    sh:description
+                   "An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the <a class=\"localLink\" href=\"http://schema.org/offers\">offers</a> property. Repeated events may be structured as separate Event objects." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_aboutShapeProperty, shape:schema_composerShapeProperty,
+                   shape:schema_contributorShapeProperty, shape:schema_durationShapeProperty,
+                   shape:schema_endDateShapeProperty, shape:schema_locationShapeProperty,
+                   shape:schema_organizerShapeProperty, shape:schema_sponsorShapeProperty,
+                   shape:schema_startDateShapeProperty, shape:schema_subEventShapeProperty,
+                   shape:schema_superEventShapeProperty, shape:schema_translatorShapeProperty ;
+    sh:targetClass <http://schema.org/Event> .
+
+shape:schema_EventVenueShape
+    a              sh:NodeShape ;
+    sh:description "An event venue." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/EventVenue> .
+
+shape:schema_FestivalShape
+    a              sh:NodeShape ;
+    sh:description "Event type: Festival." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Festival> .
+
+shape:schema_FinancialProductShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A product provided to consumers and businesses by financial institutions such as banks, insurance companies, brokerage firms, consumer finance companies, and investment companies which comprise the financial services industry." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/FinancialProduct> .
+
+shape:schema_FinancialServiceShape
+    a              sh:NodeShape ;
+    sh:description "Financial services business." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/FinancialService> .
+
+shape:schema_FireStationShape
+    a              sh:NodeShape ;
+    sh:description "A fire station. With firemen." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/FireStation> .
+
+shape:schema_FoodEstablishmentShape
+    a              sh:NodeShape ;
+    sh:description "A food-related business." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_servesCuisineShapeProperty ;
+    sh:targetClass <http://schema.org/FoodEstablishment> .
+
+shape:schema_GameShape
+    a              sh:NodeShape ;
+    sh:description
+                   "The Game type represents things which are games. These are typically rule-governed recreational activities, e.g. role-playing games in which players assume the role of characters in a fictional setting." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Game> .
+
+shape:schema_GasStationShape
+    a              sh:NodeShape ;
+    sh:description "A gas station." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/GasStation> .
+
+shape:schema_GeoCoordinatesShape
+    a              sh:NodeShape ;
+    sh:description "The geographic coordinates of a place or event." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_latitudeShapeProperty, shape:schema_longitudeShapeProperty ;
+    sh:targetClass <http://schema.org/GeoCoordinates> .
+
+shape:schema_GolfCourseShape
+    a              sh:NodeShape ;
+    sh:description "A golf course." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/GolfCourse> .
+
+shape:schema_GovernmentBuildingShape
+    a              sh:NodeShape ;
+    sh:description "A government building." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/GovernmentBuilding> .
+
+shape:schema_GovernmentOfficeShape
+    a              sh:NodeShape ;
+    sh:description "A government office&#x2014;for example, an IRS or DMV office." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/GovernmentOffice> .
+
+shape:schema_GovernmentOrganizationShape
+    a              sh:NodeShape ;
+    sh:description "A governmental organization or agency." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/GovernmentOrganization> .
+
+shape:schema_GroceryStoreShape
+    a              sh:NodeShape ;
+    sh:description "A grocery store." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/GroceryStore> .
+
+shape:schema_HealthAndBeautyBusinessShape
+    a              sh:NodeShape ;
+    sh:description "Health and beauty." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/HealthAndBeautyBusiness> .
+
+shape:schema_HealthClubShape
+    a              sh:NodeShape ;
+    sh:description "A health club." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/HealthClub> .
+
+shape:schema_HinduTempleShape
+    a              sh:NodeShape ;
+    sh:description "A Hindu temple." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/HinduTemple> .
+
+shape:schema_HospitalShape
+    a              sh:NodeShape ;
+    sh:description "A hospital." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Hospital> .
+
+shape:schema_HostelShape
+    a              sh:NodeShape ;
+    sh:description """A hostel - cheap accommodation, often in shared dormitories.
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Hostel> .
+
+shape:schema_HotelShape
+    a              sh:NodeShape ;
+    sh:description """A hotel is an establishment that provides lodging paid on a short-term basis (Source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Hotel).
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Hotel> .
+
+shape:schema_HouseShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A house is a building or structure that has the ability to be occupied for habitation by humans or other creatures (Source: Wikipedia, the free encyclopedia, see <a href=\"http://en.wikipedia.org/wiki/House\">http://en.wikipedia.org/wiki/House</a>)." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/House> .
+
+shape:schema_IceCreamShopShape
+    a              sh:NodeShape ;
+    sh:description "An ice cream shop." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/IceCreamShop> .
+
+shape:schema_ImageObjectShape
+    a              sh:NodeShape ;
+    sh:description "An image file." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/ImageObject> .
+
+shape:schema_InfectiousDiseaseShape
+    a              sh:NodeShape ;
+    sh:description
+                   "An infectious disease is a clinically evident human disease resulting from the presence of pathogenic microbial agents, like pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and prions. To be considered an infectious disease, such pathogens are known to be able to cause this disease." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/InfectiousDisease> .
+
+shape:schema_JointShape
+    a              sh:NodeShape ;
+    sh:description "The anatomical location at which two or more bones make contact." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Joint> .
+
+shape:schema_LakeBodyOfWaterShape
+    a              sh:NodeShape ;
+    sh:description "A lake (for example, Lake Pontrachain)." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/LakeBodyOfWater> .
+
+shape:schema_LandformShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A landform or physical feature.  Landform elements include mountains, plains, lakes, rivers, seascape and oceanic waterbody interface features such as bays, peninsulas, seas and so forth, including sub-aqueous terrain features such as submersed mountain ranges, volcanoes, and the great ocean basins." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Landform> .
+
+shape:schema_LandmarksOrHistoricalBuildingsShape
+    a              sh:NodeShape ;
+    sh:description "An historical landmark or building." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/LandmarksOrHistoricalBuildings> .
+
+shape:schema_LanguageShape
+    a              sh:NodeShape ;
+    sh:description
+                   "Natural languages such as Spanish, Tamil, Hindi, English, etc. Formal language code tags expressed in <a href=\"https://en.wikipedia.org/wiki/IETF_language_tag\">BCP 47</a> can be used via the <a class=\"localLink\" href=\"http://schema.org/alternateName\">alternateName</a> property. The Language type previously also covered programming languages such as Scheme and Lisp, which are now best represented using <a class=\"localLink\" href=\"http://schema.org/ComputerLanguage\">ComputerLanguage</a>." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Language> .
+
+shape:schema_LegislationShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A legal document such as an act, decree, bill, etc. (enforceable or not) or a component of a legal act (like an article)." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Legislation> .
+
+shape:schema_LibraryShape
+    a              sh:NodeShape ;
+    sh:description "A library." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Library> .
+
+shape:schema_LigamentShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A short band of tough, flexible, fibrous connective tissue that functions to connect multiple bones, cartilages, and structurally support joints." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Ligament> .
+
+shape:schema_LiquorStoreShape
+    a              sh:NodeShape ;
+    sh:description "A shop that sells alcoholic drinks such as wine, beer, whisky and other spirits." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/LiquorStore> .
+
+shape:schema_LocalBusinessShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/LocalBusiness> .
+
+shape:schema_LodgingBusinessShape
+    a              sh:NodeShape ;
+    sh:description "A lodging business, such as a motel, hotel, or inn." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/LodgingBusiness> .
+
+shape:schema_ManuscriptShape
+    a              sh:NodeShape ;
+    sh:description "A book, document, or piece of music written by hand rather than typed or printed." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Manuscript> .
+
+shape:schema_MapShape
+    a              sh:NodeShape ;
+    sh:description "A map." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Map> .
+
+shape:schema_MediaObjectShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A media object, such as an image, video, or audio object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's)." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MediaObject> .
+
+shape:schema_MedicalBusinessShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A particular physical or virtual business of an organization for medical purposes. Examples of MedicalBusiness include differents business run by health professionals." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MedicalBusiness> .
+
+shape:schema_MedicalClinicShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A facility, often associated with a hospital or medical school, that is devoted to the specific diagnosis and/or healthcare. Previously limited to outpatients but with evolution it may be open to inpatients as well." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MedicalClinic> .
+
+shape:schema_MedicalConditionShape
+    a              sh:NodeShape ;
+    sh:description
+                   "Any condition of the human body that affects the normal functioning of a person, whether physically or mentally. Includes diseases, injuries, disabilities, disorders, syndromes, etc." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_possibleTreatmentShapeProperty, shape:schema_riskFactorShapeProperty,
+                   shape:schema_signOrSymptomShapeProperty ;
+    sh:targetClass <http://schema.org/MedicalCondition> .
+
+shape:schema_MedicalDeviceShape
+    a              sh:NodeShape ;
+    sh:description "Any object used in a medical capacity, such as to diagnose or treat a patient." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MedicalDevice> .
+
+shape:schema_MedicalEntityShape
+    a              sh:NodeShape ;
+    sh:description "The most generic type of entity related to health and the practice of medicine." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_legalStatusShapeProperty, shape:schema_relevantSpecialtyShapeProperty ;
+    sh:targetClass <http://schema.org/MedicalEntity> .
+
+shape:schema_MedicalGuidelineShape
+    a              sh:NodeShape ;
+    sh:description
+                   "Any recommendation made by a standard society (e.g. ACC/AHA) or consensus statement that denotes how to diagnose and treat a particular condition. Note: this type should be used to tag the actual guideline recommendation; if the guideline recommendation occurs in a larger scholarly article, use MedicalScholarlyArticle to tag the overall article, not this type. Note also: the organization making the recommendation should be captured in the recognizingAuthority base property of MedicalEntity." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MedicalGuideline> .
+
+shape:schema_MedicalOrganizationShape
+    a              sh:NodeShape ;
+    sh:description "A medical organization (physical or not), such as hospital, institution or clinic." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MedicalOrganization> .
+
+shape:schema_MedicalProcedureShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A process of care used in either a diagnostic, therapeutic, preventive or palliative capacity that relies on invasive (surgical), non-invasive, or other techniques." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MedicalProcedure> .
+
+shape:schema_MedicalSignOrSymptomShape
+    a              sh:NodeShape ;
+    sh:description
+                   "Any feature associated or not with a medical condition. In medicine a symptom is generally subjective while a sign is objective." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_possibleTreatmentShapeProperty ;
+    sh:targetClass <http://schema.org/MedicalSignOrSymptom> .
+
+shape:schema_MedicalSignShape
+    a              sh:NodeShape ;
+    sh:description
+                   "Any physical manifestation of a person's medical condition discoverable by objective diagnostic tests or physical examination." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MedicalSign> .
+
+shape:schema_MedicalSpecialtyShape
+    a              sh:NodeShape ;
+    sh:description
+                   "Any specific branch of medical science or practice. Medical specialities include clinical specialties that pertain to particular organ systems and their respective disease states, as well as allied health specialties. Enumerated type." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MedicalSpecialty> .
+
+shape:schema_MedicalSymptomShape
+    a              sh:NodeShape ;
+    sh:description
+                   "Any complaint sensed and expressed by the patient (therefore defined as subjective)  like stomachache, lower-back pain, or fatigue." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MedicalSymptom> .
+
+shape:schema_MedicalTestShape
+    a              sh:NodeShape ;
+    sh:description "Any medical test, typically performed for diagnostic purposes." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MedicalTest> .
+
+shape:schema_MedicalTherapyShape
+    a              sh:NodeShape ;
+    sh:description
+                   "Any medical intervention designed to prevent, treat, and cure human diseases and medical conditions, including both curative and palliative therapies. Medical therapies are typically processes of care relying upon pharmacotherapy, behavioral therapy, supportive therapy (with fluid or nutrition for example), or detoxification (e.g. hemodialysis) aimed at improving or preventing a health condition." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MedicalTherapy> .
+
+shape:schema_MiddleSchoolShape
+    a              sh:NodeShape ;
+    sh:description "A middle school (typically for children aged around 11-14, although this varies somewhat)." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MiddleSchool> .
+
+shape:schema_MobileApplicationShape
+    a              sh:NodeShape ;
+    sh:description "A software application designed specifically to work well on a mobile device such as a telephone." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MobileApplication> .
+
+shape:schema_MosqueShape
+    a              sh:NodeShape ;
+    sh:description "A mosque." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Mosque> .
+
+shape:schema_MotelShape
+    a              sh:NodeShape ;
+    sh:description """A motel.
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Motel> .
+
+shape:schema_MotorcycleShape
+    a              sh:NodeShape ;
+    sh:description "A motorcycle or motorbike is a single-track, two-wheeled motor vehicle." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Motorcycle> .
+
+shape:schema_MountainShape
+    a              sh:NodeShape ;
+    sh:description "A mountain, like Mount Whitney or Mount Everest." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Mountain> .
+
+shape:schema_MovieSeriesShape
+    a              sh:NodeShape ;
+    sh:description "A series of movies. Included movies can be indicated with the hasPart property." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_actorShapeProperty, shape:schema_directorShapeProperty,
+                   shape:schema_musicByShapeProperty, shape:schema_productionCompanyShapeProperty ;
+    sh:targetClass <http://schema.org/MovieSeries> .
+
+shape:schema_MovieShape
+    a              sh:NodeShape ;
+    sh:description "A movie." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_actorShapeProperty, shape:schema_countryOfOriginShapeProperty,
+                   shape:schema_directorShapeProperty, shape:schema_durationShapeProperty,
+                   shape:schema_musicByShapeProperty, shape:schema_productionCompanyShapeProperty ;
+    sh:targetClass <http://schema.org/Movie> .
+
+shape:schema_MovieTheaterShape
+    a              sh:NodeShape ;
+    sh:description "A movie theater." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MovieTheater> .
+
+shape:schema_MuscleShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A muscle is an anatomical structure consisting of a contractile form of tissue that animals use to effect movement." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Muscle> .
+
+shape:schema_MuseumShape
+    a              sh:NodeShape ;
+    sh:description "A museum." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Museum> .
+
+shape:schema_MusicAlbumShape
+    a              sh:NodeShape ;
+    sh:description "A collection of music tracks." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_byArtistShapeProperty ;
+    sh:targetClass <http://schema.org/MusicAlbum> .
+
+shape:schema_MusicCompositionShape
+    a              sh:NodeShape ;
+    sh:description "A musical composition." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_composerShapeProperty, shape:schema_iswcCodeShapeProperty,
+                   shape:schema_lyricistShapeProperty ;
+    sh:targetClass <http://schema.org/MusicComposition> .
+
+shape:schema_MusicGroupShape
+    a              sh:NodeShape ;
+    sh:description "A musical group, such as a band, an orchestra, or a choir. Can also be a solo musician." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_genreShapeProperty ;
+    sh:targetClass <http://schema.org/MusicGroup> .
+
+shape:schema_MusicPlaylistShape
+    a              sh:NodeShape ;
+    sh:description "A collection of music tracks in playlist form." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MusicPlaylist> .
+
+shape:schema_MusicReleaseShape
+    a              sh:NodeShape ;
+    sh:description "A MusicRelease is a specific release of a music album." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_durationShapeProperty, shape:schema_musicReleaseFormatShapeProperty,
+                   shape:schema_recordLabelShapeProperty, shape:schema_releaseOfShapeProperty ;
+    sh:targetClass <http://schema.org/MusicRelease> .
+
+shape:schema_MusicVenueShape
+    a              sh:NodeShape ;
+    sh:description "A music venue." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/MusicVenue> .
+
+shape:schema_NGOShape
+    a              sh:NodeShape ;
+    sh:description "Organization: Non-governmental Organization." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/NGO> .
+
+shape:schema_NailSalonShape
+    a              sh:NodeShape ;
+    sh:description "A nail salon." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/NailSalon> .
+
+shape:schema_NerveShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A common pathway for the electrochemical nerve impulses that are transmitted along each of the axons." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Nerve> .
+
+shape:schema_NewsArticleShape
+    a              sh:NodeShape ;
+    sh:description """A NewsArticle is an article whose content reports news, or provides background context and supporting materials for understanding the news.<br/><br/>
+
+A more detailed overview of <a href="/docs/news.html">schema.org News markup</a> is also available.""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/NewsArticle> .
+
+shape:schema_NewspaperShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A publication containing information about varied topics that are pertinent to general information, a geographic area, or a specific subject matter (i.e. business, culture, education). Often published daily." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Newspaper> .
+
+shape:schema_NightClubShape
+    a              sh:NodeShape ;
+    sh:description "A nightclub or discotheque." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/NightClub> .
+
+shape:schema_OccupationShape
+    a              sh:NodeShape ;
+    sh:description "A profession, may involve prolonged training and/or a formal qualification." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Occupation> .
+
+shape:schema_OceanBodyOfWaterShape
+    a              sh:NodeShape ;
+    sh:description "An ocean (for example, the Pacific)." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/OceanBodyOfWater> .
+
+shape:schema_OpticianShape
+    a              sh:NodeShape ;
+    sh:description "A store that sells reading glasses and similar devices for improving vision." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Optician> .
+
+shape:schema_OrganizationShape
+    a              sh:NodeShape ;
+    sh:description "An organization such as a school, NGO, corporation, club, etc." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_awardShapeProperty, shape:schema_brandShapeProperty,
+                   shape:schema_dissolutionDateShapeProperty, shape:schema_dunsShapeProperty,
+                   shape:schema_faxNumberShapeProperty, shape:schema_founderShapeProperty,
+                   shape:schema_foundingDateShapeProperty, shape:schema_foundingLocationShapeProperty,
+                   shape:schema_knowsLanguageShapeProperty, shape:schema_leiCodeShapeProperty,
+                   shape:schema_locationShapeProperty, shape:schema_logoShapeProperty,
+                   shape:schema_memberOfShapeProperty, shape:schema_numberOfEmployeesShapeProperty,
+                   shape:schema_parentOrganizationShapeProperty, shape:schema_sponsorShapeProperty,
+                   shape:schema_subOrganizationShapeProperty, shape:schema_telephoneShapeProperty ;
+    sh:targetClass <http://schema.org/Organization> .
+
+shape:schema_OutletStoreShape
+    a              sh:NodeShape ;
+    sh:description "An outlet store." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/OutletStore> .
+
+shape:schema_PaintingShape
+    a              sh:NodeShape ;
+    sh:description "A painting." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Painting> .
+
+shape:schema_ParkShape
+    a              sh:NodeShape ;
+    sh:description "A park." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Park> .
+
+shape:schema_ParkingFacilityShape
+    a              sh:NodeShape ;
+    sh:description "A parking lot or other parking facility." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/ParkingFacility> .
+
+shape:schema_PawnShopShape
+    a              sh:NodeShape ;
+    sh:description "A shop that will buy, or lend money against the security of, personal possessions." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/PawnShop> .
+
+shape:schema_PerformingArtsTheaterShape
+    a              sh:NodeShape ;
+    sh:description "A theater or other performing art center." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/PerformingArtsTheater> .
+
+shape:schema_PerformingGroupShape
+    a              sh:NodeShape ;
+    sh:description "A performance group, such as a band, an orchestra, or a circus." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/PerformingGroup> .
+
+shape:schema_PeriodicalShape
+    a              sh:NodeShape ;
+    sh:description """A publication in any medium issued in successive parts bearing numerical or chronological designations and intended, such as a magazine, scholarly journal, or newspaper to continue indefinitely.<br/><br/>
+
+See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Periodical> .
+
+shape:schema_PersonShape
+    a              sh:NodeShape ;
+    sh:description "A person (alive, dead, undead, or fictional)." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_affiliationShapeProperty, shape:schema_alumniOfShapeProperty,
+                   shape:schema_awardShapeProperty, shape:schema_birthDateShapeProperty,
+                   shape:schema_birthPlaceShapeProperty, shape:schema_brandShapeProperty,
+                   shape:schema_callSignShapeProperty, shape:schema_childrenShapeProperty,
+                   shape:schema_deathDateShapeProperty, shape:schema_deathPlaceShapeProperty,
+                   shape:schema_familyNameShapeProperty, shape:schema_faxNumberShapeProperty,
+                   shape:schema_genderShapeProperty, shape:schema_givenNameShapeProperty,
+                   shape:schema_hasOccupationShapeProperty, shape:schema_heightShapeProperty,
+                   shape:schema_homeLocationShapeProperty, shape:schema_honorificPrefixShapeProperty,
+                   shape:schema_knowsLanguageShapeProperty, shape:schema_memberOfShapeProperty,
+                   shape:schema_nationalityShapeProperty, shape:schema_netWorthShapeProperty,
+                   shape:schema_ownsShapeProperty, shape:schema_parentShapeProperty, shape:schema_spouseShapeProperty,
+                   shape:schema_telephoneShapeProperty, shape:schema_weightShapeProperty,
+                   shape:schema_worksForShapeProperty ;
+    sh:targetClass <http://schema.org/Person> .
+
+shape:schema_PetStoreShape
+    a              sh:NodeShape ;
+    sh:description "A pet store." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/PetStore> .
+
+shape:schema_PharmacyShape
+    a              sh:NodeShape ;
+    sh:description "A pharmacy or drugstore." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Pharmacy> .
+
+shape:schema_PhotographShape
+    a              sh:NodeShape ;
+    sh:description "A photograph." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Photograph> .
+
+shape:schema_PhysicalExamShape
+    a              sh:NodeShape ;
+    sh:description "A type of physical examination of a patient performed by a physician." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/PhysicalExam> .
+
+shape:schema_PlaceOfWorshipShape
+    a              sh:NodeShape ;
+    sh:description "Place of worship, such as a church, synagogue, or mosque." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/PlaceOfWorship> .
+
+shape:schema_PlaceShape
+    a              sh:NodeShape ;
+    sh:description "Entities that have a somewhat fixed, physical extension." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_containedInPlaceShapeProperty, shape:schema_containsPlaceShapeProperty,
+                   shape:schema_elevationShapeProperty, shape:schema_faxNumberShapeProperty,
+                   shape:schema_geoShapeProperty, shape:schema_logoShapeProperty, shape:schema_telephoneShapeProperty ;
+    sh:targetClass <http://schema.org/Place> .
+
+shape:schema_PlayShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A play is a form of literature, usually consisting of dialogue between characters, intended for theatrical performance rather than just reading. Note the peformance of a Play would be a <a class=\"localLink\" href=\"http://schema.org/TheaterEvent\">TheaterEvent</a> - the <em>Play</em> being the <a class=\"localLink\" href=\"http://schema.org/workPerformed\">workPerformed</a>." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Play> .
+
+shape:schema_PlaygroundShape
+    a              sh:NodeShape ;
+    sh:description "A playground." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Playground> .
+
+shape:schema_PodcastSeriesShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A podcast is an episodic series of digital audio or video files which a user can download and listen to." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/PodcastSeries> .
+
+shape:schema_PoliceStationShape
+    a              sh:NodeShape ;
+    sh:description "A police station." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/PoliceStation> .
+
+shape:schema_PondShape
+    a              sh:NodeShape ;
+    sh:description "A pond." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Pond> .
+
+shape:schema_PostOfficeShape
+    a              sh:NodeShape ;
+    sh:description "A post office." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/PostOffice> .
+
+shape:schema_PosterShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A large, usually printed placard, bill, or announcement, often illustrated, that is posted to advertise or publicize something." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Poster> .
+
+shape:schema_PreschoolShape
+    a              sh:NodeShape ;
+    sh:description "A preschool." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Preschool> .
+
+shape:schema_ProductModelShape
+    a              sh:NodeShape ;
+    sh:description "A datasheet or vendor specification of a product (in the sense of a prototypical description)." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/ProductModel> .
+
+shape:schema_ProductShape
+    a              sh:NodeShape ;
+    sh:description
+                   "Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_awardShapeProperty, shape:schema_brandShapeProperty, shape:schema_depthShapeProperty,
+                   shape:schema_gtinShapeProperty, shape:schema_heightShapeProperty, shape:schema_logoShapeProperty,
+                   shape:schema_materialShapeProperty, shape:schema_weightShapeProperty,
+                   shape:schema_widthShapeProperty ;
+    sh:targetClass <http://schema.org/Product> .
+
+shape:schema_PublicSwimmingPoolShape
+    a              sh:NodeShape ;
+    sh:description "A public swimming pool." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/PublicSwimmingPool> .
+
+shape:schema_PublicToiletShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A public toilet is a room or small building containing one or more toilets (and possibly also urinals) which is available for use by the general public, or by customers or employees of certain businesses." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/PublicToilet> .
+
+shape:schema_PublicationIssueShape
+    a              sh:NodeShape ;
+    sh:description """A part of a successively published publication such as a periodical or publication volume, often numbered, usually containing a grouping of works such as articles.<br/><br/>
+
+See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_issueNumberShapeProperty, shape:schema_paginationShapeProperty ;
+    sh:targetClass <http://schema.org/PublicationIssue> .
+
+shape:schema_PublicationVolumeShape
+    a              sh:NodeShape ;
+    sh:description """A part of a successively published publication such as a periodical or multi-volume work, often numbered. It may represent a time span, such as a year.<br/><br/>
+
+See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_paginationShapeProperty, shape:schema_volumeNumberShapeProperty ;
+    sh:targetClass <http://schema.org/PublicationVolume> .
+
+shape:schema_QuantitativeValueShape
+    a              sh:NodeShape ;
+    sh:description "A point value or interval for product characteristics and other purposes." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_maxValueShapeProperty, shape:schema_minValueShapeProperty,
+                   shape:schema_unitCodeShapeProperty, shape:schema_valueShapeProperty ;
+    sh:targetClass <http://schema.org/QuantitativeValue> .
+
+shape:schema_RadiationTherapyShape
+    a              sh:NodeShape ;
+    sh:description "A process of care using radiation aimed at improving a health condition." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/RadiationTherapy> .
+
+shape:schema_RadioChannelShape
+    a              sh:NodeShape ;
+    sh:description "A unique instance of a radio BroadcastService on a CableOrSatelliteService lineup." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/RadioChannel> .
+
+shape:schema_RadioSeriesShape
+    a              sh:NodeShape ;
+    sh:description "CreativeWorkSeries dedicated to radio broadcast and associated online delivery." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_actorShapeProperty, shape:schema_directorShapeProperty,
+                   shape:schema_musicByShapeProperty, shape:schema_numberOfEpisodesShapeProperty,
+                   shape:schema_numberOfSeasonsShapeProperty, shape:schema_productionCompanyShapeProperty ;
+    sh:targetClass <http://schema.org/RadioSeries> .
+
+shape:schema_RadioStationShape
+    a              sh:NodeShape ;
+    sh:description "A radio station." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/RadioStation> .
+
+shape:schema_RatingShape
+    a              sh:NodeShape ;
+    sh:description "A rating is an evaluation on a numeric scale, such as 1 to 5 stars." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Rating> .
+
+shape:schema_RecyclingCenterShape
+    a              sh:NodeShape ;
+    sh:description "A recycling center." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/RecyclingCenter> .
+
+shape:schema_ReportShape
+    a              sh:NodeShape ;
+    sh:description "A Report generated by governmental or non-governmental organization." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Report> .
+
+shape:schema_ReservoirShape
+    a              sh:NodeShape ;
+    sh:description "A reservoir of water, typically an artificially created lake, like the Lake Kariba reservoir." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Reservoir> .
+
+shape:schema_ResortShape
+    a              sh:NodeShape ;
+    sh:description """A resort is a place used for relaxation or recreation, attracting visitors for holidays or vacations. Resorts are places, towns or sometimes commercial establishment operated by a single company (Source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Resort">http://en.wikipedia.org/wiki/Resort</a>).
+<br /><br />
+See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Resort> .
+
+shape:schema_RestaurantShape
+    a              sh:NodeShape ;
+    sh:description "A restaurant." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Restaurant> .
+
+shape:schema_RiverBodyOfWaterShape
+    a              sh:NodeShape ;
+    sh:description "A river (for example, the broad majestic Shannon)." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/RiverBodyOfWater> .
+
+shape:schema_ScholarlyArticleShape
+    a              sh:NodeShape ;
+    sh:description "A scholarly article." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/ScholarlyArticle> .
+
+shape:schema_SchoolShape
+    a              sh:NodeShape ;
+    sh:description "A school." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/School> .
+
+shape:schema_SculptureShape
+    a              sh:NodeShape ;
+    sh:description "A piece of sculpture." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Sculpture> .
+
+shape:schema_SeaBodyOfWaterShape
+    a              sh:NodeShape ;
+    sh:description "A sea (for example, the Caspian sea)." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/SeaBodyOfWater> .
+
+shape:schema_SelfStorageShape
+    a              sh:NodeShape ;
+    sh:description "A self-storage facility." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/SelfStorage> .
+
+shape:schema_ServiceShape
+    a              sh:NodeShape ;
+    sh:description "A service provided by an organization, e.g. delivery service, print services, etc." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Service> .
+
+shape:schema_SheetMusicShape
+    a              sh:NodeShape ;
+    sh:description "Printed music, as opposed to performed or recorded music." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/SheetMusic> .
+
+shape:schema_ShoeStoreShape
+    a              sh:NodeShape ;
+    sh:description "A shoe store." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/ShoeStore> .
+
+shape:schema_ShoppingCenterShape
+    a              sh:NodeShape ;
+    sh:description "A shopping center or mall." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/ShoppingCenter> .
+
+shape:schema_SkiResortShape
+    a              sh:NodeShape ;
+    sh:description "A ski resort." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/SkiResort> .
+
+shape:schema_SocialMediaPostingShape
+    a              sh:NodeShape ;
+    sh:description "A post to a social media platform, including blog posts, tweets, Facebook posts, etc." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/SocialMediaPosting> .
+
+shape:schema_SoftwareApplicationShape
+    a              sh:NodeShape ;
+    sh:description "A software application." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_operatingSystemShapeProperty ;
+    sh:targetClass <http://schema.org/SoftwareApplication> .
+
+shape:schema_SportsActivityLocationShape
+    a              sh:NodeShape ;
+    sh:description "A sports location, such as a playing field." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/SportsActivityLocation> .
+
+shape:schema_SportsEventShape
+    a              sh:NodeShape ;
+    sh:description "Event type: Sports event." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_competitorShapeProperty, shape:schema_sportShapeProperty ;
+    sh:targetClass <http://schema.org/SportsEvent> .
+
+shape:schema_SportsOrganizationShape
+    a              sh:NodeShape ;
+    sh:description
+                   "Represents the collection of all sports organizations, including sports teams, governing bodies, and sports associations." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_sportShapeProperty ;
+    sh:targetClass <http://schema.org/SportsOrganization> .
+
+shape:schema_SportsTeamShape
+    a              sh:NodeShape ;
+    sh:description "Organization: Sports team." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/SportsTeam> .
+
+shape:schema_StadiumOrArenaShape
+    a              sh:NodeShape ;
+    sh:description "A stadium." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/StadiumOrArena> .
+
+shape:schema_StateShape
+    a              sh:NodeShape ;
+    sh:description "A state or province of a country." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/State> .
+
+shape:schema_StoreShape
+    a              sh:NodeShape ;
+    sh:description "A retail good store." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Store> .
+
+shape:schema_SubstanceShape
+    a              sh:NodeShape ;
+    sh:description
+                   "Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Substance> .
+
+shape:schema_SubwayStationShape
+    a              sh:NodeShape ;
+    sh:description "A subway station." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/SubwayStation> .
+
+shape:schema_SurgicalProcedureShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A medical procedure involving an incision with instruments; performed for diagnose, or therapeutic purposes." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/SurgicalProcedure> .
+
+shape:schema_SynagogueShape
+    a              sh:NodeShape ;
+    sh:description "A synagogue." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Synagogue> .
+
+shape:schema_TVEpisodeShape
+    a              sh:NodeShape ;
+    sh:description "A TV episode which can be part of a series or season." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_countryOfOriginShapeProperty ;
+    sh:targetClass <http://schema.org/TVEpisode> .
+
+shape:schema_TVSeasonShape
+    a              sh:NodeShape ;
+    sh:description "Season dedicated to TV broadcast and associated online delivery." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_countryOfOriginShapeProperty ;
+    sh:targetClass <http://schema.org/TVSeason> .
+
+shape:schema_TVSeriesShape
+    a              sh:NodeShape ;
+    sh:description "CreativeWorkSeries dedicated to TV broadcast and associated online delivery." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_actorShapeProperty, shape:schema_countryOfOriginShapeProperty,
+                   shape:schema_directorShapeProperty, shape:schema_musicByShapeProperty,
+                   shape:schema_numberOfEpisodesShapeProperty, shape:schema_numberOfSeasonsShapeProperty,
+                   shape:schema_productionCompanyShapeProperty ;
+    sh:targetClass <http://schema.org/TVSeries> .
+
+shape:schema_TattooParlorShape
+    a              sh:NodeShape ;
+    sh:description "A tattoo parlor." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/TattooParlor> .
+
+shape:schema_TelevisionChannelShape
+    a              sh:NodeShape ;
+    sh:description "A unique instance of a television BroadcastService on a CableOrSatelliteService lineup." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/TelevisionChannel> .
+
+shape:schema_TelevisionStationShape
+    a              sh:NodeShape ;
+    sh:description "A television station." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/TelevisionStation> .
+
+shape:schema_TennisComplexShape
+    a              sh:NodeShape ;
+    sh:description "A tennis complex." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/TennisComplex> .
+
+shape:schema_TheaterGroupShape
+    a              sh:NodeShape ;
+    sh:description "A theater group or company, for example, the Royal Shakespeare Company or Druid Theatre." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/TheaterGroup> .
+
+shape:schema_TherapeuticProcedureShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A medical procedure intended primarily for therapeutic purposes, aimed at improving a health condition." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/TherapeuticProcedure> .
+
+shape:schema_ThesisShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A thesis or dissertation document submitted in support of candidature for an academic degree or professional qualification." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Thesis> .
+
+shape:schema_ThingShape
+    a              sh:NodeShape ;
+    sh:description "The most generic type of item." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_alternateNameShapeProperty, shape:schema_imageShapeProperty,
+                   shape:schema_sameAsShapeProperty, shape:schema_urlShapeProperty ;
+    sh:targetClass <http://schema.org/Thing> .
+
+shape:schema_TouristAttractionShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A tourist attraction.  In principle any Thing can be a <a class=\"localLink\" href=\"http://schema.org/TouristAttraction\">TouristAttraction</a>, from a <a class=\"localLink\" href=\"http://schema.org/Mountain\">Mountain</a> and <a class=\"localLink\" href=\"http://schema.org/LandmarksOrHistoricalBuildings\">LandmarksOrHistoricalBuildings</a> to a <a class=\"localLink\" href=\"http://schema.org/LocalBusiness\">LocalBusiness</a>.  This Type can be used on its own to describe a general <a class=\"localLink\" href=\"http://schema.org/TouristAttraction\">TouristAttraction</a>, or be used as an <a class=\"localLink\" href=\"http://schema.org/additionalType\">additionalType</a> to add tourist attraction properties to any other type.  (See examples below)" ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/TouristAttraction> .
+
+shape:schema_TouristInformationCenterShape
+    a              sh:NodeShape ;
+    sh:description "A tourist information center." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/TouristInformationCenter> .
+
+shape:schema_ToyStoreShape
+    a              sh:NodeShape ;
+    sh:description "A toy store." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/ToyStore> .
+
+shape:schema_TrainStationShape
+    a              sh:NodeShape ;
+    sh:description "A train station." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/TrainStation> .
+
+shape:schema_TravelAgencyShape
+    a              sh:NodeShape ;
+    sh:description "A travel agency." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/TravelAgency> .
+
+shape:schema_VehicleShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A vehicle is a device that is designed or used to transport people or cargo over land, water, air, or through space." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_callSignShapeProperty ;
+    sh:targetClass <http://schema.org/Vehicle> .
+
+shape:schema_VeinShape
+    a              sh:NodeShape ;
+    sh:description "A type of blood vessel that specifically carries blood to the heart." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Vein> .
+
+shape:schema_VideoGameSeriesShape
+    a              sh:NodeShape ;
+    sh:description "A video game series." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_directorShapeProperty, shape:schema_musicByShapeProperty,
+                   shape:schema_numberOfEpisodesShapeProperty, shape:schema_numberOfSeasonsShapeProperty,
+                   shape:schema_productionCompanyShapeProperty ;
+    sh:targetClass <http://schema.org/VideoGameSeries> .
+
+shape:schema_VideoGameShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A video game is an electronic game that involves human interaction with a user interface to generate visual feedback on a video device." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_actorShapeProperty, shape:schema_directorShapeProperty,
+                   shape:schema_musicByShapeProperty ;
+    sh:targetClass <http://schema.org/VideoGame> .
+
+shape:schema_VideoObjectShape
+    a              sh:NodeShape ;
+    sh:description "A video file." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/VideoObject> .
+
+shape:schema_VisualArtworkShape
+    a              sh:NodeShape ;
+    sh:description "A work of art that is primarily visual in character." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:property    shape:schema_coloristShapeProperty, shape:schema_depthShapeProperty,
+                   shape:schema_heightShapeProperty, shape:schema_widthShapeProperty ;
+    sh:targetClass <http://schema.org/VisualArtwork> .
+
+shape:schema_VolcanoShape
+    a              sh:NodeShape ;
+    sh:description "A volcano, like Fuji san." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Volcano> .
+
+shape:schema_WaterfallShape
+    a              sh:NodeShape ;
+    sh:description "A waterfall, like Niagara." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Waterfall> .
+
+shape:schema_WebPageShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as <code>breadcrumb</code> may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/WebPage> .
+
+shape:schema_WebSiteShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via URLs." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/WebSite> .
+
+shape:schema_WineryShape
+    a              sh:NodeShape ;
+    sh:description "A winery." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Winery> .
+
+shape:schema_WorkersUnionShape
+    a              sh:NodeShape ;
+    sh:description
+                   "A Workers Union (also known as a Labor Union, Labour Union, or Trade Union) is an organization that promotes the interests of its worker members by collectively bargaining with management, organizing, and political lobbying." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/WorkersUnion> .
+
+shape:schema_ZooShape
+    a              sh:NodeShape ;
+    sh:description "A zoo." ;
+    sh:nodeKind    sh:BlankNodeOrIRI ;
+    sh:targetClass <http://schema.org/Zoo> .
+
+shape:bioChemInteractionShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://bioschemas.org/BioChemEntity> ;
+    sh:path  <http://bioschemas.org/bioChemInteraction> .
+
+shape:encodesBioChemEntityShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://bioschemas.org/BioChemEntity> ;
+    sh:path  <http://bioschemas.org/encodesBioChemEntity> .
+
+shape:expressedInShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Thing> ;
+    sh:path  <http://bioschemas.org/expressedIn> .
+
+shape:hasMolecularFunctionShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Thing> ;
+    sh:path  <http://bioschemas.org/hasMolecularFunction> .
+
+shape:inChIKeyShapeProperty
+    a           sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:path     <http://bioschemas.org/inChIKey> .
+
+shape:inChIShapeProperty
+    a           sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:path     <http://bioschemas.org/inChI> .
+
+shape:isEncodedByBioChemEntityShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://bioschemas.org/Gene> ;
+    sh:path  <http://bioschemas.org/isEncodedByBioChemEntity> .
+
+shape:isInvolvedInBiologicalProcessShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Thing> ;
+    sh:path  <http://bioschemas.org/isInvolvedInBiologicalProcess> .
+
+shape:isLocatedInSubcellularLocationShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Thing> ;
+    sh:path  <http://bioschemas.org/isLocatedInSubcellularLocation> .
+
+shape:molecularFormulaShapeProperty
+    a           sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:path     <http://bioschemas.org/molecularFormula> .
+
+shape:parentTaxonShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://bioschemas.org/Taxon> ;
+    sh:path  <http://bioschemas.org/parentTaxon> .
+
+shape:smilesShapeProperty
+    a           sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:path     <http://bioschemas.org/smiles> .
+
+shape:taxonRankShapeProperty
+    a           sh:PropertyShape ;
+    sh:class    <http://schema.org/Thing> ;
+    sh:maxCount 1 ;
+    sh:path     <http://bioschemas.org/taxonRank> .
+
+shape:schema_affiliationShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Organization> ;
+    sh:description
+             "An organization that this person is affiliated with. For example, a school/university, a club, or a team." ;
+    sh:path  <http://schema.org/affiliation> .
+
+shape:schema_alternateNameShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       rdf:PlainLiteral ;
+    sh:description "An alias for the item." ;
+    sh:path        <http://schema.org/alternateName> .
+
+shape:schema_alumniOfShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Organization> ;
+    sh:description "An organization that the person is an alumni of." ;
+    sh:path        <http://schema.org/alumniOf> .
+
+shape:schema_authorShapeProperty
+    a        sh:PropertyShape ;
+    sh:description
+             "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably." ;
+    sh:path  <http://schema.org/author> ;
+    shape:or ( [ sh:class <http://schema.org/Organization> ] [ sh:class <http://schema.org/Person> ] ) .
+
+shape:schema_birthDateShapeProperty
+    a              sh:PropertyShape ;
+    sh:description "Date of birth." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/birthDate> ;
+    shape:or
+                   ( [ sh:class
+                           xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) .
+
+shape:schema_birthPlaceShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Place> ;
+    sh:description "The place where the person was born." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/birthPlace> .
+
+shape:schema_broadcastChannelIdShapeProperty
+    a           sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:description
+                "The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number." ;
+    sh:path     <http://schema.org/broadcastChannelId> .
+
+shape:schema_byArtistShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/MusicGroup> ;
+    sh:description "The artist that performed this album or recording." ;
+    sh:path        <http://schema.org/byArtist> .
+
+shape:schema_characterShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Person> ;
+    sh:description "Fictional person connected with a creative work." ;
+    sh:path        <http://schema.org/character> .
+
+shape:schema_childrenShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Person> ;
+    sh:description "A child of the person." ;
+    sh:path        <http://schema.org/children> .
+
+shape:schema_citationShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/CreativeWork> ;
+    sh:description
+             "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc." ;
+    sh:path  <http://schema.org/citation> .
+
+shape:schema_competitorShapeProperty
+    a              sh:PropertyShape ;
+    sh:description "A competitor in a sports event." ;
+    sh:path        <http://schema.org/competitor> ;
+    shape:or       ( [ sh:class <http://schema.org/Person> ] [ sh:class <http://schema.org/SportsTeam> ] ) .
+
+shape:schema_connectedToShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/AnatomicalStructure> ;
+    sh:description "Other anatomical structures to which this structure is connected." ;
+    sh:path        <http://schema.org/connectedTo> .
+
+shape:schema_containedInPlaceShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Place> ;
+    sh:description "The basic containment relation between a place and one that contains it." ;
+    sh:path        <http://schema.org/containedInPlace> .
+
+shape:schema_containsPlaceShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Place> ;
+    sh:description "The basic containment relation between a place and another that it contains." ;
+    sh:path        <http://schema.org/containsPlace> .
+
+shape:schema_contentLocationShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Place> ;
+    sh:description
+             "The location depicted or described in the content. For example, the location in a photograph or painting." ;
+    sh:path  <http://schema.org/contentLocation> .
+
+shape:schema_contentRatingShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Rating> ;
+    sh:description "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'." ;
+    sh:path        <http://schema.org/contentRating> .
+
+shape:schema_copyrightHolderShapeProperty
+    a              sh:PropertyShape ;
+    sh:description "The party holding the legal copyright to the CreativeWork." ;
+    sh:path        <http://schema.org/copyrightHolder> ;
+    shape:or       ( [ sh:class <http://schema.org/Organization> ] [ sh:class <http://schema.org/Person> ] ) .
+
+shape:schema_creatorShapeProperty
+    a              sh:PropertyShape ;
+    sh:description
+                   "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork." ;
+    sh:path        <http://schema.org/creator> ;
+    shape:or       ( [ sh:class <http://schema.org/Organization> ] [ sh:class <http://schema.org/Person> ] ) .
+
+shape:schema_dateCreatedShapeProperty
+    a              sh:PropertyShape ;
+    sh:description "The date on which the CreativeWork was created or the item was added to a DataFeed." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/dateCreated> ;
+    shape:or
+                   ( [ sh:class
+                           xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) .
+
+shape:schema_datePublishedShapeProperty
+    a              sh:PropertyShape ;
+    sh:description "Date of first broadcast/publication." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/datePublished> ;
+    shape:or
+                   ( [ sh:class
+                           xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) .
+
+shape:schema_deathDateShapeProperty
+    a              sh:PropertyShape ;
+    sh:description "Date of death." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/deathDate> ;
+    shape:or
+                   ( [ sh:class
+                           xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) .
+
+shape:schema_deathPlaceShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Place> ;
+    sh:description "The place where the person died." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/deathPlace> .
+
+shape:schema_dissolutionDateShapeProperty
+    a              sh:PropertyShape ;
+    sh:description "The date that this organization was dissolved." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/dissolutionDate> ;
+    shape:or
+                   ( [ sh:class
+                           xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) .
+
+shape:schema_dunsShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:string ;
+    sh:description "The Dun &amp; Bradstreet DUNS number for identifying an organization or business person." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/duns> .
+
+shape:schema_editorShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Person> ;
+    sh:description "Specifies the Person who edited the CreativeWork." ;
+    sh:path        <http://schema.org/editor> .
+
+shape:schema_elevationShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/QuantitativeValue> ;
+    sh:description
+             "The elevation of a location (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>). Values may be of the form 'NUMBER UNIT<em>OF</em>MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone should be assumed to be a value in meters." ;
+    sh:path  <http://schema.org/elevation> .
+
+shape:schema_encodingFormatShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:string ;
+    sh:description """Media type typically expressed using a MIME format (see <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA site</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MDN reference</a>) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).<br/><br/>
+
+In cases where a <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a> has several media type representations, <a class="localLink" href="http://schema.org/encoding">encoding</a> can be used to indicate each <a class="localLink" href="http://schema.org/MediaObject">MediaObject</a> alongside particular <a class="localLink" href="http://schema.org/encodingFormat">encodingFormat</a> information.<br/><br/>
+
+Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.""" ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/encodingFormat> .
+
+shape:schema_endDateShapeProperty
+    a           sh:PropertyShape ;
+    sh:description
+                "The end date and time of the item (in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>)." ;
+    sh:maxCount 1 ;
+    sh:path     <http://schema.org/endDate> ;
+    shape:or    ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) .
+
+shape:schema_exampleOfWorkShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/CreativeWork> ;
+    sh:description "A creative work that this work is an example/instance/realization/derivation of." ;
+    sh:path        <http://schema.org/exampleOfWork> .
+
+shape:schema_familyNameShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Thing> ;
+    sh:description
+             "Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property." ;
+    sh:path  <http://schema.org/familyName> .
+
+shape:schema_founderShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Person> ;
+    sh:description "A person who founded this organization." ;
+    sh:path        <http://schema.org/founder> .
+
+shape:schema_foundingDateShapeProperty
+    a              sh:PropertyShape ;
+    sh:description "The date that this organization was founded." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/foundingDate> ;
+    shape:or
+                   ( [ sh:class
+                           xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) .
+
+shape:schema_foundingLocationShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Place> ;
+    sh:description "The place where the Organization was founded." ;
+    sh:path        <http://schema.org/foundingLocation> .
+
+shape:schema_genderShapeProperty
+    a           sh:PropertyShape ;
+    sh:class    <http://schema.org/Thing> ;
+    sh:description
+                "Gender of something, typically a <a class=\"localLink\" href=\"http://schema.org/Person\">Person</a>, but possibly also fictional characters, animals, etc. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The <a class=\"localLink\" href=\"http://schema.org/gender\">gender</a> property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender <a class=\"localLink\" href=\"http://schema.org/SportsTeam\">SportsTeam</a> can be indicated with a text value of \"Mixed\"." ;
+    sh:maxCount 1 ;
+    sh:path     <http://schema.org/gender> .
+
+shape:schema_geoShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/GeoCoordinates> ;
+    sh:description "The geo coordinates of the place." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/geo> .
+
+shape:schema_givenNameShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Thing> ;
+    sh:description
+             "Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property." ;
+    sh:path  <http://schema.org/givenName> .
+
+shape:schema_gtinShapeProperty
+    a           sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:description
+                "A Global Trade Item Number (<a href=\"https://www.gs1.org/standards/id-keys/gtin\">GTIN</a>). GTINs identify trade items, including products and services, using numeric identification codes. The <a class=\"localLink\" href=\"http://schema.org/gtin\">gtin</a> property generalizes the earlier <a class=\"localLink\" href=\"http://schema.org/gtin8\">gtin8</a>, <a class=\"localLink\" href=\"http://schema.org/gtin12\">gtin12</a>, <a class=\"localLink\" href=\"http://schema.org/gtin13\">gtin13</a>, and <a class=\"localLink\" href=\"http://schema.org/gtin14\">gtin14</a> properties. The GS1 <a href=\"https://www.gs1.org/standards/Digital-Link/\">digital link specifications</a> express GTINs as URLs. A correct <a class=\"localLink\" href=\"http://schema.org/gtin\">gtin</a> value should be a valid GTIN, which means that it should be an all-numeric string of either 8, 12, 13 or 14 digits, or a \"GS1 Digital Link\" URL based on such a string. The numeric component should also have a <a href=\"https://www.gs1.org/services/check-digit-calculator\">valid GS1 check digit</a> and meet the other rules for valid GTINs. See also <a href=\"http://www.gs1.org/barcodes/technical/idkeys/gtin\">GS1's GTIN Summary</a> and <a href=\"https://en.wikipedia.org/wiki/Global_Trade_Item_Number\">Wikipedia</a> for more details. Left-padding of the gtin values is not required or encouraged." ;
+    sh:path     <http://schema.org/gtin> .
+
+shape:schema_hasOccupationShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Occupation> ;
+    sh:description "The Person's occupation. For past professions, use Role for expressing dates." ;
+    sh:path        <http://schema.org/hasOccupation> .
+
+shape:schema_hasPartShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/CreativeWork> ;
+    sh:description "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense)." ;
+    sh:path        <http://schema.org/hasPart> .
+
+shape:schema_homeLocationShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Place> ;
+    sh:description "A contact location for a person's residence." ;
+    sh:path        <http://schema.org/homeLocation> .
+
+shape:schema_honorificPrefixShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Thing> ;
+    sh:description "An honorific prefix preceding a Person's name such as Dr/Mrs/Mr." ;
+    sh:path        <http://schema.org/honorificPrefix> .
+
+shape:schema_illustratorShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Person> ;
+    sh:description "The illustrator of the book." ;
+    sh:path        <http://schema.org/illustrator> .
+
+shape:schema_imageShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/ImageObject> ;
+    sh:description
+             "An image of the item. This can be a <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a> or a fully described <a class=\"localLink\" href=\"http://schema.org/ImageObject\">ImageObject</a>." ;
+    sh:path  <http://schema.org/image> .
+
+shape:schema_inLanguageShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Language> ;
+    sh:description
+             "The language of the content or performance or used in an action. Please use one of the language codes from the <a href=\"http://tools.ietf.org/html/bcp47\">IETF BCP 47 standard</a>. See also <a class=\"localLink\" href=\"http://schema.org/availableLanguage\">availableLanguage</a>." ;
+    sh:path  <http://schema.org/inLanguage> .
+
+shape:schema_isBasedOnShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/CreativeWork> ;
+    sh:description "A resource from which this work is derived or from which it is a modification or adaption." ;
+    sh:path        <http://schema.org/isBasedOn> .
+
+shape:schema_isPartOfShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/CreativeWork> ;
+    sh:description "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of." ;
+    sh:path        <http://schema.org/isPartOf> .
+
+shape:schema_isbnShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:string ;
+    sh:description "The ISBN of the book." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/isbn> .
+
+shape:schema_issnShapeProperty
+    a           sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:description
+                "The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication." ;
+    sh:maxCount 1 ;
+    sh:path     <http://schema.org/issn> .
+
+shape:schema_issueNumberShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:string ;
+    sh:description "Identifies the issue of publication; for example, \"iii\" or \"2\"." ;
+    sh:path        <http://schema.org/issueNumber> .
+
+shape:schema_iswcCodeShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:string ;
+    sh:description "The International Standard Musical Work Code for the composition." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/iswcCode> .
+
+shape:schema_latitudeShapeProperty
+    a           sh:PropertyShape ;
+    sh:class    xsd:double ;
+    sh:description
+                "The latitude of a location. For example <code>37.42242</code> (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>)." ;
+    sh:maxCount 1 ;
+    sh:path     <http://schema.org/latitude> .
+
+shape:schema_legalStatusShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/DrugLegalStatus> ;
+    sh:description "The drug or supplement's legal status, including any controlled substance schedules that apply." ;
+    sh:path        <http://schema.org/legalStatus> .
+
+shape:schema_leiCodeShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:string ;
+    sh:description "An organization identifier that uniquely identifies a legal entity as defined in ISO 17442." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/leiCode> .
+
+shape:schema_licenseShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/CreativeWork> ;
+    sh:description "A license document that applies to this content, typically indicated by URL." ;
+    sh:path        <http://schema.org/license> .
+
+shape:schema_locationCreatedShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Place> ;
+    sh:description
+             "The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork." ;
+    sh:path  <http://schema.org/locationCreated> .
+
+shape:schema_longitudeShapeProperty
+    a           sh:PropertyShape ;
+    sh:class    xsd:double ;
+    sh:description
+                "The longitude of a location. For example <code>-122.08585</code> (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>)." ;
+    sh:maxCount 1 ;
+    sh:path     <http://schema.org/longitude> .
+
+shape:schema_lyricistShapeProperty
+    a              sh:PropertyShape ;
+    sh:description "The person who wrote the words." ;
+    sh:path        <http://schema.org/lyricist> ;
+    shape:or       ( [ sh:class <http://schema.org/MusicGroup> ] [ sh:class <http://schema.org/Person> ] ) .
+
+shape:schema_maxValueShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:decimal ;
+    sh:description "The upper value of some characteristic or property." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/maxValue> .
+
+shape:schema_minValueShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:decimal ;
+    sh:description "The lower value of some characteristic or property." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/minValue> .
+
+shape:schema_musicReleaseFormatShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Thing> ;
+    sh:description
+             "Format of this release (the type of recording media used, ie. compact disc, digital media, LP, etc.)." ;
+    sh:path  <http://schema.org/musicReleaseFormat> .
+
+shape:schema_nationalityShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Country> ;
+    sh:description "Nationality of the person." ;
+    sh:path        <http://schema.org/nationality> .
+
+shape:schema_netWorthShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/QuantitativeValue> ;
+    sh:description "The total financial value of the person as calculated by subtracting assets from liabilities." ;
+    sh:path        <http://schema.org/netWorth> .
+
+shape:schema_numberOfEmployeesShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/QuantitativeValue> ;
+    sh:description "The number of employees in an organization e.g. business." ;
+    sh:path        <http://schema.org/numberOfEmployees> .
+
+shape:schema_numberOfPagesShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:integer ;
+    sh:description "The number of pages in the book." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/numberOfPages> .
+
+shape:schema_operatingSystemShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/SoftwareApplication> ;
+    sh:description "Operating systems supported (Windows 7, OSX 10.6, Android 1.6)." ;
+    sh:path        <http://schema.org/operatingSystem> .
+
+shape:schema_organizerShapeProperty
+    a              sh:PropertyShape ;
+    sh:description "An organizer of an Event." ;
+    sh:path        <http://schema.org/organizer> ;
+    shape:or       ( [ sh:class <http://schema.org/MusicGroup> ] [ sh:class <http://schema.org/Person> ] ) .
+
+shape:schema_ownsShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Product> ;
+    sh:description "Products owned by the organization or person." ;
+    sh:path        <http://schema.org/owns> .
+
+shape:schema_parentOrganizationShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Organization> ;
+    sh:description
+             "The larger organization that this organization is a <a class=\"localLink\" href=\"http://schema.org/subOrganization\">subOrganization</a> of, if any." ;
+    sh:path  <http://schema.org/parentOrganization> .
+
+shape:schema_parentShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Person> ;
+    sh:description "A parent of this person." ;
+    sh:path        <http://schema.org/parent> .
+
+shape:schema_partOfSeasonShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/CreativeWorkSeason> ;
+    sh:description "The season to which this episode belongs." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/partOfSeason> .
+
+shape:schema_positionShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:integer ;
+    sh:description "The position of an item in a series or sequence of items." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/position> .
+
+shape:schema_producerShapeProperty
+    a              sh:PropertyShape ;
+    sh:description "The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.)." ;
+    sh:path        <http://schema.org/producer> ;
+    shape:or       ( [ sh:class <http://schema.org/Organization> ] [ sh:class <http://schema.org/Person> ] ) .
+
+shape:schema_providerShapeProperty
+    a        sh:PropertyShape ;
+    sh:description
+             "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller." ;
+    sh:path  <http://schema.org/provider> ;
+    shape:or ( [ sh:class <http://schema.org/Organization> ] [ sh:class <http://schema.org/Person> ] ) .
+
+shape:schema_publisherShapeProperty
+    a              sh:PropertyShape ;
+    sh:description "The publisher of the creative work." ;
+    sh:path        <http://schema.org/publisher> ;
+    shape:or       ( [ sh:class <http://schema.org/Organization> ] [ sh:class <http://schema.org/Person> ] ) .
+
+shape:schema_recordLabelShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Organization> ;
+    sh:description "The label that issued the release." ;
+    sh:path        <http://schema.org/recordLabel> .
+
+shape:schema_releaseOfShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/MusicAlbum> ;
+    sh:description "The album this is a release of." ;
+    sh:path        <http://schema.org/releaseOf> .
+
+shape:schema_relevantSpecialtyShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/MedicalSpecialty> ;
+    sh:description "If applicable, a medical specialty in which this entity is relevant." ;
+    sh:path        <http://schema.org/relevantSpecialty> .
+
+shape:schema_riskFactorShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Thing> ;
+    sh:description
+             "A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition." ;
+    sh:path  <http://schema.org/riskFactor> .
+
+shape:schema_sameAsShapeProperty
+    a        sh:PropertyShape ;
+    sh:class xsd:anyURI ;
+    sh:description
+             "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website." ;
+    sh:path  <http://schema.org/sameAs> .
+
+shape:schema_servesCuisineShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Thing> ;
+    sh:description "The cuisine of the restaurant." ;
+    sh:path        <http://schema.org/servesCuisine> .
+
+shape:schema_signOrSymptomShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/MedicalSignOrSymptom> ;
+    sh:description
+             "A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition." ;
+    sh:path  <http://schema.org/signOrSymptom> .
+
+shape:schema_spouseShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Person> ;
+    sh:description "The person's spouse." ;
+    sh:path        <http://schema.org/spouse> .
+
+shape:schema_startDateShapeProperty
+    a           sh:PropertyShape ;
+    sh:description
+                "The start date and time of the item (in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>)." ;
+    sh:maxCount 1 ;
+    sh:path     <http://schema.org/startDate> ;
+    shape:or    ( [ sh:class xsd:date ] [ sh:class xsd:dateTime ] [ sh:class xsd:gYear ] [ sh:class xsd:gYearMonth ] ) .
+
+shape:schema_subEventShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Event> ;
+    sh:description
+             "An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference." ;
+    sh:path  <http://schema.org/subEvent> .
+
+shape:schema_subOrganizationShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Organization> ;
+    sh:description
+             "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property." ;
+    sh:path  <http://schema.org/subOrganization> .
+
+shape:schema_superEventShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Event> ;
+    sh:description
+             "An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent." ;
+    sh:path  <http://schema.org/superEvent> .
+
+shape:schema_unitCodeShapeProperty
+    a           sh:PropertyShape ;
+    sh:class    <http://schema.org/Thing> ;
+    sh:description
+                "The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon." ;
+    sh:maxCount 1 ;
+    sh:path     <http://schema.org/unitCode> .
+
+shape:schema_urlShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       xsd:anyURI ;
+    sh:description "URL of the item." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/url> .
+
+shape:schema_valueShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:decimal ;
+    sh:description """The value of the quantitative value or property value node.<br/><br/>
+
+<ul>
+<li>For <a class="localLink" href="http://schema.org/QuantitativeValue">QuantitativeValue</a> and <a class="localLink" href="http://schema.org/MonetaryAmount">MonetaryAmount</a>, the recommended type for values is 'Number'.</li>
+<li>For <a class="localLink" href="http://schema.org/PropertyValue">PropertyValue</a>, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.</li>
+<li>Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.</li>
+<li>Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.</li>
+</ul>
+""" ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/value> .
+
+shape:schema_volumeNumberShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:string ;
+    sh:description "Identifies the volume of publication or multi-part work; for example, \"iii\" or \"2\"." ;
+    sh:path        <http://schema.org/volumeNumber> .
+
+shape:schema_workExampleShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/CreativeWork> ;
+    sh:description
+             "Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook." ;
+    sh:path  <http://schema.org/workExample> .
+
+shape:schema_worksForShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Person> ;
+    sh:description "Organizations that the person works for." ;
+    sh:path        <http://schema.org/worksFor> .
+
+shape:schema_aboutShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Thing> ;
+    sh:description "The subject matter of the content." ;
+    sh:path        <http://schema.org/about> .
+
+shape:schema_coloristShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Person> ;
+    sh:description "The individual who adds color to inked drawings." ;
+    sh:path        <http://schema.org/colorist> .
+
+shape:schema_composerShapeProperty
+    a        sh:PropertyShape ;
+    sh:description
+             "The person or organization who wrote a composition, or who is the composer of a work performed at some event." ;
+    sh:path  <http://schema.org/composer> ;
+    shape:or ( [ sh:class <http://schema.org/MusicGroup> ] [ sh:class <http://schema.org/Person> ] ) .
+
+shape:schema_contributorShapeProperty
+    a              sh:PropertyShape ;
+    sh:description "A secondary contributor to the CreativeWork or Event." ;
+    sh:path        <http://schema.org/contributor> ;
+    shape:or       ( [ sh:class <http://schema.org/Organization> ] [ sh:class <http://schema.org/Person> ] ) .
+
+shape:schema_depthShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/QuantitativeValue> ;
+    sh:description "The depth of the item." ;
+    sh:path        <http://schema.org/depth> .
+
+shape:schema_genreShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Thing> ;
+    sh:description "Genre of the creative work, broadcast channel or group." ;
+    sh:path        <http://schema.org/genre> .
+
+shape:schema_icaoCodeShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:string ;
+    sh:description "ICAO identifier for an airport." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/icaoCode> .
+
+shape:schema_knowsLanguageShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Language> ;
+    sh:description
+             "Of a <a class=\"localLink\" href=\"http://schema.org/Person\">Person</a>, and less typically of an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a>, to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the <a href=\"http://tools.ietf.org/html/bcp47\">IETF BCP 47 standard</a>." ;
+    sh:path  <http://schema.org/knowsLanguage> .
+
+shape:schema_locationShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Place> ;
+    sh:description
+             "The location of for example where the event is happening, an organization is located, or where an action takes place." ;
+    sh:path  <http://schema.org/location> .
+
+shape:schema_materialShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Thing> ;
+    sh:description "A material that something is made from, e.g. leather, wool, cotton, paper." ;
+    sh:path        <http://schema.org/material> .
+
+shape:schema_memberOfShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Organization> ;
+    sh:description "An Organization (or ProgramMembership) to which this Person or Organization belongs." ;
+    sh:path        <http://schema.org/memberOf> .
+
+shape:schema_partOfSeriesShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/CreativeWorkSeries> ;
+    sh:description "The series to which this episode or season belongs." ;
+    sh:path        <http://schema.org/partOfSeries> .
+
+shape:schema_possibleTreatmentShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/MedicalTherapy> ;
+    sh:description "A possible treatment to address this condition, sign or symptom." ;
+    sh:path        <http://schema.org/possibleTreatment> .
+
+shape:schema_sportShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Thing> ;
+    sh:description "A type of sport (e.g. Baseball)." ;
+    sh:path        <http://schema.org/sport> .
+
+shape:schema_translatorShapeProperty
+    a        sh:PropertyShape ;
+    sh:description
+             "Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event." ;
+    sh:path  <http://schema.org/translator> ;
+    shape:or ( [ sh:class <http://schema.org/Organization> ] [ sh:class <http://schema.org/Person> ] ) .
+
+shape:schema_weightShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/QuantitativeValue> ;
+    sh:description "The weight of the product or person." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/weight> .
+
+shape:schema_widthShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/QuantitativeValue> ;
+    sh:description "The width of the item." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/width> .
+
+shape:schema_brandShapeProperty
+    a        sh:PropertyShape ;
+    sh:description
+             "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person." ;
+    sh:path  <http://schema.org/brand> ;
+    shape:or ( [ sh:class <http://schema.org/Brand> ] [ sh:class <http://schema.org/Organization> ] ) .
+
+shape:schema_callSignShapeProperty
+    a           sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:description
+                "A <a href=\"https://en.wikipedia.org/wiki/Call_sign\">callsign</a>, as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles." ;
+    sh:path     <http://schema.org/callSign> .
+
+shape:schema_durationShapeProperty
+    a        sh:PropertyShape ;
+    sh:class xsd:duration ;
+    sh:description
+             "The duration of the item (movie, audio recording, event, etc.) in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>." ;
+    sh:path  <http://schema.org/duration> .
+
+shape:schema_faxNumberShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:string ;
+    sh:description "The fax number." ;
+    sh:path        <http://schema.org/faxNumber> .
+
+shape:schema_heightShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/QuantitativeValue> ;
+    sh:description "The height of the item." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/height> .
+
+shape:schema_iataCodeShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:string ;
+    sh:description "IATA identifier for an airline or airport." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/iataCode> .
+
+shape:schema_numberOfSeasonsShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:integer ;
+    sh:description "The number of seasons in this series." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/numberOfSeasons> .
+
+shape:schema_paginationShapeProperty
+    a           sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:description
+                "Any description of pages that is not separated into pageStart and pageEnd; for example, \"1-6, 9, 55\" or \"10-12, 46-49\"." ;
+    sh:path     <http://schema.org/pagination> .
+
+shape:schema_sponsorShapeProperty
+    a        sh:PropertyShape ;
+    sh:description
+             "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event." ;
+    sh:path  <http://schema.org/sponsor> ;
+    shape:or ( [ sh:class <http://schema.org/Organization> ] [ sh:class <http://schema.org/Person> ] ) .
+
+shape:schema_telephoneShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:string ;
+    sh:description "The telephone number." ;
+    sh:path        <http://schema.org/telephone> .
+
+shape:schema_awardShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Thing> ;
+    sh:description "An award won by or for this item." ;
+    sh:path        <http://schema.org/award> .
+
+shape:schema_countryOfOriginShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Country> ;
+    sh:description
+             "The country of the principal offices of the production company or individual responsible for the movie or program." ;
+    sh:path  <http://schema.org/countryOfOrigin> .
+
+shape:schema_logoShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/ImageObject> ;
+    sh:description "An associated logo." ;
+    sh:path        <http://schema.org/logo> .
+
+shape:schema_numberOfEpisodesShapeProperty
+    a              sh:PropertyShape ;
+    sh:datatype    xsd:integer ;
+    sh:description "The number of episodes in this season or series." ;
+    sh:maxCount    1 ;
+    sh:path        <http://schema.org/numberOfEpisodes> .
+
+shape:schema_actorShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Person> ;
+    sh:description
+             "An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip." ;
+    sh:path  <http://schema.org/actor> .
+
+shape:schema_directorShapeProperty
+    a        sh:PropertyShape ;
+    sh:class <http://schema.org/Person> ;
+    sh:description
+             "A director of e.g. tv, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip." ;
+    sh:path  <http://schema.org/director> .
+
+shape:schema_musicByShapeProperty
+    a              sh:PropertyShape ;
+    sh:description "The composer of the soundtrack." ;
+    sh:path        <http://schema.org/musicBy> ;
+    shape:or       ( [ sh:class <http://schema.org/MusicGroup> ] [ sh:class <http://schema.org/Person> ] ) .
+
+shape:schema_productionCompanyShapeProperty
+    a              sh:PropertyShape ;
+    sh:class       <http://schema.org/Organization> ;
+    sh:description "The production company or studio responsible for the item e.g. series, video game, episode etc." ;
+    sh:path        <http://schema.org/productionCompany> .
+
+

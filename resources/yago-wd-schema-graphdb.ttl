@@ -1,0 +1,4646 @@
+@prefix : <http://www.w3.org/2002/07/owl#> .
+@prefix ns1: <https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example2/compact/5g_devices.rdf#> .
+@prefix Alternative_Term: <http://www.semanticweb.org/hamide/ontologies/2019/3/untitled-ontology-14#Alternative_Term,> .
+@prefix Cibo: <http://almawave.it/ontologies/2020/01/09/Cibo#> .
+@prefix FriOntology: <urn:absolute:FriOntology#> .
+@prefix GConsent: <https://w3id.org/GConsent#> .
+@prefix LConsent: <https://www.datavillage.me/ontologies/LConsent#> .
+@prefix MF: <http://purl.obolibrary.org/obo/MF#> .
+@prefix MO: <http://lapd.pt/myOntology.owl#> .
+@prefix NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon#> .
+@prefix SEG: <http://www.outreach.io/SEG#> .
+@prefix WV: <http://www.wurvoc.org/vocabularies/WV/> .
+@prefix WebSemProject: <http://www.semanticweb.org/ontologies/WebSemProject#> .
+@prefix ace_lexicon: <http://attempto.ifi.uzh.ch/ace_lexicon#> .
+@prefix action: <http://www.estrellaproject.org/lkif-core/action.owl#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix aliexpress: <aliexpress.com:> .
+@prefix aliexpress2: <aliexpress.com:2> .
+@prefix aliexpress3: <aliexpress.com:3> .
+@prefix aliexpress4: <aliexpress.com:3.5> .
+@prefix aliexpress5: <aliexpress.com:4> .
+@prefix arrest: <http://osw2019.com/brichevg/arrest/> .
+@prefix base: <http://www.semanticweb.org/nelson/ontologies/2018/9/pep#> .
+@prefix beautiful: <file:/uploaded/generated/beautiful#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix bio: <http://purl.org/vocab/bio/0.1/> .
+@prefix bp: <http://www.biopax.org/release/biopax-level3.owl#> .
+@prefix brick: <https://brickschema.org/schema/1.1.0/Brick#> .
+@prefix c: <http://s.opencalais.com/1/pred/> .
+@prefix capacity_example: <https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example2/capacity_example.rdf#> .
+@prefix carex: <http://biosemantics.arizona.edu/ontologies/carex#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix cd: <http://www.recshop.fake/cd#> .
+@prefix cdt: <http://w3id.org/lindt/custom_datatypes#> .
+@prefix cellline: <http://www.ebi.ac.uk/cellline/> .
+@prefix central-government: <http://reference.data.gov.uk/def/central-government#> .
+@prefix chebi: <http://purl.obolibrary.org/obo/chebi/> .
+@prefix chebi1: <http://purl.obolibrary.org/obo/chebi#> .
+@prefix chebi4: <http://purl.obolibrary.org/obo/chebi#2> .
+@prefix chebi5: <http://purl.obolibrary.org/obo/chebi#3> .
+@prefix chebi6: <http://purl.obolibrary.org/obo/chebi#1> .
+@prefix cims: <http://iec.ch/TC57/1999/rdf-schema-extensions-19990926#> .
+@prefix cito: <http://purl.org/spar/cito/> .
+@prefix clmat: <http://www.nsmntx.org/2019/10/clothingMaterials#> .
+@prefix conf: <http:conf/> .
+@prefix conn2: <https://aastat.gov.de/connector/conn2/> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix core3: <http://purl.obolibrary.org/obo/core#> .
+@prefix covid-19: <http://www.semanticweb.org/kasun/ontologies/2020/3/covid-19#> .
+@prefix cpu-unit-ext: <https://cntic10.hit.bme.hu/do/network_model/raw/master/ontology/cpu-unit-ext.owl#> .
+@prefix csdo: <http://www.csdo.org/2019/5/csdo#> .
+@prefix ctro: <http://www.semanticweb.org/root/ontologies/2018/6/ctro#> .
+@prefix d: <http://learningsparql.com/ns/data#> .
+@prefix daml: <http://www.daml.org/2001/03/daml+oil#> .
+@prefix dawgt: <http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix dbpediaontology: <http://dbpedia.org/ontology/> .
+@prefix dbpprop: <http://dbpedia.org/property/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix demand: <https://cntic10.hit.bme.hu/do/network_model/raw/master/ontology/demand.owl#> .
+@prefix demands: <https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example2/demands.rdf#> .
+@prefix devices: <https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example2/5g_devices.rdf#> .
+@prefix doid: <http://purl.obolibrary.org/obo/doid#> .
+@prefix dos: <https://mohamed.eldesouki.ca/rdf#> .
+@prefix dto: <http://www.drugtargetontology.org/dto/> .
+@prefix dto1: <http://www.drugtargetontology.org/dto#> .
+@prefix dto_vocabulary_kinase_domain: <http://www.drugtargetontology.org/dto/dto_vocabulary_kinase_domain.owl#> .
+@prefix dto_vocabulary_kinase_domain1: <http://www.drugtargetontology.org/dto/dto_vocabulary_kinase_domain#> .
+@prefix dtype: <http://www.linkedmodel.org/schema/dtype#> .
+@prefix edrive: <http://www.festo.com/edrive#> .
+@prefix efo: <http://www.ebi.ac.uk/efo/> .
+@prefix en: <http://www.enseignement.org#> .
+@prefix epo: <http://data.europa.eu/a4d#> .
+@prefix esadm: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#> .
+@prefix esagm: <http://vocab.ciudadesabiertas.es/def/sector-publico/agenda-municipal#> .
+@prefix escjr: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero#> .
+@prefix esdir: <http://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal#> .
+@prefix esequip: <http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento#> .
+@prefix euvoc: <http://publications.europa.eu/ontology/euvoc#> .
+@prefix ex: <http://example.org/> .
+@prefix exif: <http://ns.adobe.com/exif/1.0/> .
+@prefix family: <http://www.semanticweb.org/mohammad/ontologies/2019/12/family#> .
+@prefix fhkb_chapter_2: <http://mowl-power.cs.man.ac.uk/fhkbtutorial/ontology/fhkb_chapter_2.owl#> .
+@prefix fhkb_chapter_4: <http://mowl-power.cs.man.ac.uk/fhkbtutorial/ontology/fhkb_chapter_4.owl#> .
+@prefix fhkb_chapter_5: <http://mowl-power.cs.man.ac.uk/fhkbtutorial/ontology/fhkb_chapter_5.owl#> .
+@prefix fhkb_chapter_7: <http://mowl-power.cs.man.ac.uk/fhkbtutorial/ontology/fhkb_chapter_7.owl#> .
+@prefix fhkb_chapter_9: <http://mowl-power.cs.man.ac.uk/fhkbtutorial/ontology/fhkb_chapter_9.owl#> .
+@prefix film: <http://www.semprog.com/film#> .
+@prefix fm: <https://www.oscinema.com.sg/week3#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix fno: <http://www.semanticweb.org/developer/ontologies/2020/3/Fake_news_Ontology> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix foo: <http://example.com/foo#> .
+@prefix food: <http://www.w3.org/TR/2003/PR-owl-guide-20031209/food#> .
+@prefix geonames: <http://www.geonames.org/ontology/ontology_v3.1.rdf#> .
+@prefix geos: <http://www.opengis.net/ont/geosparql#> .
+@prefix gist: <https://ontologies.semanticarts.com/gist/> .
+@prefix gml: <http://www.opengis.net/gml> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix go: <http://purl.obolibrary.org/obo/go#> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix greg: <http://www.w3.org/ns/time/gregorian/> .
+@prefix hfp: <http://www.w3.org/2001/XMLSchema-hasFacetAndProperty> .
+@prefix home-activities-ontology: <http://www.semanticweb.org/kass/ontologies/2020/0/home-activities-ontology#> .
+@prefix hp: <http://purl.obolibrary.org/obo/hp#> .
+@prefix hp2: <http://purl.obolibrary.org/obo/hp.owl#> .
+@prefix hsapdv: <http://purl.obolibrary.org/obo/hsapdv#> .
+@prefix http: <http://> .
+@prefix icontact: <http://ontology.eil.utoronto.ca/icontact.owl#> .
+@prefix ids: <https://w3id.org/idsa/core/> .
+@prefix idsc_auth: <https://w3id.org/idsa/code/auth/> .
+@prefix idsc_cert: <https://w3id.org/idsa/code/certification/> .
+@prefix idsc_prot: <https://w3id.org/idsa/protocol/> .
+@prefix ind: <http://manusquare.project.eu/industrial-manusquare#> .
+@prefix insect-anatomy: <http://purl.obolibrary.org/obo/uberon/insect-anatomy#> .
+@prefix inst: <http://manusquare.project.eu/instances-manusquare#/> .
+@prefix interface: <http://www.ebi.ac.uk/swo/interface/> .
+@prefix inventions: <http://www.onto.org/inventions#> .
+@prefix jerm: <http://www.mygrid.org.uk/ontology/JERMOntology#> .
+@prefix kids: <https://ken.baclawski.com/kids#> .
+@prefix km4c: <http://www.disit.org/km4city/schema#> .
+@prefix km4cr: <http://www.disit.org/km4city/resource#> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix lemon: <http://lemon-model.net/lemon#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lib: <http://www.m2.as.u.like/myTerms/> .
+@prefix license: <http://www.ebi.ac.uk/swo/license/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix lvont: <http://lexvo.org/ontology#> .
+@prefix math: <http://www.w3.org/2000/10/swap/math#> .
+@prefix mereo: <http://www.estrellaproject.org/lkif-core/mereology.owl#> .
+@prefix mesh: <https://meshb.nlm.nih.gov/record#> .
+@prefix mf: <http://www.w3.org/2001/sw/DataAccess/tests/test-manifest#> .
+@prefix mfg: <http://www.workingontologist.org/Examples/Chapter3/Product.owl#> .
+@prefix mld: <http://mld.ace.fordham.edu/mld> .
+@prefix mondo: <http://purl.obolibrary.org/obo/mondo#> .
+@prefix nbo: <http://purl.obolibrary.org/obo/nbo.owl#> .
+@prefix ncbitaxon: <http://purl.obolibrary.org/obo/ncbitaxon#> .
+@prefix nci: <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#> .
+@prefix nml: <https://cntic10.hit.bme.hu/do/network_model/raw/master/ontology/nml-base.owl#> .
+@prefix ns0: <http://example.org/inventory#> .
+@prefix ns11: <http://www.w3.org/ns/ma-ont#> .
+@prefix ns8: <http://open.vocab.org/terms/> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix oKIG019UCNY0YUCMakmuV: <http://webprotege.stanford.edu/project/7oKIG019UCNY0YUCMakmuV#> .
+@prefix obda: <https://w3id.org/obda/vocabulary#> .
+@prefix object: <http://www.mistea.supagro.inra.fr/object#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix obo2: <http://purl.obolibrary.org/obo#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix oboInOwl1: <file:/uploaded/generated/www.geneontology.org/formats/oboInOwl#> .
+@prefix ocsw: <http://data.diekb.org/def/ocsw#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix oeev: <http://www.opensilex.org/vocabulary/oeev#> .
+@prefix ogc: <http://www.opengis.net/> .
+@prefix ogcgml: <http://www.opengis.net/ont/gml#> .
+@prefix ogcgsf: <http://www.opengis.net/def/function/geosparql/> .
+@prefix ogcgsr: <http://www.opengis.net/def/rule/geosparql/> .
+@prefix ogcsf: <http://www.opengis.net/ont/sf#> .
+@prefix ogr: <http://ogr.maptools.org/> .
+@prefix olo: <http://purl.org/ontology/olo/core#> .
+@prefix om: <http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/OM4ExtruOnt#> .
+@prefix om-2: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix ombibo: <http://www.wurvoc.org/bibliography/om-2/> .
+@prefix omgeo: <http://www.ontotext.com/owlim/geo#> .
+@prefix ont: <http://www.co-ode.org/ontologies/ont.owl#> .
+@prefix onto: <http://fakesite.org/webcompany.owl#> .
+@prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix open311: <http://ontology.eil.utoronto.ca/open311#> .
+@prefix opla: <http://ontologydesignpatterns.org/opla#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix organization: <http://www.ebi.ac.uk/swo/organization/> .
+@prefix orges: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/organizacion#> .
+@prefix otherOnt: <http://example.org/otherOntologies/families/> .
+@prefix otn: <http://www.pms.ifi.uni-muenchen.de/OTN#> .
+@prefix owl-modeling: <http://www.semanticweb.org/bernhard/ontologies/2019/10/owl-modeling#> .
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix p1: <http://www.owl-ontologies.com/assert.owl#> .
+@prefix parameters: <https://cntic10.hit.bme.hu/do/network_model/raw/master/ontology/parameters.owl#> .
+@prefix part1: <https://im.internationaldataspaces.org/participant/part1> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix patterns: <http://www.co-ode.org/patterns#> .
+@prefix people: <http://www.outreach.io/people#> .
+@prefix person: <http://www.w3.org/ns/person#> .
+@prefix phil: <http://philosurfical.open.ac.uk/ontology/philosurfical.owl#> .
+@prefix pim: <http://www.w3.org/2000/10/swap/pim/contact#> .
+@prefix pizza: <http://lumii.lv/ontologies/pizza.owl#> .
+@prefix place: <http://www.estrellaproject.org/lkif-core/relative-places.owl#> .
+@prefix pr: <http://purl.obolibrary.org/obo/pr#> .
+@prefix premises-connect-topology: <https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example3/ethernet-top/premises-connect-topology.rdf#> .
+@prefix process: <http://www.estrellaproject.org/lkif-core/process.owl#> .
+@prefix product: <http://www.buy.com/rss/module/productV2/> .
+@prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
+@prefix protseq: <http://purl.org/science/protein/bysequence/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/2.1/schema/qudt/> .
+@prefix qudt-unit-1-1: <http://qudt.org/vocab/unit#> .
+@prefix quest: <http://obda.org/quest#> .
+@prefix rd: <https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example2/compact/routed_paths2.rdf#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf1: <http://www.cropontology.org/rdf/> .
+@prefix rdfa: <http://www.w3.org/ns/rdfa#> .
+@prefix rdfdf: <http://www.openlinksw.com/virtrdf-data-formats#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix restaurantontology: <http://example.org/RestaurantOntology.owl#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix role: <http://www.estrellaproject.org/lkif-core/role.owl#> .
+@prefix routed_paths: <https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example2/routed_paths.rdf#> .
+@prefix routing-domain: <https://cntic10.hit.bme.hu/do/network_model/raw/master/ontology/routing-domain.owl#> .
+@prefix ruleml: <http://www.w3.org/2003/11/ruleml#> .
+@prefix sc: <http://purl.org/science/owl/sciencecommons/> .
+@prefix sc1: <https://www.oscinema.com.sg/cinema/Screen1#> .
+@prefix sc2: <https://www.oscinema.com.sg/cinema/Screen2#> .
+@prefix sc3: <https://www.oscinema.com.sg/cinema/Screen3#> .
+@prefix schema: <http://schema.org/> .
+@prefix schor: <https://w3id.org/scholarlydata/role/> .
+@prefix scovo: <http://purl.org/NET/scovo#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix seas: <https://w3id.org/seas/> .
+@prefix semspect: <http://derivo.de/semspect#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix sfn: <http://www.w3.org/ns/sparql#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix shape: <http://lubm.shacl.io/> .
+@prefix sika: <http://ontology.sika.com/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix snap: <http://www.ifomis.org/bfo/1.1/snap#> .
+@prefix sosa: <http://www.w3.org/ns/sosa#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix span: <http://www.ifomis.org/bfo/1.1/span#> .
+@prefix spatial: <http://geovocab.org/spatial#> .
+@prefix spatialDescriptions: <http://publications.europa.eu/ontology/euvoc/spatialDescriptions#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix ssn: <https://www.w3.org/ns/ssn/> .
+@prefix ssn-system: <http://www.w3.org/ns/ssn/systems/> .
+@prefix st: <https://www.oscinema.com.sg/cinema#> .
+@prefix st1: <https://www.oscinema.com.sg/cinema/showtime/slot1#> .
+@prefix st2: <https://www.oscinema.com.sg/cinema/showtime/slot2#> .
+@prefix st3: <https://www.oscinema.com.sg/cinema/showtime/slot3#> .
+@prefix stakeholder: <http://manusquare.project.eu/stakeholders/> .
+@prefix stat: <http://lubm.shacl.stat.io/> .
+@prefix sth1: <https://www.oscinema.com.sg/cinema/Week/theme1/Screen3/slot1#> .
+@prefix sth2: <https://www.oscinema.com.sg/cinema/Week/theme2/Screen3/slot2#> .
+@prefix sth3: <https://www.oscinema.com.sg/cinema/Week/theme3/Screen3/slot3#> .
+@prefix sto: <https://ken.baclawski.com/STO#> .
+@prefix story: <http://www.example.org/story.owl#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix swo: <http://www.ebi.ac.uk/swo/> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix swrlx: <http://www.w3.org/2003/11/swrlx#> .
+@prefix tag: <https://brickschema.org/schema/1.1.0/BrickTag#> .
+@prefix temporalDescriptions: <http://publications.europa.eu/ontology/euvoc/temporalDescriptions#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix terms1: <http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/> .
+@prefix test-rigDemo: <http://www.semanticweb.org/kuegler/ontologies/2017/9/test-rigDemo#> .
+@prefix th1: <https://www.oscinema.com.sg/cinema/Week1/theme1/Screen3#> .
+@prefix th2: <https://www.oscinema.com.sg/cinema/Week1/theme2/Screen3#> .
+@prefix th3: <https://www.oscinema.com.sg/cinema/Week1/theme3/Screen3#> .
+@prefix th4: <https://www.oscinema.com.sg/cinema/Week2/theme1/Screen3#> .
+@prefix th5: <https://www.oscinema.com.sg/cinema/Week2/theme2/Screen3#> .
+@prefix th6: <https://www.oscinema.com.sg/cinema/Week2/theme3/Screen3#> .
+@prefix th7: <https://www.oscinema.com.sg/cinema/Week3/theme1/Screen3#> .
+@prefix th8: <https://www.oscinema.com.sg/cinema/Week3/theme2/Screen3#> .
+@prefix th9: <https://www.oscinema.com.sg/cinema/Week3/theme3/Screen3#> .
+@prefix tim: <tag:imise:tim:vocabulary#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix tm1: <https://www.oscinema.com.sg/cinema/Week1#> .
+@prefix tm2: <https://www.oscinema.com.sg/cinema/Week2#> .
+@prefix tm3: <https://www.oscinema.com.sg/cinema/Week3#> .
+@prefix top: <http://www.estrellaproject.org/lkif-core/lkif-top.owl#> .
+@prefix traffic-topology: <https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example3/ethernet-top/traffic-topology.rdf#> .
+@prefix transport-topology: <https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example3/ethernet-top/transport-topology.rdf#> .
+@prefix transport_network: <https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example2/transport_network.rdf#> .
+@prefix types: <http://psi.egovpt.org/types/> .
+@prefix ub: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#> .
+@prefix ubprop: <http://purl.obolibrary.org/obo/ubprop#> .
+@prefix ufo: <http://onto.fel.cvut.cz/ontologies/ufo/> .
+@prefix uml: <http://www.eclipse.org/uml2/5.0.0/UML> .
+@prefix umls: <http://bioportal.bioontology.org/ontologies/umls/> .
+@prefix uni: <http://www.mydomain.org/uni-ns#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix untitled-ontology-11: <http://www.semanticweb.org/erickantonio/ontologies/2020/0/untitled-ontology-11#> .
+@prefix untitled-ontology-16: <http://www.semanticweb.org/user/ontologies/2020/2/untitled-ontology-16#> .
+@prefix untitled-ontology-186: <http://www.semanticweb.org/kainatansar/ontologies/2020/0/untitled-ontology-186#> .
+@prefix untitled-ontology-2: <http://www.semanticweb.org/x473936/ontologies/2020/0/untitled-ontology-2#> .
+@prefix untitled-ontology-3: <http://www.semanticweb.org/acer/ontologies/2020/3/untitled-ontology-3#> .
+@prefix untitled-ontology-75: <http://www.semanticweb.org/kuegler/ontologies/2017/9/untitled-ontology-75#> .
+@prefix uom: <http://www.opengis.net/def/uom/OGC/1.0/> .
+@prefix usdl-agreement: <http://www.linked-usdl.org/ns/usdl-agreement#> .
+@prefix usdl-br: <http://www.linked-usdl.org/ns/usdl-business-roles#> .
+@prefix usdl-core: <http://www.linked-usdl.org/ns/usdl-core#> .
+@prefix usdl-ir: <http://www.linked-usdl.org/ns/usdl-interaction-roles#> .
+@prefix usdl-it: <http://www.linked-usdl.org/ns/usdl-interaction-types#> .
+@prefix usdl-lr: <http://www.linked-usdl.org/ns/usdl-liability-roles#> .
+@prefix usdl-price: <http://www.linked-usdl.org/ns/usdl-price#> .
+@prefix v0: <http://ethon.consensys.net/v0/> .
+@prefix v4e: <http://bdi.si.ehu.es/bdi/ontologies/extrusion/visualization4ExtruOnt#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix victim: <http://osw2019.com/brichevg/victim/> .
+@prefix vin: <http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine#> .
+@prefix virtcxml: <http://www.openlinksw.com/schemas/virtcxml#> .
+@prefix virtrdf: <http://www.openlinksw.com/schemas/virtrdf#> .
+@prefix visualization4ExtruOnt: <http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/visualization4ExtruOnt#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix voag: <http://voag.linkedmodel.org/voag#> .
+@prefix vocab: <http://what.ever.com/> .
+@prefix vocabulary: <http://www.opensilex.org/vocabulary/oeso#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix w3cgeo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> .
+@prefix webprotege: <http://webprotege.stanford.edu/> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix www: <http://www.filkom.ub.ac.id#> .
+@prefix x: <adobe:ns:meta/> .
+@prefix xf: <http://www.w3.org/2004/07/xpath-functions> .
+@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix xlink: <http://www.w3.org/1999/xlink> .
+@prefix xmi: <http://www.omg.org/XMI> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance> .
+@prefix xsl10: <http://www.w3.org/XSL/Transform/1.0> .
+@prefix xsl1999: <http://www.w3.org/1999/XSL/Transform> .
+@prefix xslwd: <http://www.w3.org/TR/WD-xsl> .
+@prefix xsp: <http://www.owl-ontologies.com/2005/08/07/xsp.owl#> .
+@prefix yago: <http://dbpedia.org/class/yago/> .
+@prefix zoo: <http://example.org/zoo/> .
+
+schema:Chapter a :Class .
+
+schema:CreativeWork a :Class .
+
+schema:PoliceStation a :Class .
+
+schema:EmergencyService a :Class .
+
+schema:CivicStructure a :Class .
+
+schema:SoftwareApplication a :Class .
+
+schema:Campground a :Class .
+
+schema:LodgingBusiness a :Class .
+
+schema:Atlas a :Class .
+
+schema:PhysicalExam a :Class .
+
+schema:MedicalProcedure a :Class .
+
+schema:MedicalEntity a :Class .
+
+schema:Episode a :Class .
+
+schema:HealthClub a :Class .
+
+schema:SportsActivityLocation a :Class .
+
+schema:HealthAndBeautyBusiness a :Class .
+
+schema:SheetMusic a :Class .
+
+schema:SocialMediaPosting a :Class .
+
+schema:Article a :Class .
+
+schema:Ligament a :Class .
+
+schema:AnatomicalStructure a :Class .
+
+schema:Church a :Class .
+
+schema:PlaceOfWorship a :Class .
+
+schema:TheaterGroup a :Class .
+
+schema:PerformingGroup a :Class .
+
+schema:MedicalGuideline a :Class .
+
+schema:Language a :Class .
+
+schema:Thing a :Class .
+
+schema:Drug a :Class .
+
+schema:Substance a :Class .
+
+schema:TelevisionChannel a :Class .
+
+schema:BroadcastChannel a :Class .
+
+schema:DaySpa a :Class .
+
+schema:PostOffice a :Class .
+
+schema:GovernmentOffice a :Class .
+
+schema:SportsEvent a :Class .
+
+schema:Event a :Class .
+
+schema:Continent a :Class .
+
+schema:Landform a :Class .
+
+schema:TVSeries a :Class .
+
+schema:CreativeWorkSeries a :Class .
+
+schema:ChildCare a :Class .
+
+schema:LocalBusiness a :Class .
+
+schema:Crematorium a :Class .
+
+schema:FireStation a :Class .
+
+schema:Organization a :Class .
+
+schema:Person a :Class .
+
+schema:ArtGallery a :Class .
+
+schema:EntertainmentBusiness a :Class .
+
+schema:AmusementPark a :Class .
+
+schema:Hospital a :Class .
+
+schema:MedicalOrganization a :Class .
+
+schema:Photograph a :Class .
+
+schema:Vein a :Class .
+
+schema:NightClub a :Class .
+
+schema:Reservoir a :Class .
+
+schema:BodyOfWater a :Class .
+
+schema:PublicToilet a :Class .
+
+schema:MedicalClinic a :Class .
+
+schema:MedicalBusiness a :Class .
+
+schema:Collection a :Class .
+
+schema:TrainStation a :Class .
+
+schema:GovernmentOrganization a :Class .
+
+schema:NailSalon a :Class .
+
+schema:RiverBodyOfWater a :Class .
+
+schema:MiddleSchool a :Class .
+
+schema:EducationalOrganization a :Class .
+
+schema:Brewery a :Class .
+
+schema:FoodEstablishment a :Class .
+
+schema:MusicComposition a :Class .
+
+schema:MedicalCondition a :Class .
+
+schema:House a :Class .
+
+schema:Accommodation a :Class .
+
+schema:PublicationVolume a :Class .
+
+schema:MusicGroup a :Class .
+
+schema:CollegeOrUniversity a :Class .
+
+schema:BroadcastService a :Class .
+
+schema:Service a :Class .
+
+schema:GeoCoordinates a :Class .
+
+schema:Course a :Class .
+
+schema:ComputerLanguage a :Class .
+
+schema:FinancialService a :Class .
+
+schema:Place a :Class .
+
+schema:Preschool a :Class .
+
+schema:RadioSeries a :Class .
+
+schema:ElementarySchool a :Class .
+
+schema:IceCreamShop a :Class .
+
+schema:BusStop a :Class .
+
+<http://bioschemas.org/Gene> a :Class .
+
+<http://bioschemas.org/BioChemEntity> a :Class .
+
+schema:BlogPosting a :Class .
+
+schema:AutoRental a :Class .
+
+schema:AutomotiveBusiness a :Class .
+
+schema:MovieSeries a :Class .
+
+schema:Report a :Class .
+
+schema:TennisComplex a :Class .
+
+schema:SubwayStation a :Class .
+
+schema:MedicalDevice a :Class .
+
+schema:StadiumOrArena a :Class .
+
+schema:Periodical a :Class .
+
+schema:State a :Class .
+
+schema:AdministrativeArea a :Class .
+
+schema:Pond a :Class .
+
+schema:CreativeWorkSeason a :Class .
+
+schema:ShoeStore a :Class .
+
+schema:Store a :Class .
+
+schema:Beach a :Class .
+
+schema:Courthouse a :Class .
+
+schema:GovernmentBuilding a :Class .
+
+schema:BedAndBreakfast a :Class .
+
+schema:NewsArticle a :Class .
+
+<http://bioschemas.org/Taxon> a :Class .
+
+schema:Joint a :Class .
+
+schema:Casino a :Class .
+
+schema:DataCatalog a :Class .
+
+schema:Festival a :Class .
+
+schema:OutletStore a :Class .
+
+schema:Country a :Class .
+
+schema:Park a :Class .
+
+schema:Library a :Class .
+
+schema:NGO a :Class .
+
+schema:Hotel a :Class .
+
+schema:SportsOrganization a :Class .
+
+schema:Resort a :Class .
+
+schema:Embassy a :Class .
+
+schema:TVEpisode a :Class .
+
+schema:Mountain a :Class .
+
+schema:BloodTest a :Class .
+
+schema:MedicalTest a :Class .
+
+schema:RadiationTherapy a :Class .
+
+schema:MedicalTherapy a :Class .
+
+schema:CafeOrCoffeeShop a :Class .
+
+schema:Bridge a :Class .
+
+schema:GroceryStore a :Class .
+
+schema:TouristAttraction a :Class .
+
+schema:SurgicalProcedure a :Class .
+
+schema:Vehicle a :Class .
+
+schema:Product a :Class .
+
+schema:Waterfall a :Class .
+
+schema:Airport a :Class .
+
+schema:QuantitativeValue a :Class .
+
+schema:TVSeason a :Class .
+
+schema:Car a :Class .
+
+schema:CityHall a :Class .
+
+schema:TherapeuticProcedure a :Class .
+
+schema:DiagnosticProcedure a :Class .
+
+schema:WorkersUnion a :Class .
+
+schema:DanceGroup a :Class .
+
+schema:SelfStorage a :Class .
+
+schema:Muscle a :Class .
+
+schema:BusOrCoach a :Class .
+
+schema:BookStore a :Class .
+
+schema:CatholicChurch a :Class .
+
+schema:Movie a :Class .
+
+schema:BookSeries a :Class .
+
+schema:ArchiveOrganization a :Class .
+
+schema:SeaBodyOfWater a :Class .
+
+schema:Drawing a :Class .
+
+schema:Nerve a :Class .
+
+schema:ImageObject a :Class .
+
+schema:MediaObject a :Class .
+
+schema:TelevisionStation a :Class .
+
+schema:Sculpture a :Class .
+
+schema:BowlingAlley a :Class .
+
+schema:Brand a :Class .
+
+schema:LakeBodyOfWater a :Class .
+
+schema:Motorcycle a :Class .
+
+schema:GolfCourse a :Class .
+
+schema:Museum a :Class .
+
+schema:Painting a :Class .
+
+schema:LiquorStore a :Class .
+
+schema:Dataset a :Class .
+
+schema:Artery a :Class .
+
+schema:Canal a :Class .
+
+schema:VisualArtwork a :Class .
+
+schema:Hostel a :Class .
+
+schema:Winery a :Class .
+
+schema:Synagogue a :Class .
+
+schema:PublicSwimmingPool a :Class .
+
+schema:MedicalSymptom a :Class .
+
+schema:MedicalSignOrSymptom a :Class .
+
+schema:ShoppingCenter a :Class .
+
+schema:HinduTemple a :Class .
+
+schema:Cemetery a :Class .
+
+schema:Mosque a :Class .
+
+schema:TouristInformationCenter a :Class .
+
+schema:Play a :Class .
+
+schema:Rating a :Class .
+
+schema:TravelAgency a :Class .
+
+schema:Manuscript a :Class .
+
+schema:WebPage a :Class .
+
+schema:Game a :Class .
+
+schema:AnimalShelter a :Class .
+
+schema:ProductModel a :Class .
+
+schema:RadioChannel a :Class .
+
+schema:FinancialProduct a :Class .
+
+schema:MusicAlbum a :Class .
+
+schema:MusicPlaylist a :Class .
+
+schema:Occupation a :Class .
+
+schema:RecyclingCenter a :Class .
+
+schema:Pharmacy a :Class .
+
+schema:SportsTeam a :Class .
+
+schema:MovieTheater a :Class .
+
+schema:Newspaper a :Class .
+
+schema:PawnShop a :Class .
+
+schema:SkiResort a :Class .
+
+schema:Bakery a :Class .
+
+schema:BarOrPub a :Class .
+
+schema:ParkingFacility a :Class .
+
+schema:MedicalSign a :Class .
+
+schema:ComicStory a :Class .
+
+schema:Distillery a :Class .
+
+schema:Bone a :Class .
+
+schema:School a :Class .
+
+schema:DefenceEstablishment a :Class .
+
+schema:EventSeries a :Class .
+
+schema:Blog a :Class .
+
+schema:BusStation a :Class .
+
+schema:Legislation a :Class .
+
+schema:PodcastSeries a :Class .
+
+schema:Airline a :Class .
+
+schema:WebSite a :Class .
+
+schema:TattooParlor a :Class .
+
+schema:VideoGameSeries a :Class .
+
+schema:BuddhistTemple a :Class .
+
+schema:PublicationIssue a :Class .
+
+schema:Poster a :Class .
+
+schema:DrugLegalStatus a :Class .
+
+schema:OceanBodyOfWater a :Class .
+
+schema:AudioObject a :Class .
+
+schema:LandmarksOrHistoricalBuildings a :Class .
+
+schema:PerformingArtsTheater a :Class .
+
+<http://bioschemas.org/ChemicalSubstance> a :Class .
+
+schema:ComedyClub a :Class .
+
+schema:RadioStation a :Class .
+
+schema:Restaurant a :Class .
+
+schema:City a :Class .
+
+schema:Apartment a :Class .
+
+schema:MobileApplication a :Class .
+
+schema:EmploymentAgency a :Class .
+
+schema:BeautySalon a :Class .
+
+schema:Thesis a :Class .
+
+schema:Aquarium a :Class .
+
+schema:Volcano a :Class .
+
+schema:MusicVenue a :Class .
+
+schema:GasStation a :Class .
+
+schema:Corporation a :Class .
+
+schema:BankOrCreditUnion a :Class .
+
+schema:MedicalSpecialty a :Class .
+
+<http://bioschemas.org/Protein> a :Class .
+
+<http://bioschemas.org/MolecularEntity> a :Class .
+
+schema:Book a :Class .
+
+schema:VideoGame a :Class .
+
+schema:Motel a :Class .
+
+schema:ScholarlyArticle a :Class .
+
+schema:Map a :Class .
+
+schema:MusicRelease a :Class .
+
+schema:PetStore a :Class .
+
+schema:VideoObject a :Class .
+
+schema:InfectiousDisease a :Class .
+
+schema:ComicSeries a :Class .
+
+schema:ToyStore a :Class .
+
+schema:Optician a :Class .
+
+schema:Playground a :Class .
+
+schema:EventVenue a :Class .
+
+schema:Zoo a :Class .
+
+schema:copyrightHolder a :ObjectProperty .
+
+schema:material a :ObjectProperty .
+
+schema:productionCompany a :ObjectProperty .
+
+schema:servesCuisine a :ObjectProperty .
+
+schema:brand a :ObjectProperty .
+
+schema:countryOfOrigin a :ObjectProperty .
+
+schema:latitude a :DatatypeProperty, :FunctionalProperty .
+
+schema:translator a :ObjectProperty .
+
+schema:sponsor a :ObjectProperty .
+
+schema:callSign a :DatatypeProperty .
+
+schema:editor a :ObjectProperty .
+
+schema:musicReleaseFormat a :ObjectProperty .
+
+schema:award a :ObjectProperty .
+
+schema:icaoCode a :DatatypeProperty, :FunctionalProperty .
+
+schema:license a :ObjectProperty .
+
+schema:recordLabel a :ObjectProperty .
+
+schema:director a :ObjectProperty .
+
+schema:numberOfSeasons a :DatatypeProperty, :FunctionalProperty .
+
+schema:gtin a :DatatypeProperty .
+
+schema:logo a :ObjectProperty .
+
+schema:image a :ObjectProperty .
+
+schema:musicBy a :ObjectProperty .
+
+schema:alumniOf a :ObjectProperty .
+
+schema:worksFor a :ObjectProperty .
+
+schema:isPartOf a :ObjectProperty .
+
+schema:hasPart a :ObjectProperty .
+
+schema:actor a :ObjectProperty .
+
+schema:contentRating a :ObjectProperty .
+
+schema:duns a :DatatypeProperty, :FunctionalProperty .
+
+schema:composer a :ObjectProperty .
+
+schema:position a :DatatypeProperty, :FunctionalProperty .
+
+schema:numberOfEpisodes a :DatatypeProperty, :FunctionalProperty .
+
+schema:minValue a :DatatypeProperty, :FunctionalProperty .
+
+schema:legalStatus a :ObjectProperty .
+
+schema:spouse a :ObjectProperty .
+
+schema:possibleTreatment a :ObjectProperty .
+
+schema:inLanguage a :ObjectProperty .
+
+<http://bioschemas.org/isInvolvedInBiologicalProcess> a :ObjectProperty .
+
+schema:sameAs a :DatatypeProperty .
+
+schema:superEvent a :ObjectProperty .
+
+schema:subEvent a :ObjectProperty .
+
+schema:sport a :ObjectProperty .
+
+schema:issn a :DatatypeProperty, :FunctionalProperty .
+
+schema:operatingSystem a :ObjectProperty .
+
+schema:exampleOfWork a :ObjectProperty .
+
+schema:workExample a :ObjectProperty .
+
+schema:width a :FunctionalProperty, :ObjectProperty .
+
+schema:about a :ObjectProperty .
+
+schema:connectedTo a :ObjectProperty .
+
+schema:deathDate a :DatatypeProperty, :FunctionalProperty .
+
+schema:nationality a :ObjectProperty .
+
+schema:height a :FunctionalProperty, :ObjectProperty .
+
+schema:affiliation a :ObjectProperty .
+
+schema:memberOf a :ObjectProperty .
+
+schema:parentOrganization a :ObjectProperty .
+
+schema:subOrganization a :ObjectProperty .
+
+<http://bioschemas.org/inChIKey> a :DatatypeProperty, :FunctionalProperty .
+
+schema:weight a :FunctionalProperty, :ObjectProperty .
+
+schema:pagination a :DatatypeProperty .
+
+schema:numberOfPages a :DatatypeProperty, :FunctionalProperty .
+
+schema:endDate a :DatatypeProperty, :FunctionalProperty .
+
+schema:containsPlace a :ObjectProperty .
+
+schema:containedInPlace a :ObjectProperty .
+
+schema:faxNumber a :DatatypeProperty .
+
+schema:byArtist a :ObjectProperty .
+
+schema:contributor a :ObjectProperty .
+
+schema:contentLocation a :ObjectProperty .
+
+schema:parent a :ObjectProperty .
+
+schema:familyName a :ObjectProperty .
+
+schema:longitude a :DatatypeProperty, :FunctionalProperty .
+
+schema:geo a :FunctionalProperty, :ObjectProperty .
+
+<http://bioschemas.org/smiles> a :DatatypeProperty .
+
+schema:genre a :ObjectProperty .
+
+<http://bioschemas.org/encodesBioChemEntity> a :ObjectProperty .
+
+<http://bioschemas.org/isEncodedByBioChemEntity> a :ObjectProperty .
+
+schema:signOrSymptom a :ObjectProperty .
+
+schema:givenName a :ObjectProperty .
+
+schema:homeLocation a :ObjectProperty .
+
+schema:location a :ObjectProperty .
+
+schema:birthPlace a :FunctionalProperty, :ObjectProperty .
+
+schema:iataCode a :DatatypeProperty, :FunctionalProperty .
+
+schema:unitCode a :FunctionalProperty, :ObjectProperty .
+
+schema:depth a :ObjectProperty .
+
+schema:volumeNumber a :DatatypeProperty .
+
+schema:url a :DatatypeProperty, :FunctionalProperty .
+
+schema:startDate a :DatatypeProperty, :FunctionalProperty .
+
+schema:duration a :DatatypeProperty .
+
+schema:iswcCode a :DatatypeProperty, :FunctionalProperty .
+
+schema:telephone a :DatatypeProperty .
+
+schema:value a :DatatypeProperty, :FunctionalProperty .
+
+schema:organizer a :ObjectProperty .
+
+schema:competitor a :ObjectProperty .
+
+schema:knowsLanguage a :ObjectProperty .
+
+<http://bioschemas.org/isLocatedInSubcellularLocation> a :ObjectProperty .
+
+schema:partOfSeries a :ObjectProperty .
+
+schema:issueNumber a :DatatypeProperty .
+
+schema:netWorth a :ObjectProperty .
+
+schema:encodingFormat a :DatatypeProperty, :FunctionalProperty .
+
+schema:locationCreated a :ObjectProperty .
+
+schema:author a :ObjectProperty .
+
+<http://bioschemas.org/parentTaxon> a :ObjectProperty .
+
+schema:creator a :ObjectProperty .
+
+schema:hasOccupation a :ObjectProperty .
+
+schema:publisher a :ObjectProperty .
+
+schema:honorificPrefix a :ObjectProperty .
+
+<http://bioschemas.org/molecularFormula> a :DatatypeProperty, :FunctionalProperty .
+
+schema:isbn a :DatatypeProperty, :FunctionalProperty .
+
+<http://bioschemas.org/taxonRank> a :FunctionalProperty, :ObjectProperty .
+
+schema:birthDate a :DatatypeProperty, :FunctionalProperty .
+
+schema:gender a :FunctionalProperty, :ObjectProperty .
+
+schema:children a :ObjectProperty .
+
+schema:maxValue a :DatatypeProperty, :FunctionalProperty .
+
+schema:producer a :ObjectProperty .
+
+schema:alternateName a :DatatypeProperty .
+
+schema:foundingDate a :DatatypeProperty, :FunctionalProperty .
+
+schema:founder a :ObjectProperty .
+
+schema:datePublished a :DatatypeProperty, :FunctionalProperty .
+
+schema:broadcastChannelId a :DatatypeProperty .
+
+schema:dateCreated a :DatatypeProperty, :FunctionalProperty .
+
+schema:owns a :ObjectProperty .
+
+schema:dissolutionDate a :DatatypeProperty, :FunctionalProperty .
+
+schema:releaseOf a :ObjectProperty .
+
+schema:leiCode a :DatatypeProperty, :FunctionalProperty;
+  rdfs:subPropertyOf schema:identifier .
+
+schema:isBasedOn a :ObjectProperty .
+
+schema:deathPlace a :FunctionalProperty, :ObjectProperty .
+
+schema:riskFactor a :ObjectProperty .
+
+schema:colorist a :ObjectProperty .
+
+schema:character a :ObjectProperty .
+
+schema:foundingLocation a :ObjectProperty .
+
+schema:elevation a :ObjectProperty .
+
+<http://bioschemas.org/expressedIn> a :ObjectProperty .
+
+schema:numberOfEmployees a :ObjectProperty .
+
+<http://bioschemas.org/hasMolecularFunction> a :ObjectProperty .
+
+schema:relevantSpecialty a :ObjectProperty .
+
+<http://bioschemas.org/inChI> a :DatatypeProperty, :FunctionalProperty .
+
+schema:lyricist a :ObjectProperty .
+
+schema:provider a :ObjectProperty .
+
+schema:citation a :ObjectProperty .
+
+schema:partOfSeason a :FunctionalProperty, :ObjectProperty;
+  rdfs:subPropertyOf schema:isPartOf .
+
+<http://bioschemas.org/bioChemInteraction> a :ObjectProperty .
+
+schema:illustrator a :ObjectProperty .
+
+schema:callSign rdfs:subPropertyOf schema:identifier .
+
+schema:gtin rdfs:subPropertyOf schema:identifier .
+
+schema:logo rdfs:subPropertyOf schema:image .
+
+schema:duns rdfs:subPropertyOf schema:identifier .
+
+schema:issn rdfs:subPropertyOf schema:identifier .
+
+schema:affiliation rdfs:subPropertyOf schema:memberOf .
+
+schema:homeLocation rdfs:subPropertyOf schema:location .
+
+schema:volumeNumber rdfs:subPropertyOf schema:position .
+
+schema:partOfSeries rdfs:subPropertyOf schema:isPartOf .
+
+schema:issueNumber rdfs:subPropertyOf schema:position .
+
+schema:isbn rdfs:subPropertyOf schema:identifier .
+
+schema:Chapter rdfs:subClassOf schema:CreativeWork .
+
+schema:CreativeWork rdfs:subClassOf schema:Thing .
+
+schema:PoliceStation rdfs:subClassOf schema:CivicStructure, schema:EmergencyService .
+
+schema:EmergencyService rdfs:subClassOf schema:LocalBusiness .
+
+schema:CivicStructure rdfs:subClassOf schema:Place .
+
+schema:SoftwareApplication rdfs:subClassOf schema:CreativeWork .
+
+schema:Campground rdfs:subClassOf schema:CivicStructure, schema:LodgingBusiness .
+
+schema:LodgingBusiness rdfs:subClassOf schema:LocalBusiness .
+
+schema:Atlas rdfs:subClassOf schema:CreativeWork .
+
+schema:PhysicalExam rdfs:subClassOf schema:MedicalEntity, schema:MedicalProcedure .
+
+schema:MedicalProcedure rdfs:subClassOf schema:MedicalEntity .
+
+schema:MedicalEntity rdfs:subClassOf schema:Thing .
+
+schema:Episode rdfs:subClassOf schema:CreativeWork .
+
+schema:HealthClub rdfs:subClassOf schema:HealthAndBeautyBusiness, schema:SportsActivityLocation .
+
+schema:SportsActivityLocation rdfs:subClassOf schema:LocalBusiness .
+
+schema:HealthAndBeautyBusiness rdfs:subClassOf schema:LocalBusiness .
+
+schema:SheetMusic rdfs:subClassOf schema:CreativeWork .
+
+schema:SocialMediaPosting rdfs:subClassOf schema:Article .
+
+schema:Article rdfs:subClassOf schema:CreativeWork .
+
+schema:Ligament rdfs:subClassOf schema:AnatomicalStructure .
+
+schema:AnatomicalStructure rdfs:subClassOf schema:MedicalEntity .
+
+schema:Church rdfs:subClassOf schema:PlaceOfWorship .
+
+schema:PlaceOfWorship rdfs:subClassOf schema:CivicStructure .
+
+schema:TheaterGroup rdfs:subClassOf schema:PerformingGroup .
+
+schema:PerformingGroup rdfs:subClassOf schema:Organization .
+
+schema:MedicalGuideline rdfs:subClassOf schema:MedicalEntity .
+
+schema:Language rdfs:subClassOf schema:Thing .
+
+schema:Drug rdfs:subClassOf schema:Substance .
+
+schema:Substance rdfs:subClassOf schema:MedicalEntity .
+
+schema:TelevisionChannel rdfs:subClassOf schema:BroadcastChannel .
+
+schema:BroadcastChannel rdfs:subClassOf schema:Thing .
+
+schema:DaySpa rdfs:subClassOf schema:HealthAndBeautyBusiness .
+
+schema:PostOffice rdfs:subClassOf schema:GovernmentOffice .
+
+schema:GovernmentOffice rdfs:subClassOf schema:LocalBusiness .
+
+schema:SportsEvent rdfs:subClassOf schema:Event .
+
+schema:Event rdfs:subClassOf schema:Thing .
+
+schema:Continent rdfs:subClassOf schema:Landform .
+
+schema:Landform rdfs:subClassOf schema:Place .
+
+schema:TVSeries rdfs:subClassOf schema:CreativeWork, schema:CreativeWorkSeries .
+
+schema:CreativeWorkSeries rdfs:subClassOf schema:CreativeWork .
+
+schema:ChildCare rdfs:subClassOf schema:LocalBusiness .
+
+schema:LocalBusiness rdfs:subClassOf schema:Organization, schema:Place .
+
+schema:Crematorium rdfs:subClassOf schema:CivicStructure .
+
+schema:FireStation rdfs:subClassOf schema:CivicStructure, schema:EmergencyService .
+
+schema:Organization rdfs:subClassOf schema:Thing .
+
+schema:Person rdfs:subClassOf schema:Thing .
+
+schema:ArtGallery rdfs:subClassOf schema:EntertainmentBusiness .
+
+schema:EntertainmentBusiness rdfs:subClassOf schema:LocalBusiness .
+
+schema:AmusementPark rdfs:subClassOf schema:EntertainmentBusiness .
+
+schema:Hospital rdfs:subClassOf schema:CivicStructure, schema:EmergencyService, schema:MedicalOrganization .
+
+schema:MedicalOrganization rdfs:subClassOf schema:Organization .
+
+schema:Photograph rdfs:subClassOf schema:CreativeWork .
+
+schema:Vein rdfs:subClassOf schema:Vessel .
+
+schema:NightClub rdfs:subClassOf schema:EntertainmentBusiness .
+
+schema:Reservoir rdfs:subClassOf schema:BodyOfWater .
+
+schema:BodyOfWater rdfs:subClassOf schema:Landform .
+
+schema:PublicToilet rdfs:subClassOf schema:CivicStructure .
+
+schema:MedicalClinic rdfs:subClassOf schema:MedicalBusiness, schema:MedicalOrganization .
+
+schema:MedicalBusiness rdfs:subClassOf schema:LocalBusiness .
+
+schema:Collection rdfs:subClassOf schema:CreativeWork .
+
+schema:TrainStation rdfs:subClassOf schema:CivicStructure .
+
+schema:GovernmentOrganization rdfs:subClassOf schema:Organization .
+
+schema:NailSalon rdfs:subClassOf schema:HealthAndBeautyBusiness .
+
+schema:RiverBodyOfWater rdfs:subClassOf schema:BodyOfWater .
+
+schema:MiddleSchool rdfs:subClassOf schema:EducationalOrganization .
+
+schema:EducationalOrganization rdfs:subClassOf schema:Organization .
+
+schema:Brewery rdfs:subClassOf schema:FoodEstablishment .
+
+schema:FoodEstablishment rdfs:subClassOf schema:LocalBusiness .
+
+schema:MusicComposition rdfs:subClassOf schema:CreativeWork .
+
+schema:MedicalCondition rdfs:subClassOf schema:MedicalEntity .
+
+schema:House rdfs:subClassOf schema:Accommodation .
+
+schema:Accommodation rdfs:subClassOf schema:Place .
+
+schema:PublicationVolume rdfs:subClassOf schema:CreativeWork .
+
+schema:MusicGroup rdfs:subClassOf schema:PerformingGroup .
+
+schema:CollegeOrUniversity rdfs:subClassOf schema:EducationalOrganization .
+
+schema:BroadcastService rdfs:subClassOf schema:Service .
+
+schema:Service rdfs:subClassOf schema:Thing .
+
+schema:Course rdfs:subClassOf schema:CreativeWork .
+
+schema:ComputerLanguage rdfs:subClassOf schema:Thing .
+
+schema:FinancialService rdfs:subClassOf schema:LocalBusiness .
+
+schema:Place rdfs:subClassOf schema:Thing .
+
+schema:Preschool rdfs:subClassOf schema:EducationalOrganization .
+
+schema:RadioSeries rdfs:subClassOf schema:CreativeWorkSeries .
+
+schema:ElementarySchool rdfs:subClassOf schema:EducationalOrganization .
+
+schema:IceCreamShop rdfs:subClassOf schema:FoodEstablishment .
+
+schema:BusStop rdfs:subClassOf schema:CivicStructure .
+
+<http://bioschemas.org/Gene> rdfs:subClassOf <http://bioschemas.org/BioChemEntity> .
+
+<http://bioschemas.org/BioChemEntity> rdfs:subClassOf schema:Thing .
+
+schema:BlogPosting rdfs:subClassOf schema:SocialMediaPosting .
+
+schema:AutoRental rdfs:subClassOf schema:AutomotiveBusiness .
+
+schema:AutomotiveBusiness rdfs:subClassOf schema:LocalBusiness .
+
+schema:MovieSeries rdfs:subClassOf schema:CreativeWorkSeries .
+
+schema:Report rdfs:subClassOf schema:Article .
+
+schema:TennisComplex rdfs:subClassOf schema:SportsActivityLocation .
+
+schema:SubwayStation rdfs:subClassOf schema:CivicStructure .
+
+schema:MedicalDevice rdfs:subClassOf schema:MedicalEntity .
+
+schema:StadiumOrArena rdfs:subClassOf schema:CivicStructure, schema:SportsActivityLocation .
+
+schema:Periodical rdfs:subClassOf schema:CreativeWorkSeries .
+
+schema:State rdfs:subClassOf schema:AdministrativeArea .
+
+schema:AdministrativeArea rdfs:subClassOf schema:Place .
+
+schema:Pond rdfs:subClassOf schema:BodyOfWater .
+
+schema:CreativeWorkSeason rdfs:subClassOf schema:CreativeWork .
+
+schema:ShoeStore rdfs:subClassOf schema:Store .
+
+schema:Store rdfs:subClassOf schema:LocalBusiness .
+
+schema:Beach rdfs:subClassOf schema:CivicStructure .
+
+schema:Courthouse rdfs:subClassOf schema:GovernmentBuilding .
+
+schema:GovernmentBuilding rdfs:subClassOf schema:CivicStructure .
+
+schema:BedAndBreakfast rdfs:subClassOf schema:LodgingBusiness .
+
+schema:NewsArticle rdfs:subClassOf schema:Article .
+
+<http://bioschemas.org/Taxon> rdfs:subClassOf schema:Thing .
+
+schema:Joint rdfs:subClassOf schema:AnatomicalStructure .
+
+schema:Casino rdfs:subClassOf schema:EntertainmentBusiness .
+
+schema:DataCatalog rdfs:subClassOf schema:CreativeWork .
+
+schema:Festival rdfs:subClassOf schema:Event .
+
+schema:OutletStore rdfs:subClassOf schema:Store .
+
+schema:Country rdfs:subClassOf schema:AdministrativeArea .
+
+schema:Park rdfs:subClassOf schema:CivicStructure .
+
+schema:Library rdfs:subClassOf schema:LocalBusiness .
+
+schema:NGO rdfs:subClassOf schema:Organization .
+
+schema:Hotel rdfs:subClassOf schema:LodgingBusiness .
+
+schema:SportsOrganization rdfs:subClassOf schema:Organization .
+
+schema:Resort rdfs:subClassOf schema:LodgingBusiness .
+
+schema:Embassy rdfs:subClassOf schema:GovernmentBuilding .
+
+schema:TVEpisode rdfs:subClassOf schema:Episode .
+
+schema:Mountain rdfs:subClassOf schema:Landform .
+
+schema:BloodTest rdfs:subClassOf schema:MedicalTest .
+
+schema:MedicalTest rdfs:subClassOf schema:MedicalEntity .
+
+schema:RadiationTherapy rdfs:subClassOf schema:MedicalTherapy .
+
+schema:MedicalTherapy rdfs:subClassOf schema:TherapeuticProcedure .
+
+schema:CafeOrCoffeeShop rdfs:subClassOf schema:FoodEstablishment .
+
+schema:Bridge rdfs:subClassOf schema:CivicStructure .
+
+schema:GroceryStore rdfs:subClassOf schema:Store .
+
+schema:TouristAttraction rdfs:subClassOf schema:Place .
+
+schema:SurgicalProcedure rdfs:subClassOf schema:MedicalProcedure .
+
+schema:Vehicle rdfs:subClassOf schema:Product .
+
+schema:Product rdfs:subClassOf schema:Thing .
+
+schema:Waterfall rdfs:subClassOf schema:BodyOfWater .
+
+schema:Airport rdfs:subClassOf schema:CivicStructure .
+
+schema:TVSeason rdfs:subClassOf schema:CreativeWork, schema:CreativeWorkSeason .
+
+schema:Car rdfs:subClassOf schema:Vehicle .
+
+schema:CityHall rdfs:subClassOf schema:GovernmentBuilding .
+
+schema:TherapeuticProcedure rdfs:subClassOf schema:MedicalProcedure .
+
+schema:DiagnosticProcedure rdfs:subClassOf schema:MedicalProcedure .
+
+schema:WorkersUnion rdfs:subClassOf schema:Organization .
+
+schema:DanceGroup rdfs:subClassOf schema:PerformingGroup .
+
+schema:SelfStorage rdfs:subClassOf schema:LocalBusiness .
+
+schema:Muscle rdfs:subClassOf schema:AnatomicalStructure .
+
+schema:BusOrCoach rdfs:subClassOf schema:Vehicle .
+
+schema:BookStore rdfs:subClassOf schema:Store .
+
+schema:CatholicChurch rdfs:subClassOf schema:Church .
+
+schema:Movie rdfs:subClassOf schema:CreativeWork .
+
+schema:BookSeries rdfs:subClassOf schema:CreativeWorkSeries .
+
+schema:ArchiveOrganization rdfs:subClassOf schema:LocalBusiness .
+
+schema:SeaBodyOfWater rdfs:subClassOf schema:BodyOfWater .
+
+schema:Drawing rdfs:subClassOf schema:CreativeWork .
+
+schema:Nerve rdfs:subClassOf schema:AnatomicalStructure .
+
+schema:ImageObject rdfs:subClassOf schema:MediaObject .
+
+schema:MediaObject rdfs:subClassOf schema:CreativeWork .
+
+schema:TelevisionStation rdfs:subClassOf schema:LocalBusiness .
+
+schema:Sculpture rdfs:subClassOf schema:CreativeWork .
+
+schema:BowlingAlley rdfs:subClassOf schema:SportsActivityLocation .
+
+schema:Brand rdfs:subClassOf schema:Thing .
+
+schema:LakeBodyOfWater rdfs:subClassOf schema:BodyOfWater .
+
+schema:Motorcycle rdfs:subClassOf schema:Vehicle .
+
+schema:GolfCourse rdfs:subClassOf schema:SportsActivityLocation .
+
+schema:Museum rdfs:subClassOf schema:CivicStructure .
+
+schema:Painting rdfs:subClassOf schema:CreativeWork .
+
+schema:LiquorStore rdfs:subClassOf schema:Store .
+
+schema:Dataset rdfs:subClassOf schema:CreativeWork .
+
+schema:Artery rdfs:subClassOf schema:Vessel .
+
+schema:Canal rdfs:subClassOf schema:BodyOfWater .
+
+schema:VisualArtwork rdfs:subClassOf schema:CreativeWork .
+
+schema:Hostel rdfs:subClassOf schema:LodgingBusiness .
+
+schema:Winery rdfs:subClassOf schema:FoodEstablishment .
+
+schema:Synagogue rdfs:subClassOf schema:PlaceOfWorship .
+
+schema:PublicSwimmingPool rdfs:subClassOf schema:SportsActivityLocation .
+
+schema:MedicalSymptom rdfs:subClassOf schema:MedicalSignOrSymptom .
+
+schema:MedicalSignOrSymptom rdfs:subClassOf schema:MedicalCondition .
+
+schema:ShoppingCenter rdfs:subClassOf schema:LocalBusiness .
+
+schema:HinduTemple rdfs:subClassOf schema:PlaceOfWorship .
+
+schema:Cemetery rdfs:subClassOf schema:CivicStructure .
+
+schema:Mosque rdfs:subClassOf schema:PlaceOfWorship .
+
+schema:TouristInformationCenter rdfs:subClassOf schema:LocalBusiness .
+
+schema:Play rdfs:subClassOf schema:CreativeWork .
+
+schema:Rating rdfs:subClassOf schema:Thing .
+
+schema:TravelAgency rdfs:subClassOf schema:LocalBusiness .
+
+schema:Manuscript rdfs:subClassOf schema:CreativeWork .
+
+schema:WebPage rdfs:subClassOf schema:CreativeWork .
+
+schema:Game rdfs:subClassOf schema:CreativeWork .
+
+schema:AnimalShelter rdfs:subClassOf schema:LocalBusiness .
+
+schema:ProductModel rdfs:subClassOf schema:Product .
+
+schema:RadioChannel rdfs:subClassOf schema:BroadcastChannel .
+
+schema:FinancialProduct rdfs:subClassOf schema:Service .
+
+schema:MusicAlbum rdfs:subClassOf schema:MusicPlaylist .
+
+schema:MusicPlaylist rdfs:subClassOf schema:CreativeWork .
+
+schema:Occupation rdfs:subClassOf schema:Thing .
+
+schema:RecyclingCenter rdfs:subClassOf schema:LocalBusiness .
+
+schema:Pharmacy rdfs:subClassOf schema:MedicalBusiness, schema:MedicalOrganization .
+
+schema:SportsTeam rdfs:subClassOf schema:SportsOrganization .
+
+schema:MovieTheater rdfs:subClassOf schema:CivicStructure, schema:EntertainmentBusiness .
+
+schema:Newspaper rdfs:subClassOf schema:Periodical .
+
+schema:PawnShop rdfs:subClassOf schema:Store .
+
+schema:SkiResort rdfs:subClassOf schema:SportsActivityLocation .
+
+schema:Bakery rdfs:subClassOf schema:FoodEstablishment .
+
+schema:BarOrPub rdfs:subClassOf schema:FoodEstablishment .
+
+schema:ParkingFacility rdfs:subClassOf schema:CivicStructure .
+
+schema:MedicalSign rdfs:subClassOf schema:MedicalSignOrSymptom .
+
+schema:ComicStory rdfs:subClassOf schema:CreativeWork .
+
+schema:Distillery rdfs:subClassOf schema:FoodEstablishment .
+
+schema:Bone rdfs:subClassOf schema:AnatomicalStructure .
+
+schema:School rdfs:subClassOf schema:EducationalOrganization .
+
+schema:DefenceEstablishment rdfs:subClassOf schema:GovernmentBuilding .
+
+schema:EventSeries rdfs:subClassOf schema:Event .
+
+schema:Blog rdfs:subClassOf schema:CreativeWork .
+
+schema:BusStation rdfs:subClassOf schema:CivicStructure .
+
+schema:Legislation rdfs:subClassOf schema:CreativeWork .
+
+schema:PodcastSeries rdfs:subClassOf schema:CreativeWorkSeries .
+
+schema:Airline rdfs:subClassOf schema:Organization .
+
+schema:WebSite rdfs:subClassOf schema:CreativeWork .
+
+schema:TattooParlor rdfs:subClassOf schema:HealthAndBeautyBusiness .
+
+schema:VideoGameSeries rdfs:subClassOf schema:CreativeWorkSeries .
+
+schema:BuddhistTemple rdfs:subClassOf schema:PlaceOfWorship .
+
+schema:PublicationIssue rdfs:subClassOf schema:CreativeWork .
+
+schema:Poster rdfs:subClassOf schema:CreativeWork .
+
+schema:DrugLegalStatus rdfs:subClassOf schema:MedicalEntity .
+
+schema:OceanBodyOfWater rdfs:subClassOf schema:BodyOfWater .
+
+schema:AudioObject rdfs:subClassOf schema:MediaObject .
+
+schema:LandmarksOrHistoricalBuildings rdfs:subClassOf schema:Place .
+
+schema:PerformingArtsTheater rdfs:subClassOf schema:CivicStructure .
+
+<http://bioschemas.org/ChemicalSubstance> rdfs:subClassOf <http://bioschemas.org/BioChemEntity> .
+
+schema:ComedyClub rdfs:subClassOf schema:EntertainmentBusiness .
+
+schema:RadioStation rdfs:subClassOf schema:LocalBusiness .
+
+schema:Restaurant rdfs:subClassOf schema:FoodEstablishment .
+
+schema:City rdfs:subClassOf schema:AdministrativeArea .
+
+schema:Apartment rdfs:subClassOf schema:Accommodation .
+
+schema:MobileApplication rdfs:subClassOf schema:SoftwareApplication .
+
+schema:EmploymentAgency rdfs:subClassOf schema:LocalBusiness .
+
+schema:BeautySalon rdfs:subClassOf schema:HealthAndBeautyBusiness .
+
+schema:Thesis rdfs:subClassOf schema:CreativeWork .
+
+schema:Aquarium rdfs:subClassOf schema:CivicStructure .
+
+schema:Volcano rdfs:subClassOf schema:Landform .
+
+schema:MusicVenue rdfs:subClassOf schema:CivicStructure .
+
+schema:GasStation rdfs:subClassOf schema:AutomotiveBusiness .
+
+schema:Corporation rdfs:subClassOf schema:Organization .
+
+schema:BankOrCreditUnion rdfs:subClassOf schema:FinancialService .
+
+schema:MedicalSpecialty rdfs:subClassOf schema:MedicalEntity, schema:Specialty .
+
+<http://bioschemas.org/Protein> rdfs:subClassOf <http://bioschemas.org/BioChemEntity> .
+
+<http://bioschemas.org/MolecularEntity> rdfs:subClassOf <http://bioschemas.org/BioChemEntity> .
+
+schema:Book rdfs:subClassOf schema:CreativeWork .
+
+schema:VideoGame rdfs:subClassOf schema:Game, schema:SoftwareApplication .
+
+schema:Motel rdfs:subClassOf schema:LodgingBusiness .
+
+schema:ScholarlyArticle rdfs:subClassOf schema:Article .
+
+schema:Map rdfs:subClassOf schema:CreativeWork .
+
+schema:MusicRelease rdfs:subClassOf schema:MusicPlaylist .
+
+schema:PetStore rdfs:subClassOf schema:Store .
+
+schema:VideoObject rdfs:subClassOf schema:MediaObject .
+
+schema:InfectiousDisease rdfs:subClassOf schema:MedicalCondition .
+
+schema:ComicSeries rdfs:subClassOf schema:Periodical .
+
+schema:ToyStore rdfs:subClassOf schema:Store .
+
+schema:Optician rdfs:subClassOf schema:MedicalBusiness .
+
+schema:Playground rdfs:subClassOf schema:CivicStructure .
+
+schema:EventVenue rdfs:subClassOf schema:CivicStructure .
+
+schema:Zoo rdfs:subClassOf schema:CivicStructure .
+
+schema:copyrightHolder rdfs:domain schema:CreativeWork .
+
+schema:material rdfs:domain _:x172C16FC295schema-material-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Product .
+
+_:x172C16FC295schema-material-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Product
+  a :Class .
+
+schema:productionCompany rdfs:domain _:x172C16FC295schema-productionCompany-rdfs-domain-owl-unionOf-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries .
+
+_:x172C16FC295schema-productionCompany-rdfs-domain-owl-unionOf-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries
+  a :Class .
+
+schema:servesCuisine rdfs:domain schema:FoodEstablishment .
+
+schema:brand rdfs:domain _:x172C16FC295schema-brand-rdfs-domain-owl-unionOf-schema-Organization-schema-Person-schema-Product .
+
+_:x172C16FC295schema-brand-rdfs-domain-owl-unionOf-schema-Organization-schema-Person-schema-Product
+  a :Class .
+
+schema:countryOfOrigin rdfs:domain _:x172C16FC295schema-countryOfOrigin-rdfs-domain-owl-unionOf-schema-Movie-schema-TVEpisode-schema-TVSeason-schema-TVSeries .
+
+_:x172C16FC295schema-countryOfOrigin-rdfs-domain-owl-unionOf-schema-Movie-schema-TVEpisode-schema-TVSeason-schema-TVSeries
+  a :Class .
+
+schema:latitude rdfs:domain schema:GeoCoordinates .
+
+schema:translator rdfs:domain _:x172C16FC295schema-translator-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Event .
+
+_:x172C16FC295schema-translator-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Event
+  a :Class .
+
+schema:sponsor rdfs:domain _:x172C16FC295schema-sponsor-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Event-schema-Organization .
+
+_:x172C16FC295schema-sponsor-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Event-schema-Organization
+  a :Class .
+
+schema:callSign rdfs:domain _:x172C16FC295schema-callSign-rdfs-domain-owl-unionOf-schema-BroadcastService-schema-Person-schema-Vehicle .
+
+_:x172C16FC295schema-callSign-rdfs-domain-owl-unionOf-schema-BroadcastService-schema-Person-schema-Vehicle
+  a :Class .
+
+schema:editor rdfs:domain schema:CreativeWork .
+
+schema:musicReleaseFormat rdfs:domain schema:MusicRelease .
+
+schema:award rdfs:domain _:x172C16FC295schema-award-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Organization-schema-Person-schema-Product .
+
+_:x172C16FC295schema-award-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Organization-schema-Person-schema-Product
+  a :Class .
+
+schema:icaoCode rdfs:domain _:x172C16FC295schema-icaoCode-rdfs-domain-owl-unionOf-schema-Airline-schema-Airport .
+
+_:x172C16FC295schema-icaoCode-rdfs-domain-owl-unionOf-schema-Airline-schema-Airport
+  a :Class .
+
+schema:license rdfs:domain schema:CreativeWork .
+
+schema:recordLabel rdfs:domain schema:MusicRelease .
+
+schema:director rdfs:domain _:x172C16FC295schema-director-rdfs-domain-owl-unionOf-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries .
+
+_:x172C16FC295schema-director-rdfs-domain-owl-unionOf-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries
+  a :Class .
+
+schema:numberOfSeasons rdfs:domain _:x172C16FC295schema-numberOfSeasons-rdfs-domain-owl-unionOf-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries .
+
+_:x172C16FC295schema-numberOfSeasons-rdfs-domain-owl-unionOf-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries
+  a :Class .
+
+schema:gtin rdfs:domain schema:Product .
+
+schema:logo rdfs:domain _:x172C16FC295schema-logo-rdfs-domain-owl-unionOf-schema-Brand-schema-Organization-schema-Place-schema-Product .
+
+_:x172C16FC295schema-logo-rdfs-domain-owl-unionOf-schema-Brand-schema-Organization-schema-Place-schema-Product
+  a :Class .
+
+schema:image rdfs:domain schema:Thing .
+
+schema:musicBy rdfs:domain _:x172C16FC295schema-musicBy-rdfs-domain-owl-unionOf-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries .
+
+_:x172C16FC295schema-musicBy-rdfs-domain-owl-unionOf-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries
+  a :Class .
+
+schema:alumniOf rdfs:domain schema:Person .
+
+schema:worksFor rdfs:domain schema:Person .
+
+schema:isPartOf rdfs:domain schema:CreativeWork .
+
+schema:hasPart rdfs:domain schema:CreativeWork .
+
+schema:actor rdfs:domain _:x172C16FC295schema-actor-rdfs-domain-owl-unionOf-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame .
+
+_:x172C16FC295schema-actor-rdfs-domain-owl-unionOf-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame
+  a :Class .
+
+schema:contentRating rdfs:domain schema:CreativeWork .
+
+schema:duns rdfs:domain schema:Organization .
+
+schema:composer rdfs:domain _:x172C16FC295schema-composer-rdfs-domain-owl-unionOf-schema-Event-schema-MusicComposition .
+
+_:x172C16FC295schema-composer-rdfs-domain-owl-unionOf-schema-Event-schema-MusicComposition
+  a :Class .
+
+schema:position rdfs:domain schema:CreativeWork .
+
+schema:numberOfEpisodes rdfs:domain _:x172C16FC295schema-numberOfEpisodes-rdfs-domain-owl-unionOf-schema-CreativeWorkSeason-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries .
+
+_:x172C16FC295schema-numberOfEpisodes-rdfs-domain-owl-unionOf-schema-CreativeWorkSeason-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries
+  a :Class .
+
+schema:minValue rdfs:domain schema:QuantitativeValue .
+
+schema:legalStatus rdfs:domain schema:MedicalEntity .
+
+schema:spouse rdfs:domain schema:Person .
+
+schema:possibleTreatment rdfs:domain _:x172C16FC295schema-possibleTreatment-rdfs-domain-owl-unionOf-schema-MedicalCondition-schema-MedicalSignOrSymptom .
+
+_:x172C16FC295schema-possibleTreatment-rdfs-domain-owl-unionOf-schema-MedicalCondition-schema-MedicalSignOrSymptom
+  a :Class .
+
+schema:inLanguage rdfs:domain schema:CreativeWork .
+
+<http://bioschemas.org/isInvolvedInBiologicalProcess> rdfs:domain <http://bioschemas.org/BioChemEntity> .
+
+schema:sameAs rdfs:domain schema:Thing .
+
+schema:superEvent rdfs:domain schema:Event .
+
+schema:subEvent rdfs:domain schema:Event .
+
+schema:sport rdfs:domain _:x172C16FC295schema-sport-rdfs-domain-owl-unionOf-schema-SportsEvent-schema-SportsOrganization .
+
+_:x172C16FC295schema-sport-rdfs-domain-owl-unionOf-schema-SportsEvent-schema-SportsOrganization
+  a :Class .
+
+schema:issn rdfs:domain schema:CreativeWorkSeries .
+
+schema:operatingSystem rdfs:domain schema:SoftwareApplication .
+
+schema:exampleOfWork rdfs:domain schema:CreativeWork .
+
+schema:workExample rdfs:domain schema:CreativeWork .
+
+schema:width rdfs:domain _:x172C16FC295schema-width-rdfs-domain-owl-unionOf-schema-Product-schema-VisualArtwork .
+
+_:x172C16FC295schema-width-rdfs-domain-owl-unionOf-schema-Product-schema-VisualArtwork
+  a :Class .
+
+schema:about rdfs:domain _:x172C16FC295schema-about-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Event .
+
+_:x172C16FC295schema-about-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Event
+  a :Class .
+
+schema:connectedTo rdfs:domain schema:AnatomicalStructure .
+
+schema:deathDate rdfs:domain schema:Person .
+
+schema:nationality rdfs:domain schema:Person .
+
+schema:height rdfs:domain _:x172C16FC295schema-height-rdfs-domain-owl-unionOf-schema-Person-schema-Product-schema-VisualArtwork .
+
+_:x172C16FC295schema-height-rdfs-domain-owl-unionOf-schema-Person-schema-Product-schema-VisualArtwork
+  a :Class .
+
+schema:affiliation rdfs:domain schema:Person .
+
+schema:memberOf rdfs:domain _:x172C16FC295schema-memberOf-rdfs-domain-owl-unionOf-schema-Organization-schema-Person .
+
+_:x172C16FC295schema-memberOf-rdfs-domain-owl-unionOf-schema-Organization-schema-Person
+  a :Class .
+
+schema:parentOrganization rdfs:domain schema:Organization .
+
+schema:subOrganization rdfs:domain schema:Organization .
+
+<http://bioschemas.org/inChIKey> rdfs:domain <http://bioschemas.org/MolecularEntity> .
+
+schema:weight rdfs:domain _:x172C16FC295schema-weight-rdfs-domain-owl-unionOf-schema-Person-schema-Product .
+
+_:x172C16FC295schema-weight-rdfs-domain-owl-unionOf-schema-Person-schema-Product a
+    :Class .
+
+schema:pagination rdfs:domain _:x172C16FC295schema-pagination-rdfs-domain-owl-unionOf-schema-Article-schema-PublicationIssue-schema-PublicationVolume .
+
+_:x172C16FC295schema-pagination-rdfs-domain-owl-unionOf-schema-Article-schema-PublicationIssue-schema-PublicationVolume
+  a :Class .
+
+schema:numberOfPages rdfs:domain schema:Book .
+
+schema:endDate rdfs:domain schema:Event .
+
+schema:containsPlace rdfs:domain schema:Place .
+
+schema:containedInPlace rdfs:domain schema:Place .
+
+schema:faxNumber rdfs:domain _:x172C16FC295schema-faxNumber-rdfs-domain-owl-unionOf-schema-Organization-schema-Person-schema-Place .
+
+_:x172C16FC295schema-faxNumber-rdfs-domain-owl-unionOf-schema-Organization-schema-Person-schema-Place
+  a :Class .
+
+schema:byArtist rdfs:domain schema:MusicAlbum .
+
+schema:contributor rdfs:domain _:x172C16FC295schema-contributor-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Event .
+
+_:x172C16FC295schema-contributor-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Event
+  a :Class .
+
+schema:contentLocation rdfs:domain schema:CreativeWork .
+
+schema:parent rdfs:domain schema:Person .
+
+schema:familyName rdfs:domain schema:Person .
+
+schema:longitude rdfs:domain schema:GeoCoordinates .
+
+schema:geo rdfs:domain schema:Place .
+
+<http://bioschemas.org/smiles> rdfs:domain <http://bioschemas.org/MolecularEntity> .
+
+schema:genre rdfs:domain _:x172C16FC295schema-genre-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-MusicGroup .
+
+_:x172C16FC295schema-genre-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-MusicGroup
+  a :Class .
+
+<http://bioschemas.org/encodesBioChemEntity> rdfs:domain <http://bioschemas.org/Gene> .
+
+<http://bioschemas.org/isEncodedByBioChemEntity> rdfs:domain <http://bioschemas.org/BioChemEntity> .
+
+schema:signOrSymptom rdfs:domain schema:MedicalCondition .
+
+schema:givenName rdfs:domain schema:Person .
+
+schema:homeLocation rdfs:domain schema:Person .
+
+schema:location rdfs:domain _:x172C16FC295schema-location-rdfs-domain-owl-unionOf-schema-Event-schema-Organization .
+
+_:x172C16FC295schema-location-rdfs-domain-owl-unionOf-schema-Event-schema-Organization
+  a :Class .
+
+schema:birthPlace rdfs:domain schema:Person .
+
+schema:iataCode rdfs:domain _:x172C16FC295schema-iataCode-rdfs-domain-owl-unionOf-schema-Airline-schema-Airport-schema-City .
+
+_:x172C16FC295schema-iataCode-rdfs-domain-owl-unionOf-schema-Airline-schema-Airport-schema-City
+  a :Class .
+
+schema:unitCode rdfs:domain schema:QuantitativeValue .
+
+schema:depth rdfs:domain _:x172C16FC295schema-depth-rdfs-domain-owl-unionOf-schema-Product-schema-VisualArtwork .
+
+_:x172C16FC295schema-depth-rdfs-domain-owl-unionOf-schema-Product-schema-VisualArtwork
+  a :Class .
+
+schema:volumeNumber rdfs:domain schema:PublicationVolume .
+
+schema:url rdfs:domain schema:Thing .
+
+schema:startDate rdfs:domain schema:Event .
+
+schema:duration rdfs:domain _:x172C16FC295schema-duration-rdfs-domain-owl-unionOf-schema-Event-schema-Movie-schema-MusicRelease .
+
+_:x172C16FC295schema-duration-rdfs-domain-owl-unionOf-schema-Event-schema-Movie-schema-MusicRelease
+  a :Class .
+
+schema:iswcCode rdfs:domain schema:MusicComposition .
+
+schema:telephone rdfs:domain _:x172C16FC295schema-telephone-rdfs-domain-owl-unionOf-schema-Organization-schema-Person-schema-Place .
+
+_:x172C16FC295schema-telephone-rdfs-domain-owl-unionOf-schema-Organization-schema-Person-schema-Place
+  a :Class .
+
+schema:value rdfs:domain schema:QuantitativeValue .
+
+schema:organizer rdfs:domain schema:Event .
+
+schema:competitor rdfs:domain schema:SportsEvent .
+
+schema:knowsLanguage rdfs:domain _:x172C16FC295schema-knowsLanguage-rdfs-domain-owl-unionOf-schema-Organization-schema-Person .
+
+_:x172C16FC295schema-knowsLanguage-rdfs-domain-owl-unionOf-schema-Organization-schema-Person
+  a :Class .
+
+<http://bioschemas.org/isLocatedInSubcellularLocation> rdfs:domain <http://bioschemas.org/BioChemEntity> .
+
+schema:partOfSeries rdfs:domain _:x172C16FC295schema-partOfSeries-rdfs-domain-owl-unionOf-schema-CreativeWorkSeason-schema-Episode .
+
+_:x172C16FC295schema-partOfSeries-rdfs-domain-owl-unionOf-schema-CreativeWorkSeason-schema-Episode
+  a :Class .
+
+schema:issueNumber rdfs:domain schema:PublicationIssue .
+
+schema:netWorth rdfs:domain schema:Person .
+
+schema:encodingFormat rdfs:domain schema:CreativeWork .
+
+schema:locationCreated rdfs:domain schema:CreativeWork .
+
+schema:author rdfs:domain schema:CreativeWork .
+
+<http://bioschemas.org/parentTaxon> rdfs:domain <http://bioschemas.org/Taxon> .
+
+schema:creator rdfs:domain schema:CreativeWork .
+
+schema:hasOccupation rdfs:domain schema:Person .
+
+schema:publisher rdfs:domain schema:CreativeWork .
+
+schema:honorificPrefix rdfs:domain schema:Person .
+
+<http://bioschemas.org/molecularFormula> rdfs:domain <http://bioschemas.org/MolecularEntity> .
+
+schema:isbn rdfs:domain schema:Book .
+
+<http://bioschemas.org/taxonRank> rdfs:domain <http://bioschemas.org/Taxon> .
+
+schema:birthDate rdfs:domain schema:Person .
+
+schema:gender rdfs:domain schema:Person .
+
+schema:children rdfs:domain schema:Person .
+
+schema:maxValue rdfs:domain schema:QuantitativeValue .
+
+schema:producer rdfs:domain schema:CreativeWork .
+
+schema:alternateName rdfs:domain schema:Thing .
+
+schema:foundingDate rdfs:domain schema:Organization .
+
+schema:founder rdfs:domain schema:Organization .
+
+schema:datePublished rdfs:domain schema:CreativeWork .
+
+schema:broadcastChannelId rdfs:domain schema:BroadcastChannel .
+
+schema:dateCreated rdfs:domain schema:CreativeWork .
+
+schema:owns rdfs:domain schema:Person .
+
+schema:dissolutionDate rdfs:domain schema:Organization .
+
+schema:releaseOf rdfs:domain schema:MusicRelease .
+
+schema:leiCode rdfs:domain schema:Organization .
+
+schema:isBasedOn rdfs:domain schema:CreativeWork .
+
+schema:deathPlace rdfs:domain schema:Person .
+
+schema:riskFactor rdfs:domain schema:MedicalCondition .
+
+schema:colorist rdfs:domain _:x172C16FC295schema-colorist-rdfs-domain-owl-unionOf-schema-ComicStory-schema-VisualArtwork .
+
+_:x172C16FC295schema-colorist-rdfs-domain-owl-unionOf-schema-ComicStory-schema-VisualArtwork
+  a :Class .
+
+schema:character rdfs:domain schema:CreativeWork .
+
+schema:foundingLocation rdfs:domain schema:Organization .
+
+schema:elevation rdfs:domain schema:Place .
+
+<http://bioschemas.org/expressedIn> rdfs:domain <http://bioschemas.org/Gene> .
+
+schema:numberOfEmployees rdfs:domain schema:Organization .
+
+<http://bioschemas.org/hasMolecularFunction> rdfs:domain <http://bioschemas.org/BioChemEntity> .
+
+schema:relevantSpecialty rdfs:domain schema:MedicalEntity .
+
+<http://bioschemas.org/inChI> rdfs:domain <http://bioschemas.org/MolecularEntity> .
+
+schema:lyricist rdfs:domain schema:MusicComposition .
+
+schema:provider rdfs:domain schema:CreativeWork .
+
+schema:citation rdfs:domain schema:CreativeWork .
+
+schema:partOfSeason rdfs:domain schema:Episode .
+
+<http://bioschemas.org/bioChemInteraction> rdfs:domain <http://bioschemas.org/BioChemEntity> .
+
+schema:illustrator rdfs:domain schema:Book .
+
+schema:copyrightHolder rdfs:range _:x172C16FC295schema-copyrightHolder-rdfs-range-owl-unionOf-schema-Organization-schema-Person .
+
+_:x172C16FC295schema-copyrightHolder-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  a :Class .
+
+schema:material rdfs:range schema:Thing .
+
+schema:productionCompany rdfs:range schema:Organization .
+
+schema:servesCuisine rdfs:range schema:Thing .
+
+schema:brand rdfs:range _:x172C16FC295schema-brand-rdfs-range-owl-unionOf-schema-Brand-schema-Organization .
+
+_:x172C16FC295schema-brand-rdfs-range-owl-unionOf-schema-Brand-schema-Organization
+  a :Class .
+
+schema:countryOfOrigin rdfs:range schema:Country .
+
+schema:latitude rdfs:range xsd:double .
+
+schema:translator rdfs:range _:x172C16FC295schema-translator-rdfs-range-owl-unionOf-schema-Organization-schema-Person .
+
+_:x172C16FC295schema-translator-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  a :Class .
+
+schema:sponsor rdfs:range _:x172C16FC295schema-sponsor-rdfs-range-owl-unionOf-schema-Organization-schema-Person .
+
+_:x172C16FC295schema-sponsor-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  a :Class .
+
+schema:callSign rdfs:range xsd:string .
+
+schema:editor rdfs:range schema:Person .
+
+schema:musicReleaseFormat rdfs:range schema:Thing .
+
+schema:award rdfs:range schema:Thing .
+
+schema:icaoCode rdfs:range xsd:string .
+
+schema:license rdfs:range schema:CreativeWork .
+
+schema:recordLabel rdfs:range schema:Organization .
+
+schema:director rdfs:range schema:Person .
+
+schema:numberOfSeasons rdfs:range xsd:integer .
+
+schema:gtin rdfs:range xsd:string .
+
+schema:logo rdfs:range schema:ImageObject .
+
+schema:image rdfs:range schema:ImageObject .
+
+schema:musicBy rdfs:range _:x172C16FC295schema-musicBy-rdfs-range-owl-unionOf-schema-MusicGroup-schema-Person .
+
+_:x172C16FC295schema-musicBy-rdfs-range-owl-unionOf-schema-MusicGroup-schema-Person
+  a :Class .
+
+schema:alumniOf rdfs:range schema:Organization .
+
+schema:worksFor rdfs:range schema:Person .
+
+schema:isPartOf rdfs:range schema:CreativeWork .
+
+schema:hasPart rdfs:range schema:CreativeWork .
+
+schema:actor rdfs:range schema:Person .
+
+schema:contentRating rdfs:range schema:Rating .
+
+schema:duns rdfs:range xsd:string .
+
+schema:composer rdfs:range _:x172C16FC295schema-composer-rdfs-range-owl-unionOf-schema-MusicGroup-schema-Person .
+
+_:x172C16FC295schema-composer-rdfs-range-owl-unionOf-schema-MusicGroup-schema-Person
+  a :Class .
+
+schema:position rdfs:range xsd:integer .
+
+schema:numberOfEpisodes rdfs:range xsd:integer .
+
+schema:minValue rdfs:range xsd:decimal .
+
+schema:legalStatus rdfs:range schema:DrugLegalStatus .
+
+schema:spouse rdfs:range schema:Person .
+
+schema:possibleTreatment rdfs:range schema:MedicalTherapy .
+
+schema:inLanguage rdfs:range schema:Language .
+
+<http://bioschemas.org/isInvolvedInBiologicalProcess> rdfs:range schema:Thing .
+
+schema:sameAs rdfs:range xsd:anyURI .
+
+schema:superEvent rdfs:range schema:Event .
+
+schema:subEvent rdfs:range schema:Event .
+
+schema:sport rdfs:range schema:Thing .
+
+schema:issn rdfs:range xsd:string .
+
+schema:operatingSystem rdfs:range schema:SoftwareApplication .
+
+schema:exampleOfWork rdfs:range schema:CreativeWork .
+
+schema:workExample rdfs:range schema:CreativeWork .
+
+schema:width rdfs:range schema:QuantitativeValue .
+
+schema:about rdfs:range schema:Thing .
+
+schema:connectedTo rdfs:range schema:AnatomicalStructure .
+
+schema:deathDate rdfs:range _:x172C16FC295schema-deathDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth .
+
+_:x172C16FC295schema-deathDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  a rdfs:Datatype .
+
+schema:nationality rdfs:range schema:Country .
+
+schema:height rdfs:range schema:QuantitativeValue .
+
+schema:affiliation rdfs:range schema:Organization .
+
+schema:memberOf rdfs:range schema:Organization .
+
+schema:parentOrganization rdfs:range schema:Organization .
+
+schema:subOrganization rdfs:range schema:Organization .
+
+<http://bioschemas.org/inChIKey> rdfs:range xsd:string .
+
+schema:weight rdfs:range schema:QuantitativeValue .
+
+schema:pagination rdfs:range xsd:string .
+
+schema:numberOfPages rdfs:range xsd:integer .
+
+schema:endDate rdfs:range _:x172C16FC295schema-endDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth .
+
+_:x172C16FC295schema-endDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  a rdfs:Datatype .
+
+schema:containsPlace rdfs:range schema:Place .
+
+schema:containedInPlace rdfs:range schema:Place .
+
+schema:faxNumber rdfs:range xsd:string .
+
+schema:byArtist rdfs:range schema:MusicGroup .
+
+schema:contributor rdfs:range _:x172C16FC295schema-contributor-rdfs-range-owl-unionOf-schema-Organization-schema-Person .
+
+_:x172C16FC295schema-contributor-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  a :Class .
+
+schema:contentLocation rdfs:range schema:Place .
+
+schema:parent rdfs:range schema:Person .
+
+schema:familyName rdfs:range schema:Thing .
+
+schema:longitude rdfs:range xsd:double .
+
+schema:geo rdfs:range schema:GeoCoordinates .
+
+<http://bioschemas.org/smiles> rdfs:range xsd:string .
+
+schema:genre rdfs:range schema:Thing .
+
+<http://bioschemas.org/encodesBioChemEntity> rdfs:range <http://bioschemas.org/BioChemEntity>;
+  :inverseOf <http://bioschemas.org/isEncodedByBioChemEntity> .
+
+<http://bioschemas.org/isEncodedByBioChemEntity> rdfs:range <http://bioschemas.org/Gene>;
+  :inverseOf <http://bioschemas.org/encodesBioChemEntity> .
+
+schema:signOrSymptom rdfs:range schema:MedicalSignOrSymptom .
+
+schema:givenName rdfs:range schema:Thing .
+
+schema:homeLocation rdfs:range schema:Place .
+
+schema:location rdfs:range schema:Place .
+
+schema:birthPlace rdfs:range schema:Place .
+
+schema:iataCode rdfs:range xsd:string .
+
+schema:unitCode rdfs:range schema:Thing .
+
+schema:depth rdfs:range schema:QuantitativeValue .
+
+schema:volumeNumber rdfs:range xsd:string .
+
+schema:url rdfs:range xsd:anyURI .
+
+schema:startDate rdfs:range _:x172C16FC295schema-startDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth .
+
+_:x172C16FC295schema-startDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  a rdfs:Datatype .
+
+schema:duration rdfs:range xsd:duration .
+
+schema:iswcCode rdfs:range xsd:string .
+
+schema:telephone rdfs:range xsd:string .
+
+schema:value rdfs:range xsd:decimal .
+
+schema:organizer rdfs:range _:x172C16FC295schema-organizer-rdfs-range-owl-unionOf-schema-MusicGroup-schema-Person .
+
+_:x172C16FC295schema-organizer-rdfs-range-owl-unionOf-schema-MusicGroup-schema-Person
+  a :Class .
+
+schema:competitor rdfs:range _:x172C16FC295schema-competitor-rdfs-range-owl-unionOf-schema-Person-schema-SportsTeam .
+
+_:x172C16FC295schema-competitor-rdfs-range-owl-unionOf-schema-Person-schema-SportsTeam
+  a :Class .
+
+schema:knowsLanguage rdfs:range schema:Language .
+
+<http://bioschemas.org/isLocatedInSubcellularLocation> rdfs:range schema:Thing .
+
+schema:partOfSeries rdfs:range schema:CreativeWorkSeries .
+
+schema:issueNumber rdfs:range xsd:string .
+
+schema:netWorth rdfs:range schema:QuantitativeValue .
+
+schema:encodingFormat rdfs:range xsd:string .
+
+schema:locationCreated rdfs:range schema:Place .
+
+schema:author rdfs:range _:x172C16FC295schema-author-rdfs-range-owl-unionOf-schema-Organization-schema-Person .
+
+_:x172C16FC295schema-author-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  a :Class .
+
+<http://bioschemas.org/parentTaxon> rdfs:range <http://bioschemas.org/Taxon> .
+
+schema:creator rdfs:range _:x172C16FC295schema-creator-rdfs-range-owl-unionOf-schema-Organization-schema-Person .
+
+_:x172C16FC295schema-creator-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  a :Class .
+
+schema:hasOccupation rdfs:range schema:Occupation .
+
+schema:publisher rdfs:range _:x172C16FC295schema-publisher-rdfs-range-owl-unionOf-schema-Organization-schema-Person .
+
+_:x172C16FC295schema-publisher-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  a :Class .
+
+schema:honorificPrefix rdfs:range schema:Thing .
+
+<http://bioschemas.org/molecularFormula> rdfs:range xsd:string .
+
+schema:isbn rdfs:range xsd:string .
+
+<http://bioschemas.org/taxonRank> rdfs:range schema:Thing .
+
+schema:birthDate rdfs:range _:x172C16FC295schema-birthDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth .
+
+_:x172C16FC295schema-birthDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  a rdfs:Datatype .
+
+schema:gender rdfs:range schema:Thing .
+
+schema:children rdfs:range schema:Person .
+
+schema:maxValue rdfs:range xsd:decimal .
+
+schema:producer rdfs:range _:x172C16FC295schema-producer-rdfs-range-owl-unionOf-schema-Organization-schema-Person .
+
+_:x172C16FC295schema-producer-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  a :Class .
+
+schema:alternateName rdfs:range rdf:PlainLiteral .
+
+schema:foundingDate rdfs:range _:x172C16FC295schema-foundingDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth .
+
+_:x172C16FC295schema-foundingDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  a rdfs:Datatype .
+
+schema:founder rdfs:range schema:Person .
+
+schema:datePublished rdfs:range _:x172C16FC295schema-datePublished-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth .
+
+_:x172C16FC295schema-datePublished-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  a rdfs:Datatype .
+
+schema:broadcastChannelId rdfs:range xsd:string .
+
+schema:dateCreated rdfs:range _:x172C16FC295schema-dateCreated-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth .
+
+_:x172C16FC295schema-dateCreated-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  a rdfs:Datatype .
+
+schema:owns rdfs:range schema:Product .
+
+schema:dissolutionDate rdfs:range _:x172C16FC295schema-dissolutionDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth .
+
+_:x172C16FC295schema-dissolutionDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  a rdfs:Datatype .
+
+schema:releaseOf rdfs:range schema:MusicAlbum;
+  :inverseOf schema:albumRelease .
+
+schema:leiCode rdfs:range xsd:string .
+
+schema:isBasedOn rdfs:range schema:CreativeWork .
+
+schema:deathPlace rdfs:range schema:Place .
+
+schema:riskFactor rdfs:range schema:Thing .
+
+schema:colorist rdfs:range schema:Person .
+
+schema:character rdfs:range schema:Person .
+
+schema:foundingLocation rdfs:range schema:Place .
+
+schema:elevation rdfs:range schema:QuantitativeValue .
+
+<http://bioschemas.org/expressedIn> rdfs:range schema:Thing .
+
+schema:numberOfEmployees rdfs:range schema:QuantitativeValue .
+
+<http://bioschemas.org/hasMolecularFunction> rdfs:range schema:Thing .
+
+schema:relevantSpecialty rdfs:range schema:MedicalSpecialty .
+
+<http://bioschemas.org/inChI> rdfs:range xsd:string .
+
+schema:lyricist rdfs:range _:x172C16FC295schema-lyricist-rdfs-range-owl-unionOf-schema-MusicGroup-schema-Person .
+
+_:x172C16FC295schema-lyricist-rdfs-range-owl-unionOf-schema-MusicGroup-schema-Person
+  a :Class .
+
+schema:provider rdfs:range _:x172C16FC295schema-provider-rdfs-range-owl-unionOf-schema-Organization-schema-Person .
+
+_:x172C16FC295schema-provider-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  a :Class .
+
+schema:citation rdfs:range schema:CreativeWork .
+
+schema:partOfSeason rdfs:range schema:CreativeWorkSeason .
+
+<http://bioschemas.org/bioChemInteraction> rdfs:range <http://bioschemas.org/BioChemEntity> .
+
+schema:illustrator rdfs:range schema:Person .
+
+schema:alumniOf :inverseOf schema:alumni .
+
+schema:isPartOf :inverseOf schema:hasPart .
+
+schema:hasPart :inverseOf schema:isPartOf .
+
+schema:superEvent :inverseOf schema:subEvent .
+
+schema:subEvent :inverseOf schema:superEvent .
+
+schema:exampleOfWork :inverseOf schema:workExample .
+
+schema:workExample :inverseOf schema:exampleOfWork .
+
+schema:about :inverseOf schema:subjectOf .
+
+schema:memberOf :inverseOf schema:member .
+
+schema:parentOrganization :inverseOf schema:subOrganization .
+
+schema:subOrganization :inverseOf schema:parentOrganization .
+
+schema:containsPlace :inverseOf schema:containedInPlace .
+
+schema:containedInPlace :inverseOf schema:containsPlace .
+
+_:x172C16FC295list-schema-CreativeWork-schema-Event-schema-Organization-3 rdf:first
+    schema:Organization;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-CreativeWork-schema-Event-schema-Organization-2 rdf:first
+    schema:Event;
+  rdf:rest _:x172C16FC295list-schema-CreativeWork-schema-Event-schema-Organization-3 .
+
+_:x172C16FC295list-schema-CreativeWork-schema-Event-schema-Organization-1 rdf:first
+    schema:CreativeWork;
+  rdf:rest _:x172C16FC295list-schema-CreativeWork-schema-Event-schema-Organization-2 .
+
+_:x172C16FC295list-schema-ComicStory-schema-VisualArtwork-2 rdf:first schema:VisualArtwork;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-ComicStory-schema-VisualArtwork-1 rdf:first schema:ComicStory;
+  rdf:rest _:x172C16FC295list-schema-ComicStory-schema-VisualArtwork-2 .
+
+_:x172C16FC295list-schema-Event-schema-Movie-schema-MusicRelease-3 rdf:first schema:MusicRelease;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Event-schema-Movie-schema-MusicRelease-2 rdf:first schema:Movie;
+  rdf:rest _:x172C16FC295list-schema-Event-schema-Movie-schema-MusicRelease-3 .
+
+_:x172C16FC295list-schema-Event-schema-Movie-schema-MusicRelease-1 rdf:first schema:Event;
+  rdf:rest _:x172C16FC295list-schema-Event-schema-Movie-schema-MusicRelease-2 .
+
+_:x172C16FC295list-schema-Airline-schema-Airport-schema-City-3 rdf:first schema:City;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Airline-schema-Airport-schema-City-2 rdf:first schema:Airport;
+  rdf:rest _:x172C16FC295list-schema-Airline-schema-Airport-schema-City-3 .
+
+_:x172C16FC295list-schema-Airline-schema-Airport-schema-City-1 rdf:first schema:Airline;
+  rdf:rest _:x172C16FC295list-schema-Airline-schema-Airport-schema-City-2 .
+
+_:x172C16FC295list-schema-CreativeWork-schema-Event-2 rdf:first schema:Event;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-CreativeWork-schema-Event-1 rdf:first schema:CreativeWork;
+  rdf:rest _:x172C16FC295list-schema-CreativeWork-schema-Event-2 .
+
+_:x172C16FC295list-schema-Airline-schema-Airport-2 rdf:first schema:Airport;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Airline-schema-Airport-1 rdf:first schema:Airline;
+  rdf:rest _:x172C16FC295list-schema-Airline-schema-Airport-2 .
+
+_:x172C16FC295list-schema-Event-schema-MusicComposition-2 rdf:first schema:MusicComposition;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Event-schema-MusicComposition-1 rdf:first schema:Event;
+  rdf:rest _:x172C16FC295list-schema-Event-schema-MusicComposition-2 .
+
+_:x172C16FC295list-schema-Person-schema-Product-2 rdf:first schema:Product;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Person-schema-Product-1 rdf:first schema:Person;
+  rdf:rest _:x172C16FC295list-schema-Person-schema-Product-2 .
+
+_:x172C16FC295list-schema-Article-schema-PublicationIssue-schema-PublicationVolume-3
+  rdf:first schema:PublicationVolume;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Article-schema-PublicationIssue-schema-PublicationVolume-2
+  rdf:first schema:PublicationIssue;
+  rdf:rest _:x172C16FC295list-schema-Article-schema-PublicationIssue-schema-PublicationVolume-3 .
+
+_:x172C16FC295list-schema-Article-schema-PublicationIssue-schema-PublicationVolume-1
+  rdf:first schema:Article;
+  rdf:rest _:x172C16FC295list-schema-Article-schema-PublicationIssue-schema-PublicationVolume-2 .
+
+_:x172C16FC295list-schema-Organization-schema-Person-2 rdf:first schema:Person;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Organization-schema-Person-1 rdf:first schema:Organization;
+  rdf:rest _:x172C16FC295list-schema-Organization-schema-Person-2 .
+
+_:x172C16FC295list-schema-BroadcastService-schema-Person-schema-Vehicle-3 rdf:first
+    schema:Vehicle;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-BroadcastService-schema-Person-schema-Vehicle-2 rdf:first
+    schema:Person;
+  rdf:rest _:x172C16FC295list-schema-BroadcastService-schema-Person-schema-Vehicle-3 .
+
+_:x172C16FC295list-schema-BroadcastService-schema-Person-schema-Vehicle-1 rdf:first
+    schema:BroadcastService;
+  rdf:rest _:x172C16FC295list-schema-BroadcastService-schema-Person-schema-Vehicle-2 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-4
+  rdf:first schema:VideoGameSeries;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-3
+  rdf:first schema:TVSeries;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-4 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-2
+  rdf:first schema:RadioSeries;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-3 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-1
+  rdf:first schema:CreativeWorkSeason;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-2 .
+
+_:x172C16FC295list-schema-MedicalCondition-schema-MedicalSignOrSymptom-2 rdf:first
+    schema:MedicalSignOrSymptom;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-MedicalCondition-schema-MedicalSignOrSymptom-1 rdf:first
+    schema:MedicalCondition;
+  rdf:rest _:x172C16FC295list-schema-MedicalCondition-schema-MedicalSignOrSymptom-2 .
+
+_:x172C16FC295list-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries-7
+  rdf:first schema:VideoGameSeries;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries-6
+  rdf:first schema:VideoGame;
+  rdf:rest _:x172C16FC295list-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries-7 .
+
+_:x172C16FC295list-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries-5
+  rdf:first schema:TVSeries;
+  rdf:rest _:x172C16FC295list-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries-6 .
+
+_:x172C16FC295list-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries-4
+  rdf:first schema:RadioSeries;
+  rdf:rest _:x172C16FC295list-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries-5 .
+
+_:x172C16FC295list-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries-3
+  rdf:first schema:MovieSeries;
+  rdf:rest _:x172C16FC295list-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries-4 .
+
+_:x172C16FC295list-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries-2
+  rdf:first schema:Movie;
+  rdf:rest _:x172C16FC295list-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries-3 .
+
+_:x172C16FC295list-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries-1
+  rdf:first schema:Episode;
+  rdf:rest _:x172C16FC295list-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries-2 .
+
+_:x172C16FC295list-schema-Person-schema-Product-schema-VisualArtwork-3 rdf:first schema:VisualArtwork;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Person-schema-Product-schema-VisualArtwork-2 rdf:first schema:Product;
+  rdf:rest _:x172C16FC295list-schema-Person-schema-Product-schema-VisualArtwork-3 .
+
+_:x172C16FC295list-schema-Person-schema-Product-schema-VisualArtwork-1 rdf:first schema:Person;
+  rdf:rest _:x172C16FC295list-schema-Person-schema-Product-schema-VisualArtwork-2 .
+
+_:x172C16FC295list-schema-Movie-schema-TVEpisode-schema-TVSeason-schema-TVSeries-4
+  rdf:first schema:TVSeries;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Movie-schema-TVEpisode-schema-TVSeason-schema-TVSeries-3
+  rdf:first schema:TVSeason;
+  rdf:rest _:x172C16FC295list-schema-Movie-schema-TVEpisode-schema-TVSeason-schema-TVSeries-4 .
+
+_:x172C16FC295list-schema-Movie-schema-TVEpisode-schema-TVSeason-schema-TVSeries-2
+  rdf:first schema:TVEpisode;
+  rdf:rest _:x172C16FC295list-schema-Movie-schema-TVEpisode-schema-TVSeason-schema-TVSeries-3 .
+
+_:x172C16FC295list-schema-Movie-schema-TVEpisode-schema-TVSeason-schema-TVSeries-1
+  rdf:first schema:Movie;
+  rdf:rest _:x172C16FC295list-schema-Movie-schema-TVEpisode-schema-TVSeason-schema-TVSeries-2 .
+
+_:x172C16FC295list-schema-Product-schema-VisualArtwork-2 rdf:first schema:VisualArtwork;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Product-schema-VisualArtwork-1 rdf:first schema:Product;
+  rdf:rest _:x172C16FC295list-schema-Product-schema-VisualArtwork-2 .
+
+_:x172C16FC295list-schema-Organization-schema-Person-schema-Place-3 rdf:first schema:Place;
+  rdf:rest rdf:nil .
+
+schema:Chapter rdfs:comment "One of the sections into which a book is divided. A chapter usually has a section number or a name." .
+
+schema:CreativeWork rdfs:comment "The most generic kind of creative work, including books, movies, photographs, software programs, etc." .
+
+schema:PoliceStation rdfs:comment "A police station." .
+
+schema:EmergencyService rdfs:comment "An emergency service, such as a fire station or ER." .
+
+schema:CivicStructure rdfs:comment "A public structure, such as a town hall or concert hall." .
+
+schema:SoftwareApplication rdfs:comment "A software application." .
+
+schema:Campground rdfs:comment """A camping site, campsite, or <a class=\"localLink\" href=\"http://schema.org/Campground\">Campground</a> is a place used for overnight stay in the outdoors, typically containing individual <a class=\"localLink\" href=\"http://schema.org/CampingPitch\">CampingPitch</a> locations. <br/><br/>
+
+In British English a campsite is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or park a camper; a campground may contain many campsites (Source: Wikipedia see <a href=\"https://en.wikipedia.org/wiki/Campsite\">https://en.wikipedia.org/wiki/Campsite</a>).<br/><br/>
+
+See also the dedicated <a href=\"/docs/hotels.html\">document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""" .
+
+schema:LodgingBusiness rdfs:comment "A lodging business, such as a motel, hotel, or inn." .
+
+schema:Atlas rdfs:comment "A collection or bound volume of maps, charts, plates or tables, physical or in media form illustrating any subject." .
+
+schema:PhysicalExam rdfs:comment "A type of physical examination of a patient performed by a physician." .
+
+schema:MedicalProcedure rdfs:comment "A process of care used in either a diagnostic, therapeutic, preventive or palliative capacity that relies on invasive (surgical), non-invasive, or other techniques." .
+
+schema:MedicalEntity rdfs:comment "The most generic type of entity related to health and the practice of medicine." .
+
+schema:Episode rdfs:comment "A media episode (e.g. TV, radio, video game) which can be part of a series or season." .
+
+schema:HealthClub rdfs:comment "A health club." .
+
+schema:SportsActivityLocation rdfs:comment "A sports location, such as a playing field." .
+
+schema:HealthAndBeautyBusiness rdfs:comment "Health and beauty." .
+
+schema:SheetMusic rdfs:comment "Printed music, as opposed to performed or recorded music." .
+
+schema:SocialMediaPosting rdfs:comment "A post to a social media platform, including blog posts, tweets, Facebook posts, etc." .
+
+schema:Article rdfs:comment """An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.<br/><br/>
+
+See also <a href=\"http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html\">blog post</a>.""" .
+
+schema:Ligament rdfs:comment "A short band of tough, flexible, fibrous connective tissue that functions to connect multiple bones, cartilages, and structurally support joints." .
+
+schema:AnatomicalStructure rdfs:comment "Any part of the human body, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical structures." .
+
+schema:Church rdfs:comment "A church." .
+
+schema:PlaceOfWorship rdfs:comment "Place of worship, such as a church, synagogue, or mosque." .
+
+schema:TheaterGroup rdfs:comment "A theater group or company, for example, the Royal Shakespeare Company or Druid Theatre." .
+
+schema:PerformingGroup rdfs:comment "A performance group, such as a band, an orchestra, or a circus." .
+
+schema:MedicalGuideline rdfs:comment "Any recommendation made by a standard society (e.g. ACC/AHA) or consensus statement that denotes how to diagnose and treat a particular condition. Note: this type should be used to tag the actual guideline recommendation; if the guideline recommendation occurs in a larger scholarly article, use MedicalScholarlyArticle to tag the overall article, not this type. Note also: the organization making the recommendation should be captured in the recognizingAuthority base property of MedicalEntity." .
+
+schema:Language rdfs:comment "Natural languages such as Spanish, Tamil, Hindi, English, etc. Formal language code tags expressed in <a href=\"https://en.wikipedia.org/wiki/IETF_language_tag\">BCP 47</a> can be used via the <a class=\"localLink\" href=\"http://schema.org/alternateName\">alternateName</a> property. The Language type previously also covered programming languages such as Scheme and Lisp, which are now best represented using <a class=\"localLink\" href=\"http://schema.org/ComputerLanguage\">ComputerLanguage</a>." .
+
+schema:Thing rdfs:comment "The most generic type of item." .
+
+schema:Drug rdfs:comment "A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism. Here the term drug is used interchangeably with the term medicine although clinical knowledge make a clear difference between them." .
+
+schema:Substance rdfs:comment "Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical." .
+
+schema:TelevisionChannel rdfs:comment "A unique instance of a television BroadcastService on a CableOrSatelliteService lineup." .
+
+schema:BroadcastChannel rdfs:comment "A unique instance of a BroadcastService on a CableOrSatelliteService lineup." .
+
+schema:DaySpa rdfs:comment "A day spa." .
+
+schema:PostOffice rdfs:comment "A post office." .
+
+schema:GovernmentOffice rdfs:comment "A government office&#x2014;for example, an IRS or DMV office." .
+
+schema:SportsEvent rdfs:comment "Event type: Sports event." .
+
+schema:Event rdfs:comment "An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the <a class=\"localLink\" href=\"http://schema.org/offers\">offers</a> property. Repeated events may be structured as separate Event objects." .
+
+schema:Continent rdfs:comment "One of the continents (for example, Europe or Africa)." .
+
+schema:Landform rdfs:comment "A landform or physical feature.  Landform elements include mountains, plains, lakes, rivers, seascape and oceanic waterbody interface features such as bays, peninsulas, seas and so forth, including sub-aqueous terrain features such as submersed mountain ranges, volcanoes, and the great ocean basins." .
+
+schema:TVSeries rdfs:comment "CreativeWorkSeries dedicated to TV broadcast and associated online delivery." .
+
+schema:CreativeWorkSeries rdfs:comment """A CreativeWorkSeries in schema.org is a group of related items, typically but not necessarily of the same kind. CreativeWorkSeries are usually organized into some order, often chronological. Unlike <a class=\"localLink\" href=\"http://schema.org/ItemList\">ItemList</a> which is a general purpose data structure for lists of things, the emphasis with CreativeWorkSeries is on published materials (written e.g. books and periodicals, or media such as tv, radio and games).<br/><br/>
+
+Specific subtypes are available for describing <a class=\"localLink\" href=\"http://schema.org/TVSeries\">TVSeries</a>, <a class=\"localLink\" href=\"http://schema.org/RadioSeries\">RadioSeries</a>, <a class=\"localLink\" href=\"http://schema.org/MovieSeries\">MovieSeries</a>, <a class=\"localLink\" href=\"http://schema.org/BookSeries\">BookSeries</a>, <a class=\"localLink\" href=\"http://schema.org/Periodical\">Periodical</a> and <a class=\"localLink\" href=\"http://schema.org/VideoGameSeries\">VideoGameSeries</a>. In each case, the <a class=\"localLink\" href=\"http://schema.org/hasPart\">hasPart</a> / <a class=\"localLink\" href=\"http://schema.org/isPartOf\">isPartOf</a> properties can be used to relate the CreativeWorkSeries to its parts. The general CreativeWorkSeries type serves largely just to organize these more specific and practical subtypes.<br/><br/>
+
+It is common for properties applicable to an item from the series to be usefully applied to the containing group. Schema.org attempts to anticipate some of these cases, but publishers should be free to apply properties of the series parts to the series as a whole wherever they seem appropriate.""" .
+
+schema:ChildCare rdfs:comment "A Childcare center." .
+
+schema:LocalBusiness rdfs:comment "A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc." .
+
+schema:Crematorium rdfs:comment "A crematorium." .
+
+schema:FireStation rdfs:comment "A fire station. With firemen." .
+
+schema:Organization rdfs:comment "An organization such as a school, NGO, corporation, club, etc." .
+
+schema:Person rdfs:comment "A person (alive, dead, undead, or fictional)." .
+
+schema:ArtGallery rdfs:comment "An art gallery." .
+
+schema:EntertainmentBusiness rdfs:comment "A business providing entertainment." .
+
+schema:AmusementPark rdfs:comment "An amusement park." .
+
+schema:Hospital rdfs:comment "A hospital." .
+
+schema:MedicalOrganization rdfs:comment "A medical organization (physical or not), such as hospital, institution or clinic." .
+
+schema:Photograph rdfs:comment "A photograph." .
+
+schema:Vein rdfs:comment "A type of blood vessel that specifically carries blood to the heart." .
+
+schema:NightClub rdfs:comment "A nightclub or discotheque." .
+
+schema:Reservoir rdfs:comment "A reservoir of water, typically an artificially created lake, like the Lake Kariba reservoir." .
+
+schema:BodyOfWater rdfs:comment "A body of water, such as a sea, ocean, or lake." .
+
+schema:PublicToilet rdfs:comment "A public toilet is a room or small building containing one or more toilets (and possibly also urinals) which is available for use by the general public, or by customers or employees of certain businesses." .
+
+schema:MedicalClinic rdfs:comment "A facility, often associated with a hospital or medical school, that is devoted to the specific diagnosis and/or healthcare. Previously limited to outpatients but with evolution it may be open to inpatients as well." .
+
+schema:MedicalBusiness rdfs:comment "A particular physical or virtual business of an organization for medical purposes. Examples of MedicalBusiness include differents business run by health professionals." .
+
+schema:Collection rdfs:comment "A created collection of Creative Works or other artefacts." .
+
+schema:TrainStation rdfs:comment "A train station." .
+
+schema:GovernmentOrganization rdfs:comment "A governmental organization or agency." .
+
+schema:NailSalon rdfs:comment "A nail salon." .
+
+schema:RiverBodyOfWater rdfs:comment "A river (for example, the broad majestic Shannon)." .
+
+schema:MiddleSchool rdfs:comment "A middle school (typically for children aged around 11-14, although this varies somewhat)." .
+
+schema:EducationalOrganization rdfs:comment "An educational organization." .
+
+schema:Brewery rdfs:comment "Brewery." .
+
+schema:FoodEstablishment rdfs:comment "A food-related business." .
+
+schema:MusicComposition rdfs:comment "A musical composition." .
+
+schema:MedicalCondition rdfs:comment "Any condition of the human body that affects the normal functioning of a person, whether physically or mentally. Includes diseases, injuries, disabilities, disorders, syndromes, etc." .
+
+schema:House rdfs:comment "A house is a building or structure that has the ability to be occupied for habitation by humans or other creatures (Source: Wikipedia, the free encyclopedia, see <a href=\"http://en.wikipedia.org/wiki/House\">http://en.wikipedia.org/wiki/House</a>)." .
+
+schema:Accommodation rdfs:comment """An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
+For more specific types of accommodations not defined in schema.org, one can use additionalType with external vocabularies.
+<br /><br />
+See also the <a href=\"/docs/hotels.html\">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""" .
+
+schema:PublicationVolume rdfs:comment """A part of a successively published publication such as a periodical or multi-volume work, often numbered. It may represent a time span, such as a year.<br/><br/>
+
+See also <a href=\"http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html\">blog post</a>.""" .
+
+schema:MusicGroup rdfs:comment "A musical group, such as a band, an orchestra, or a choir. Can also be a solo musician." .
+
+schema:CollegeOrUniversity rdfs:comment "A college, university, or other third-level educational institution." .
+
+schema:BroadcastService rdfs:comment "A delivery service through which content is provided via broadcast over the air or online." .
+
+schema:Service rdfs:comment "A service provided by an organization, e.g. delivery service, print services, etc." .
+
+schema:GeoCoordinates rdfs:comment "The geographic coordinates of a place or event." .
+
+schema:Course rdfs:comment "A description of an educational course which may be offered as distinct instances at which take place at different times or take place at different locations, or be offered through different media or modes of study. An educational course is a sequence of one or more educational events and/or creative works which aims to build knowledge, competence or ability of learners." .
+
+schema:ComputerLanguage rdfs:comment "This type covers computer programming languages such as Scheme and Lisp, as well as other language-like computer representations. Natural languages are best represented with the <a class=\"localLink\" href=\"http://schema.org/Language\">Language</a> type." .
+
+schema:FinancialService rdfs:comment "Financial services business." .
+
+schema:Place rdfs:comment "Entities that have a somewhat fixed, physical extension." .
+
+schema:Preschool rdfs:comment "A preschool." .
+
+schema:RadioSeries rdfs:comment "CreativeWorkSeries dedicated to radio broadcast and associated online delivery." .
+
+schema:ElementarySchool rdfs:comment "An elementary school." .
+
+schema:IceCreamShop rdfs:comment "An ice cream shop." .
+
+schema:BusStop rdfs:comment "A bus stop." .
+
+<http://bioschemas.org/Gene> rdfs:comment "A discrete unit of inheritance which affects one or more biological traits ."@en .
+
+<http://bioschemas.org/BioChemEntity> rdfs:comment "Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical."@en .
+
+schema:BlogPosting rdfs:comment "A blog post." .
+
+schema:AutoRental rdfs:comment "A car rental business." .
+
+schema:AutomotiveBusiness rdfs:comment "Car repair, sales, or parts." .
+
+schema:MovieSeries rdfs:comment "A series of movies. Included movies can be indicated with the hasPart property." .
+
+schema:Report rdfs:comment "A Report generated by governmental or non-governmental organization." .
+
+schema:TennisComplex rdfs:comment "A tennis complex." .
+
+schema:SubwayStation rdfs:comment "A subway station." .
+
+schema:MedicalDevice rdfs:comment "Any object used in a medical capacity, such as to diagnose or treat a patient." .
+
+schema:StadiumOrArena rdfs:comment "A stadium." .
+
+schema:Periodical rdfs:comment """A publication in any medium issued in successive parts bearing numerical or chronological designations and intended, such as a magazine, scholarly journal, or newspaper to continue indefinitely.<br/><br/>
+
+See also <a href=\"http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html\">blog post</a>.""" .
+
+schema:State rdfs:comment "A state or province of a country." .
+
+schema:AdministrativeArea rdfs:comment "A geographical region, typically under the jurisdiction of a particular government." .
+
+schema:Pond rdfs:comment "A pond." .
+
+schema:CreativeWorkSeason rdfs:comment "A media season e.g. tv, radio, video game etc." .
+
+schema:ShoeStore rdfs:comment "A shoe store." .
+
+schema:Store rdfs:comment "A retail good store." .
+
+schema:Beach rdfs:comment "Beach." .
+
+schema:Courthouse rdfs:comment "A courthouse." .
+
+schema:GovernmentBuilding rdfs:comment "A government building." .
+
+schema:BedAndBreakfast rdfs:comment """Bed and breakfast.
+<br /><br />
+See also the <a href=\"/docs/hotels.html\">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""" .
+
+schema:NewsArticle rdfs:comment """A NewsArticle is an article whose content reports news, or provides background context and supporting materials for understanding the news.<br/><br/>
+
+A more detailed overview of <a href=\"/docs/news.html\">schema.org News markup</a> is also available.""" .
+
+<http://bioschemas.org/Taxon> rdfs:comment "A set of organisms asserted to represent a natural cohesive biological unit."@en .
+
+schema:Joint rdfs:comment "The anatomical location at which two or more bones make contact." .
+
+schema:Casino rdfs:comment "A casino." .
+
+schema:DataCatalog rdfs:comment "A collection of datasets." .
+
+schema:Festival rdfs:comment "Event type: Festival." .
+
+schema:OutletStore rdfs:comment "An outlet store." .
+
+schema:Country rdfs:comment "A country." .
+
+schema:Park rdfs:comment "A park." .
+
+schema:Library rdfs:comment "A library." .
+
+schema:NGO rdfs:comment "Organization: Non-governmental Organization." .
+
+schema:Hotel rdfs:comment """A hotel is an establishment that provides lodging paid on a short-term basis (Source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Hotel).
+<br /><br />
+See also the <a href=\"/docs/hotels.html\">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""" .
+
+schema:SportsOrganization rdfs:comment "Represents the collection of all sports organizations, including sports teams, governing bodies, and sports associations." .
+
+schema:Resort rdfs:comment """A resort is a place used for relaxation or recreation, attracting visitors for holidays or vacations. Resorts are places, towns or sometimes commercial establishment operated by a single company (Source: Wikipedia, the free encyclopedia, see <a href=\"http://en.wikipedia.org/wiki/Resort\">http://en.wikipedia.org/wiki/Resort</a>).
+<br /><br />
+See also the <a href=\"/docs/hotels.html\">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""" .
+
+schema:Embassy rdfs:comment "An embassy." .
+
+schema:TVEpisode rdfs:comment "A TV episode which can be part of a series or season." .
+
+schema:Mountain rdfs:comment "A mountain, like Mount Whitney or Mount Everest." .
+
+schema:BloodTest rdfs:comment "A medical test performed on a sample of a patient's blood." .
+
+schema:MedicalTest rdfs:comment "Any medical test, typically performed for diagnostic purposes." .
+
+schema:RadiationTherapy rdfs:comment "A process of care using radiation aimed at improving a health condition." .
+
+schema:MedicalTherapy rdfs:comment "Any medical intervention designed to prevent, treat, and cure human diseases and medical conditions, including both curative and palliative therapies. Medical therapies are typically processes of care relying upon pharmacotherapy, behavioral therapy, supportive therapy (with fluid or nutrition for example), or detoxification (e.g. hemodialysis) aimed at improving or preventing a health condition." .
+
+schema:CafeOrCoffeeShop rdfs:comment "A cafe or coffee shop." .
+
+schema:Bridge rdfs:comment "A bridge." .
+
+schema:GroceryStore rdfs:comment "A grocery store." .
+
+schema:TouristAttraction rdfs:comment "A tourist attraction.  In principle any Thing can be a <a class=\"localLink\" href=\"http://schema.org/TouristAttraction\">TouristAttraction</a>, from a <a class=\"localLink\" href=\"http://schema.org/Mountain\">Mountain</a> and <a class=\"localLink\" href=\"http://schema.org/LandmarksOrHistoricalBuildings\">LandmarksOrHistoricalBuildings</a> to a <a class=\"localLink\" href=\"http://schema.org/LocalBusiness\">LocalBusiness</a>.  This Type can be used on its own to describe a general <a class=\"localLink\" href=\"http://schema.org/TouristAttraction\">TouristAttraction</a>, or be used as an <a class=\"localLink\" href=\"http://schema.org/additionalType\">additionalType</a> to add tourist attraction properties to any other type.  (See examples below)" .
+
+schema:SurgicalProcedure rdfs:comment "A medical procedure involving an incision with instruments; performed for diagnose, or therapeutic purposes." .
+
+schema:Vehicle rdfs:comment "A vehicle is a device that is designed or used to transport people or cargo over land, water, air, or through space." .
+
+schema:Product rdfs:comment "Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online." .
+
+schema:Waterfall rdfs:comment "A waterfall, like Niagara." .
+
+schema:Airport rdfs:comment "An airport." .
+
+schema:QuantitativeValue rdfs:comment "A point value or interval for product characteristics and other purposes." .
+
+schema:TVSeason rdfs:comment "Season dedicated to TV broadcast and associated online delivery." .
+
+schema:Car rdfs:comment "A car is a wheeled, self-powered motor vehicle used for transportation." .
+
+schema:CityHall rdfs:comment "A city hall." .
+
+schema:TherapeuticProcedure rdfs:comment "A medical procedure intended primarily for therapeutic purposes, aimed at improving a health condition." .
+
+schema:DiagnosticProcedure rdfs:comment "A medical procedure intended primarily for diagnostic, as opposed to therapeutic, purposes." .
+
+schema:WorkersUnion rdfs:comment "A Workers Union (also known as a Labor Union, Labour Union, or Trade Union) is an organization that promotes the interests of its worker members by collectively bargaining with management, organizing, and political lobbying." .
+
+schema:DanceGroup rdfs:comment "A dance group&#x2014;for example, the Alvin Ailey Dance Theater or Riverdance." .
+
+schema:SelfStorage rdfs:comment "A self-storage facility." .
+
+schema:Muscle rdfs:comment "A muscle is an anatomical structure consisting of a contractile form of tissue that animals use to effect movement." .
+
+schema:BusOrCoach rdfs:comment "A bus (also omnibus or autobus) is a road vehicle designed to carry passengers. Coaches are luxury busses, usually in service for long distance travel." .
+
+schema:BookStore rdfs:comment "A bookstore." .
+
+schema:CatholicChurch rdfs:comment "A Catholic church." .
+
+schema:Movie rdfs:comment "A movie." .
+
+schema:BookSeries rdfs:comment "A series of books. Included books can be indicated with the hasPart property." .
+
+schema:ArchiveOrganization rdfs:comment "An organization with archival holdings. An organization which keeps and preserves archival material and typically makes it accessible to the public." .
+
+schema:SeaBodyOfWater rdfs:comment "A sea (for example, the Caspian sea)." .
+
+schema:Drawing rdfs:comment "A picture or diagram made with a pencil, pen, or crayon rather than paint." .
+
+schema:Nerve rdfs:comment "A common pathway for the electrochemical nerve impulses that are transmitted along each of the axons." .
+
+schema:ImageObject rdfs:comment "An image file." .
+
+schema:MediaObject rdfs:comment "A media object, such as an image, video, or audio object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's)." .
+
+schema:TelevisionStation rdfs:comment "A television station." .
+
+schema:Sculpture rdfs:comment "A piece of sculpture." .
+
+schema:BowlingAlley rdfs:comment "A bowling alley." .
+
+schema:Brand rdfs:comment "A brand is a name used by an organization or business person for labeling a product, product group, or similar." .
+
+schema:LakeBodyOfWater rdfs:comment "A lake (for example, Lake Pontrachain)." .
+
+schema:Motorcycle rdfs:comment "A motorcycle or motorbike is a single-track, two-wheeled motor vehicle." .
+
+schema:GolfCourse rdfs:comment "A golf course." .
+
+schema:Museum rdfs:comment "A museum." .
+
+schema:Painting rdfs:comment "A painting." .
+
+schema:LiquorStore rdfs:comment "A shop that sells alcoholic drinks such as wine, beer, whisky and other spirits." .
+
+schema:Dataset rdfs:comment "A body of structured information describing some topic(s) of interest." .
+
+schema:Artery rdfs:comment "A type of blood vessel that specifically carries blood away from the heart." .
+
+schema:Canal rdfs:comment "A canal, like the Panama Canal." .
+
+schema:VisualArtwork rdfs:comment "A work of art that is primarily visual in character." .
+
+schema:Hostel rdfs:comment """A hostel - cheap accommodation, often in shared dormitories.
+<br /><br />
+See also the <a href=\"/docs/hotels.html\">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""" .
+
+schema:Winery rdfs:comment "A winery." .
+
+schema:Synagogue rdfs:comment "A synagogue." .
+
+schema:PublicSwimmingPool rdfs:comment "A public swimming pool." .
+
+schema:MedicalSymptom rdfs:comment "Any complaint sensed and expressed by the patient (therefore defined as subjective)  like stomachache, lower-back pain, or fatigue." .
+
+schema:MedicalSignOrSymptom rdfs:comment "Any feature associated or not with a medical condition. In medicine a symptom is generally subjective while a sign is objective." .
+
+schema:ShoppingCenter rdfs:comment "A shopping center or mall." .
+
+schema:HinduTemple rdfs:comment "A Hindu temple." .
+
+schema:Cemetery rdfs:comment "A graveyard." .
+
+schema:Mosque rdfs:comment "A mosque." .
+
+schema:TouristInformationCenter rdfs:comment "A tourist information center." .
+
+schema:Play rdfs:comment "A play is a form of literature, usually consisting of dialogue between characters, intended for theatrical performance rather than just reading. Note the peformance of a Play would be a <a class=\"localLink\" href=\"http://schema.org/TheaterEvent\">TheaterEvent</a> - the <em>Play</em> being the <a class=\"localLink\" href=\"http://schema.org/workPerformed\">workPerformed</a>." .
+
+schema:Rating rdfs:comment "A rating is an evaluation on a numeric scale, such as 1 to 5 stars." .
+
+schema:TravelAgency rdfs:comment "A travel agency." .
+
+schema:Manuscript rdfs:comment "A book, document, or piece of music written by hand rather than typed or printed." .
+
+schema:WebPage rdfs:comment "A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as <code>breadcrumb</code> may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page." .
+
+schema:Game rdfs:comment "The Game type represents things which are games. These are typically rule-governed recreational activities, e.g. role-playing games in which players assume the role of characters in a fictional setting." .
+
+schema:AnimalShelter rdfs:comment "Animal shelter." .
+
+schema:ProductModel rdfs:comment "A datasheet or vendor specification of a product (in the sense of a prototypical description)." .
+
+schema:RadioChannel rdfs:comment "A unique instance of a radio BroadcastService on a CableOrSatelliteService lineup." .
+
+schema:FinancialProduct rdfs:comment "A product provided to consumers and businesses by financial institutions such as banks, insurance companies, brokerage firms, consumer finance companies, and investment companies which comprise the financial services industry." .
+
+schema:MusicAlbum rdfs:comment "A collection of music tracks." .
+
+schema:MusicPlaylist rdfs:comment "A collection of music tracks in playlist form." .
+
+schema:Occupation rdfs:comment "A profession, may involve prolonged training and/or a formal qualification." .
+
+schema:RecyclingCenter rdfs:comment "A recycling center." .
+
+schema:Pharmacy rdfs:comment "A pharmacy or drugstore." .
+
+schema:SportsTeam rdfs:comment "Organization: Sports team." .
+
+schema:MovieTheater rdfs:comment "A movie theater." .
+
+schema:Newspaper rdfs:comment "A publication containing information about varied topics that are pertinent to general information, a geographic area, or a specific subject matter (i.e. business, culture, education). Often published daily." .
+
+schema:PawnShop rdfs:comment "A shop that will buy, or lend money against the security of, personal possessions." .
+
+schema:SkiResort rdfs:comment "A ski resort." .
+
+schema:Bakery rdfs:comment "A bakery." .
+
+schema:BarOrPub rdfs:comment "A bar or pub." .
+
+schema:ParkingFacility rdfs:comment "A parking lot or other parking facility." .
+
+schema:MedicalSign rdfs:comment "Any physical manifestation of a person's medical condition discoverable by objective diagnostic tests or physical examination." .
+
+schema:ComicStory rdfs:comment """The term \"story\" is any indivisible, re-printable
+    unit of a comic, including the interior stories, covers, and backmatter. Most
+    comics have at least two stories: a cover (ComicCoverArt) and an interior story.""" .
+
+schema:Distillery rdfs:comment "A distillery." .
+
+schema:Bone rdfs:comment "Rigid connective tissue that comprises up the skeletal structure of the human body." .
+
+schema:School rdfs:comment "A school." .
+
+schema:DefenceEstablishment rdfs:comment "A defence establishment, such as an army or navy base." .
+
+schema:EventSeries rdfs:comment """A series of <a class=\"localLink\" href=\"http://schema.org/Event\">Event</a>s. Included events can relate with the series using the <a class=\"localLink\" href=\"http://schema.org/superEvent\">superEvent</a> property.<br/><br/>
+
+An EventSeries is a collection of events that share some unifying characteristic. For example, \"The Olympic Games\" is a series, which
+is repeated regularly. The \"2012 London Olympics\" can be presented both as an <a class=\"localLink\" href=\"http://schema.org/Event\">Event</a> in the series \"Olympic Games\", and as an
+<a class=\"localLink\" href=\"http://schema.org/EventSeries\">EventSeries</a> that included a number of sporting competitions as Events.<br/><br/>
+
+The nature of the association between the events in an <a class=\"localLink\" href=\"http://schema.org/EventSeries\">EventSeries</a> can vary, but typical examples could
+include a thematic event series (e.g. topical meetups or classes), or a series of regular events that share a location, attendee group and/or organizers.<br/><br/>
+
+EventSeries has been defined as a kind of Event to make it easy for publishers to use it in an Event context without
+worrying about which kinds of series are really event-like enough to call an Event. In general an EventSeries
+may seem more Event-like when the period of time is compact and when aspects such as location are fixed, but
+it may also sometimes prove useful to describe a longer-term series as an Event.""" .
+
+schema:Blog rdfs:comment "A blog." .
+
+schema:BusStation rdfs:comment "A bus station." .
+
+schema:Legislation rdfs:comment "A legal document such as an act, decree, bill, etc. (enforceable or not) or a component of a legal act (like an article)." .
+
+schema:PodcastSeries rdfs:comment "A podcast is an episodic series of digital audio or video files which a user can download and listen to." .
+
+schema:Airline rdfs:comment "An organization that provides flights for passengers." .
+
+schema:WebSite rdfs:comment "A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via URLs." .
+
+schema:TattooParlor rdfs:comment "A tattoo parlor." .
+
+schema:VideoGameSeries rdfs:comment "A video game series." .
+
+schema:BuddhistTemple rdfs:comment "A Buddhist temple." .
+
+schema:PublicationIssue rdfs:comment """A part of a successively published publication such as a periodical or publication volume, often numbered, usually containing a grouping of works such as articles.<br/><br/>
+
+See also <a href=\"http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html\">blog post</a>.""" .
+
+schema:Poster rdfs:comment "A large, usually printed placard, bill, or announcement, often illustrated, that is posted to advertise or publicize something." .
+
+schema:DrugLegalStatus rdfs:comment "The legal availability status of a medical drug." .
+
+schema:OceanBodyOfWater rdfs:comment "An ocean (for example, the Pacific)." .
+
+schema:AudioObject rdfs:comment "An audio file." .
+
+schema:LandmarksOrHistoricalBuildings rdfs:comment "An historical landmark or building." .
+
+schema:PerformingArtsTheater rdfs:comment "A theater or other performing art center." .
+
+<http://bioschemas.org/ChemicalSubstance> rdfs:comment "A chemical substance."@en .
+
+schema:ComedyClub rdfs:comment "A comedy club." .
+
+schema:RadioStation rdfs:comment "A radio station." .
+
+schema:Restaurant rdfs:comment "A restaurant." .
+
+schema:City rdfs:comment "A city or town." .
+
+schema:Apartment rdfs:comment "An apartment (in American English) or flat (in British English) is a self-contained housing unit (a type of residential real estate) that occupies only part of a building (Source: Wikipedia, the free encyclopedia, see <a href=\"http://en.wikipedia.org/wiki/Apartment\">http://en.wikipedia.org/wiki/Apartment</a>)." .
+
+schema:MobileApplication rdfs:comment "A software application designed specifically to work well on a mobile device such as a telephone." .
+
+schema:EmploymentAgency rdfs:comment "An employment agency." .
+
+schema:BeautySalon rdfs:comment "Beauty salon." .
+
+schema:Thesis rdfs:comment "A thesis or dissertation document submitted in support of candidature for an academic degree or professional qualification." .
+
+schema:Aquarium rdfs:comment "Aquarium." .
+
+schema:Volcano rdfs:comment "A volcano, like Fuji san." .
+
+schema:MusicVenue rdfs:comment "A music venue." .
+
+schema:GasStation rdfs:comment "A gas station." .
+
+schema:Corporation rdfs:comment "Organization: A business corporation." .
+
+schema:BankOrCreditUnion rdfs:comment "Bank or credit union." .
+
+schema:MedicalSpecialty rdfs:comment "Any specific branch of medical science or practice. Medical specialities include clinical specialties that pertain to particular organ systems and their respective disease states, as well as allied health specialties. Enumerated type." .
+
+<http://bioschemas.org/Protein> rdfs:comment "Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type schema:Protein. A protein can thus be a subclass of another protein, e.g. schema:Protein as a UniProt record can have multiple isoforms inside it which would also be schema:Protein. They can be imagined, synthetic, hypothetical or naturally occurring."@en .
+
+<http://bioschemas.org/MolecularEntity> rdfs:comment "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity."@en .
+
+schema:Book rdfs:comment "A book." .
+
+schema:VideoGame rdfs:comment "A video game is an electronic game that involves human interaction with a user interface to generate visual feedback on a video device." .
+
+schema:Motel rdfs:comment """A motel.
+<br /><br />
+See also the <a href=\"/docs/hotels.html\">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.""" .
+
+schema:ScholarlyArticle rdfs:comment "A scholarly article." .
+
+schema:Map rdfs:comment "A map." .
+
+schema:MusicRelease rdfs:comment "A MusicRelease is a specific release of a music album." .
+
+schema:PetStore rdfs:comment "A pet store." .
+
+schema:VideoObject rdfs:comment "A video file." .
+
+schema:InfectiousDisease rdfs:comment "An infectious disease is a clinically evident human disease resulting from the presence of pathogenic microbial agents, like pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and prions. To be considered an infectious disease, such pathogens are known to be able to cause this disease." .
+
+schema:ComicSeries rdfs:comment """A sequential publication of comic stories under a
+    unifying title, for example \"The Amazing Spider-Man\" or \"Groo the
+    Wanderer\".""" .
+
+schema:ToyStore rdfs:comment "A toy store." .
+
+schema:Optician rdfs:comment "A store that sells reading glasses and similar devices for improving vision." .
+
+schema:Playground rdfs:comment "A playground." .
+
+schema:EventVenue rdfs:comment "An event venue." .
+
+schema:Zoo rdfs:comment "A zoo." .
+
+schema:copyrightHolder rdfs:comment "The party holding the legal copyright to the CreativeWork." .
+
+schema:material rdfs:comment "A material that something is made from, e.g. leather, wool, cotton, paper." .
+
+schema:productionCompany rdfs:comment "The production company or studio responsible for the item e.g. series, video game, episode etc." .
+
+schema:servesCuisine rdfs:comment "The cuisine of the restaurant." .
+
+schema:brand rdfs:comment "The brand(s) associated with a product or service, or the brand(s) maintained by an organization or business person." .
+
+schema:countryOfOrigin rdfs:comment "The country of the principal offices of the production company or individual responsible for the movie or program." .
+
+schema:latitude rdfs:comment "The latitude of a location. For example <code>37.42242</code> (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>)." .
+
+schema:translator rdfs:comment "Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event." .
+
+schema:sponsor rdfs:comment "A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event." .
+
+schema:callSign rdfs:comment "A <a href=\"https://en.wikipedia.org/wiki/Call_sign\">callsign</a>, as used in broadcasting and radio communications to identify people, radio and TV stations, or vehicles." .
+
+schema:editor rdfs:comment "Specifies the Person who edited the CreativeWork." .
+
+schema:musicReleaseFormat rdfs:comment "Format of this release (the type of recording media used, ie. compact disc, digital media, LP, etc.)." .
+
+schema:award rdfs:comment "An award won by or for this item." .
+
+schema:icaoCode rdfs:comment "ICAO identifier for an airport." .
+
+schema:license rdfs:comment "A license document that applies to this content, typically indicated by URL." .
+
+schema:recordLabel rdfs:comment "The label that issued the release." .
+
+schema:director rdfs:comment "A director of e.g. tv, radio, movie, video gaming etc. content, or of an event. Directors can be associated with individual items or with a series, episode, clip." .
+
+schema:numberOfSeasons rdfs:comment "The number of seasons in this series." .
+
+schema:gtin rdfs:comment "A Global Trade Item Number (<a href=\"https://www.gs1.org/standards/id-keys/gtin\">GTIN</a>). GTINs identify trade items, including products and services, using numeric identification codes. The <a class=\"localLink\" href=\"http://schema.org/gtin\">gtin</a> property generalizes the earlier <a class=\"localLink\" href=\"http://schema.org/gtin8\">gtin8</a>, <a class=\"localLink\" href=\"http://schema.org/gtin12\">gtin12</a>, <a class=\"localLink\" href=\"http://schema.org/gtin13\">gtin13</a>, and <a class=\"localLink\" href=\"http://schema.org/gtin14\">gtin14</a> properties. The GS1 <a href=\"https://www.gs1.org/standards/Digital-Link/\">digital link specifications</a> express GTINs as URLs. A correct <a class=\"localLink\" href=\"http://schema.org/gtin\">gtin</a> value should be a valid GTIN, which means that it should be an all-numeric string of either 8, 12, 13 or 14 digits, or a \"GS1 Digital Link\" URL based on such a string. The numeric component should also have a <a href=\"https://www.gs1.org/services/check-digit-calculator\">valid GS1 check digit</a> and meet the other rules for valid GTINs. See also <a href=\"http://www.gs1.org/barcodes/technical/idkeys/gtin\">GS1's GTIN Summary</a> and <a href=\"https://en.wikipedia.org/wiki/Global_Trade_Item_Number\">Wikipedia</a> for more details. Left-padding of the gtin values is not required or encouraged." .
+
+schema:logo rdfs:comment "An associated logo." .
+
+schema:image rdfs:comment "An image of the item. This can be a <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a> or a fully described <a class=\"localLink\" href=\"http://schema.org/ImageObject\">ImageObject</a>." .
+
+schema:musicBy rdfs:comment "The composer of the soundtrack." .
+
+schema:alumniOf rdfs:comment "An organization that the person is an alumni of." .
+
+schema:worksFor rdfs:comment "Organizations that the person works for." .
+
+schema:isPartOf rdfs:comment "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of." .
+
+schema:hasPart rdfs:comment "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense)." .
+
+schema:actor rdfs:comment "An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip." .
+
+schema:contentRating rdfs:comment "Official rating of a piece of content&#x2014;for example,'MPAA PG-13'." .
+
+schema:duns rdfs:comment "The Dun &amp; Bradstreet DUNS number for identifying an organization or business person." .
+
+schema:composer rdfs:comment "The person or organization who wrote a composition, or who is the composer of a work performed at some event." .
+
+schema:position rdfs:comment "The position of an item in a series or sequence of items." .
+
+schema:numberOfEpisodes rdfs:comment "The number of episodes in this season or series." .
+
+schema:minValue rdfs:comment "The lower value of some characteristic or property." .
+
+schema:legalStatus rdfs:comment "The drug or supplement's legal status, including any controlled substance schedules that apply." .
+
+schema:spouse rdfs:comment "The person's spouse." .
+
+schema:possibleTreatment rdfs:comment "A possible treatment to address this condition, sign or symptom." .
+
+schema:inLanguage rdfs:comment "The language of the content or performance or used in an action. Please use one of the language codes from the <a href=\"http://tools.ietf.org/html/bcp47\">IETF BCP 47 standard</a>. See also <a class=\"localLink\" href=\"http://schema.org/availableLanguage\">availableLanguage</a>." .
+
+schema:sameAs rdfs:comment "URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website." .
+
+schema:superEvent rdfs:comment "An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent." .
+
+schema:subEvent rdfs:comment "An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference." .
+
+schema:sport rdfs:comment "A type of sport (e.g. Baseball)." .
+
+schema:issn rdfs:comment "The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication." .
+
+schema:operatingSystem rdfs:comment "Operating systems supported (Windows 7, OSX 10.6, Android 1.6)." .
+
+schema:exampleOfWork rdfs:comment "A creative work that this work is an example/instance/realization/derivation of." .
+
+schema:workExample rdfs:comment "Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook." .
+
+schema:width rdfs:comment "The width of the item." .
+
+schema:about rdfs:comment "The subject matter of the content." .
+
+schema:connectedTo rdfs:comment "Other anatomical structures to which this structure is connected." .
+
+schema:deathDate rdfs:comment "Date of death." .
+
+schema:nationality rdfs:comment "Nationality of the person." .
+
+schema:height rdfs:comment "The height of the item." .
+
+schema:affiliation rdfs:comment "An organization that this person is affiliated with. For example, a school/university, a club, or a team." .
+
+schema:memberOf rdfs:comment "An Organization (or ProgramMembership) to which this Person or Organization belongs." .
+
+schema:parentOrganization rdfs:comment "The larger organization that this organization is a <a class=\"localLink\" href=\"http://schema.org/subOrganization\">subOrganization</a> of, if any." .
+
+schema:subOrganization rdfs:comment "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property." .
+
+schema:weight rdfs:comment "The weight of the product or person." .
+
+schema:pagination rdfs:comment "Any description of pages that is not separated into pageStart and pageEnd; for example, \"1-6, 9, 55\" or \"10-12, 46-49\"." .
+
+schema:numberOfPages rdfs:comment "The number of pages in the book." .
+
+schema:endDate rdfs:comment "The end date and time of the item (in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>)." .
+
+schema:containsPlace rdfs:comment "The basic containment relation between a place and another that it contains." .
+
+schema:containedInPlace rdfs:comment "The basic containment relation between a place and one that contains it." .
+
+schema:faxNumber rdfs:comment "The fax number." .
+
+schema:byArtist rdfs:comment "The artist that performed this album or recording." .
+
+schema:contributor rdfs:comment "A secondary contributor to the CreativeWork or Event." .
+
+schema:contentLocation rdfs:comment "The location depicted or described in the content. For example, the location in a photograph or painting." .
+
+schema:parent rdfs:comment "A parent of this person." .
+
+schema:familyName rdfs:comment "Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property." .
+
+schema:longitude rdfs:comment "The longitude of a location. For example <code>-122.08585</code> (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>)." .
+
+schema:geo rdfs:comment "The geo coordinates of the place." .
+
+schema:genre rdfs:comment "Genre of the creative work, broadcast channel or group." .
+
+schema:signOrSymptom rdfs:comment "A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition." .
+
+schema:givenName rdfs:comment "Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property." .
+
+schema:homeLocation rdfs:comment "A contact location for a person's residence." .
+
+schema:location rdfs:comment "The location of for example where the event is happening, an organization is located, or where an action takes place." .
+
+schema:birthPlace rdfs:comment "The place where the person was born." .
+
+schema:iataCode rdfs:comment "IATA identifier for an airline or airport." .
+
+schema:unitCode rdfs:comment "The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon." .
+
+schema:depth rdfs:comment "The depth of the item." .
+
+schema:volumeNumber rdfs:comment "Identifies the volume of publication or multi-part work; for example, \"iii\" or \"2\"." .
+
+schema:url rdfs:comment "URL of the item." .
+
+schema:startDate rdfs:comment "The start date and time of the item (in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>)." .
+
+schema:duration rdfs:comment "The duration of the item (movie, audio recording, event, etc.) in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 date format</a>." .
+
+schema:iswcCode rdfs:comment "The International Standard Musical Work Code for the composition." .
+
+schema:telephone rdfs:comment "The telephone number." .
+
+schema:value rdfs:comment """The value of the quantitative value or property value node.<br/><br/>
+
+<ul>
+<li>For <a class=\"localLink\" href=\"http://schema.org/QuantitativeValue\">QuantitativeValue</a> and <a class=\"localLink\" href=\"http://schema.org/MonetaryAmount\">MonetaryAmount</a>, the recommended type for values is 'Number'.</li>
+<li>For <a class=\"localLink\" href=\"http://schema.org/PropertyValue\">PropertyValue</a>, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.</li>
+<li>Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.</li>
+<li>Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.</li>
+</ul>
+""" .
+
+schema:organizer rdfs:comment "An organizer of an Event." .
+
+schema:competitor rdfs:comment "A competitor in a sports event." .
+
+schema:knowsLanguage rdfs:comment "Of a <a class=\"localLink\" href=\"http://schema.org/Person\">Person</a>, and less typically of an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a>, to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the <a href=\"http://tools.ietf.org/html/bcp47\">IETF BCP 47 standard</a>." .
+
+schema:partOfSeries rdfs:comment "The series to which this episode or season belongs." .
+
+schema:issueNumber rdfs:comment "Identifies the issue of publication; for example, \"iii\" or \"2\"." .
+
+schema:netWorth rdfs:comment "The total financial value of the person as calculated by subtracting assets from liabilities." .
+
+schema:encodingFormat rdfs:comment """Media type typically expressed using a MIME format (see <a href=\"http://www.iana.org/assignments/media-types/media-types.xhtml\">IANA site</a> and <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types\">MDN reference</a>) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).<br/><br/>
+
+In cases where a <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a> has several media type representations, <a class=\"localLink\" href=\"http://schema.org/encoding\">encoding</a> can be used to indicate each <a class=\"localLink\" href=\"http://schema.org/MediaObject\">MediaObject</a> alongside particular <a class=\"localLink\" href=\"http://schema.org/encodingFormat\">encodingFormat</a> information.<br/><br/>
+
+Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.""" .
+
+schema:locationCreated rdfs:comment "The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork." .
+
+schema:author rdfs:comment "The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably." .
+
+schema:creator rdfs:comment "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork." .
+
+schema:hasOccupation rdfs:comment "The Person's occupation. For past professions, use Role for expressing dates." .
+
+schema:publisher rdfs:comment "The publisher of the creative work." .
+
+schema:honorificPrefix rdfs:comment "An honorific prefix preceding a Person's name such as Dr/Mrs/Mr." .
+
+schema:isbn rdfs:comment "The ISBN of the book." .
+
+schema:birthDate rdfs:comment "Date of birth." .
+
+schema:gender rdfs:comment "Gender of something, typically a <a class=\"localLink\" href=\"http://schema.org/Person\">Person</a>, but possibly also fictional characters, animals, etc. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The <a class=\"localLink\" href=\"http://schema.org/gender\">gender</a> property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender <a class=\"localLink\" href=\"http://schema.org/SportsTeam\">SportsTeam</a> can be indicated with a text value of \"Mixed\"." .
+
+schema:children rdfs:comment "A child of the person." .
+
+schema:maxValue rdfs:comment "The upper value of some characteristic or property." .
+
+schema:producer rdfs:comment "The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.)." .
+
+schema:alternateName rdfs:comment "An alias for the item." .
+
+schema:foundingDate rdfs:comment "The date that this organization was founded." .
+
+schema:founder rdfs:comment "A person who founded this organization." .
+
+schema:datePublished rdfs:comment "Date of first broadcast/publication." .
+
+schema:broadcastChannelId rdfs:comment "The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number." .
+
+schema:dateCreated rdfs:comment "The date on which the CreativeWork was created or the item was added to a DataFeed." .
+
+schema:owns rdfs:comment "Products owned by the organization or person." .
+
+schema:dissolutionDate rdfs:comment "The date that this organization was dissolved." .
+
+schema:releaseOf rdfs:comment "The album this is a release of." .
+
+schema:leiCode rdfs:comment "An organization identifier that uniquely identifies a legal entity as defined in ISO 17442." .
+
+schema:isBasedOn rdfs:comment "A resource from which this work is derived or from which it is a modification or adaption." .
+
+schema:deathPlace rdfs:comment "The place where the person died." .
+
+schema:riskFactor rdfs:comment "A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition." .
+
+schema:colorist rdfs:comment "The individual who adds color to inked drawings." .
+
+schema:character rdfs:comment "Fictional person connected with a creative work." .
+
+schema:foundingLocation rdfs:comment "The place where the Organization was founded." .
+
+schema:elevation rdfs:comment "The elevation of a location (<a href=\"https://en.wikipedia.org/wiki/World_Geodetic_System\">WGS 84</a>). Values may be of the form 'NUMBER UNIT<em>OF</em>MEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone should be assumed to be a value in meters." .
+
+schema:numberOfEmployees rdfs:comment "The number of employees in an organization e.g. business." .
+
+schema:relevantSpecialty rdfs:comment "If applicable, a medical specialty in which this entity is relevant." .
+
+schema:lyricist rdfs:comment "The person who wrote the words." .
+
+schema:provider rdfs:comment "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller." .
+
+schema:citation rdfs:comment "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc." .
+
+schema:partOfSeason rdfs:comment "The season to which this episode belongs." .
+
+schema:illustrator rdfs:comment "The illustrator of the book." .
+
+schema:Chapter rdfs:label "chapter"@en .
+
+schema:CreativeWork rdfs:label "creative work" .
+
+schema:PoliceStation rdfs:label "police station" .
+
+schema:EmergencyService rdfs:label "emergency service" .
+
+schema:CivicStructure rdfs:label "civic structure" .
+
+schema:SoftwareApplication rdfs:label "software application" .
+
+schema:Campground rdfs:label "campground" .
+
+schema:LodgingBusiness rdfs:label "lodging business" .
+
+schema:Atlas rdfs:label "atlas"@en .
+
+schema:PhysicalExam rdfs:label "physical exam" .
+
+schema:MedicalProcedure rdfs:label "medical procedure" .
+
+schema:MedicalEntity rdfs:label "medical entity" .
+
+schema:Episode rdfs:label "episode" .
+
+schema:HealthClub rdfs:label "health club" .
+
+schema:SportsActivityLocation rdfs:label "sports activity location" .
+
+schema:HealthAndBeautyBusiness rdfs:label "health and beauty business" .
+
+schema:SheetMusic rdfs:label "sheet music" .
+
+schema:SocialMediaPosting rdfs:label "social media posting" .
+
+schema:Article rdfs:label "article" .
+
+schema:Ligament rdfs:label "ligament" .
+
+schema:AnatomicalStructure rdfs:label "anatomical structure" .
+
+schema:Church rdfs:label "church" .
+
+schema:PlaceOfWorship rdfs:label "place of worship" .
+
+schema:TheaterGroup rdfs:label "theater group" .
+
+schema:PerformingGroup rdfs:label "performing group" .
+
+schema:MedicalGuideline rdfs:label "medical guideline" .
+
+schema:Language rdfs:label "language" .
+
+schema:Thing rdfs:label "thing" .
+
+schema:Drug rdfs:label "drug" .
+
+schema:Substance rdfs:label "substance" .
+
+schema:TelevisionChannel rdfs:label "television channel" .
+
+schema:BroadcastChannel rdfs:label "broadcast channel" .
+
+schema:DaySpa rdfs:label "day spa" .
+
+schema:PostOffice rdfs:label "post office" .
+
+schema:GovernmentOffice rdfs:label "government office" .
+
+schema:SportsEvent rdfs:label "sports event" .
+
+schema:Event rdfs:label "event" .
+
+schema:Continent rdfs:label "continent" .
+
+schema:Landform rdfs:label "landform" .
+
+schema:TVSeries rdfs:label "t v series" .
+
+schema:CreativeWorkSeries rdfs:label "creative work series" .
+
+schema:ChildCare rdfs:label "child care" .
+
+schema:LocalBusiness rdfs:label "local business" .
+
+schema:Crematorium rdfs:label "crematorium" .
+
+schema:FireStation rdfs:label "fire station" .
+
+schema:Organization rdfs:label "organization" .
+
+schema:Person rdfs:label "person" .
+
+schema:ArtGallery rdfs:label "art gallery" .
+
+schema:EntertainmentBusiness rdfs:label "entertainment business" .
+
+schema:AmusementPark rdfs:label "amusement park" .
+
+schema:Hospital rdfs:label "hospital" .
+
+schema:MedicalOrganization rdfs:label "medical organization" .
+
+schema:Photograph rdfs:label "photograph" .
+
+schema:Vein rdfs:label "vein" .
+
+schema:NightClub rdfs:label "night club" .
+
+schema:Reservoir rdfs:label "reservoir" .
+
+schema:BodyOfWater rdfs:label "body of water" .
+
+schema:PublicToilet rdfs:label "public toilet" .
+
+schema:MedicalClinic rdfs:label "medical clinic" .
+
+schema:MedicalBusiness rdfs:label "medical business" .
+
+schema:Collection rdfs:label "collection"@en .
+
+schema:TrainStation rdfs:label "train station" .
+
+schema:GovernmentOrganization rdfs:label "government organization" .
+
+schema:NailSalon rdfs:label "nail salon" .
+
+schema:RiverBodyOfWater rdfs:label "river body of water" .
+
+schema:MiddleSchool rdfs:label "middle school" .
+
+schema:EducationalOrganization rdfs:label "educational organization" .
+
+schema:Brewery rdfs:label "brewery" .
+
+schema:FoodEstablishment rdfs:label "food establishment" .
+
+schema:MusicComposition rdfs:label "music composition" .
+
+schema:MedicalCondition rdfs:label "medical condition" .
+
+schema:House rdfs:label "house" .
+
+schema:Accommodation rdfs:label "accommodation" .
+
+schema:PublicationVolume rdfs:label "publication volume" .
+
+schema:MusicGroup rdfs:label "music group" .
+
+schema:CollegeOrUniversity rdfs:label "college or university" .
+
+schema:BroadcastService rdfs:label "broadcast service" .
+
+schema:Service rdfs:label "service" .
+
+schema:GeoCoordinates rdfs:label "geo coordinates" .
+
+schema:Course rdfs:label "course" .
+
+schema:ComputerLanguage rdfs:label "computer language" .
+
+schema:FinancialService rdfs:label "financial service" .
+
+schema:Place rdfs:label "place" .
+
+schema:Preschool rdfs:label "preschool" .
+
+schema:RadioSeries rdfs:label "radio series" .
+
+schema:ElementarySchool rdfs:label "elementary school" .
+
+schema:IceCreamShop rdfs:label "ice cream shop" .
+
+schema:BusStop rdfs:label "bus stop" .
+
+<http://bioschemas.org/Gene> rdfs:label "gene"@en .
+
+<http://bioschemas.org/BioChemEntity> rdfs:label "biology chemistry entity"@en .
+
+schema:BlogPosting rdfs:label "blog posting" .
+
+schema:AutoRental rdfs:label "auto rental" .
+
+schema:AutomotiveBusiness rdfs:label "automotive business" .
+
+schema:MovieSeries rdfs:label "movie series" .
+
+schema:Report rdfs:label "report" .
+
+schema:TennisComplex rdfs:label "tennis complex" .
+
+schema:SubwayStation rdfs:label "subway station" .
+
+schema:MedicalDevice rdfs:label "medical device" .
+
+schema:StadiumOrArena rdfs:label "stadium or arena" .
+
+schema:Periodical rdfs:label "periodical" .
+
+schema:State rdfs:label "state" .
+
+schema:AdministrativeArea rdfs:label "administrative area" .
+
+schema:Pond rdfs:label "pond" .
+
+schema:CreativeWorkSeason rdfs:label "creative work season" .
+
+schema:ShoeStore rdfs:label "shoe store" .
+
+schema:Store rdfs:label "store" .
+
+schema:Beach rdfs:label "beach" .
+
+schema:Courthouse rdfs:label "courthouse" .
+
+schema:GovernmentBuilding rdfs:label "government building" .
+
+schema:BedAndBreakfast rdfs:label "bed and breakfast" .
+
+schema:NewsArticle rdfs:label "news article" .
+
+<http://bioschemas.org/Taxon> rdfs:label "taxon"@en .
+
+schema:Joint rdfs:label "joint" .
+
+schema:Casino rdfs:label "casino" .
+
+schema:DataCatalog rdfs:label "data catalog" .
+
+schema:Festival rdfs:label "festival" .
+
+schema:OutletStore rdfs:label "outlet store" .
+
+schema:Country rdfs:label "country" .
+
+schema:Park rdfs:label "park" .
+
+schema:Library rdfs:label "library" .
+
+schema:NGO rdfs:label "n g o" .
+
+schema:Hotel rdfs:label "hotel" .
+
+schema:SportsOrganization rdfs:label "sports organization" .
+
+schema:Resort rdfs:label "resort" .
+
+schema:Embassy rdfs:label "embassy" .
+
+schema:TVEpisode rdfs:label "t v episode" .
+
+schema:Mountain rdfs:label "mountain" .
+
+schema:BloodTest rdfs:label "blood test" .
+
+schema:MedicalTest rdfs:label "medical test" .
+
+schema:RadiationTherapy rdfs:label "radiation therapy" .
+
+schema:MedicalTherapy rdfs:label "medical therapy" .
+
+schema:CafeOrCoffeeShop rdfs:label "cafe or coffee shop" .
+
+schema:Bridge rdfs:label "bridge" .
+
+schema:GroceryStore rdfs:label "grocery store" .
+
+schema:TouristAttraction rdfs:label "tourist attraction" .
+
+schema:SurgicalProcedure rdfs:label "surgical procedure" .
+
+schema:Vehicle rdfs:label "vehicle" .
+
+schema:Product rdfs:label "product" .
+
+schema:Waterfall rdfs:label "waterfall" .
+
+schema:Airport rdfs:label "airport" .
+
+schema:QuantitativeValue rdfs:label "quantitative value" .
+
+schema:TVSeason rdfs:label "t v season" .
+
+schema:Car rdfs:label "car" .
+
+schema:CityHall rdfs:label "city hall" .
+
+schema:TherapeuticProcedure rdfs:label "therapeutic procedure" .
+
+schema:DiagnosticProcedure rdfs:label "diagnostic procedure" .
+
+schema:WorkersUnion rdfs:label "workers union" .
+
+schema:DanceGroup rdfs:label "dance group" .
+
+schema:SelfStorage rdfs:label "self storage" .
+
+schema:Muscle rdfs:label "muscle" .
+
+schema:BusOrCoach rdfs:label "bus or coach" .
+
+schema:BookStore rdfs:label "book store" .
+
+schema:CatholicChurch rdfs:label "catholic church" .
+
+schema:Movie rdfs:label "movie" .
+
+schema:BookSeries rdfs:label "book series" .
+
+schema:ArchiveOrganization rdfs:label "archive organization"@en .
+
+schema:SeaBodyOfWater rdfs:label "sea body of water" .
+
+schema:Drawing rdfs:label "drawing" .
+
+schema:Nerve rdfs:label "nerve" .
+
+schema:ImageObject rdfs:label "image object" .
+
+schema:MediaObject rdfs:label "media object" .
+
+schema:TelevisionStation rdfs:label "television station" .
+
+schema:Sculpture rdfs:label "sculpture" .
+
+schema:BowlingAlley rdfs:label "bowling alley" .
+
+schema:Brand rdfs:label "brand" .
+
+schema:LakeBodyOfWater rdfs:label "lake body of water" .
+
+schema:Motorcycle rdfs:label "motorcycle" .
+
+schema:GolfCourse rdfs:label "golf course" .
+
+schema:Museum rdfs:label "museum" .
+
+schema:Painting rdfs:label "painting" .
+
+schema:LiquorStore rdfs:label "liquor store" .
+
+schema:Dataset rdfs:label "dataset" .
+
+schema:Artery rdfs:label "artery" .
+
+schema:Canal rdfs:label "canal" .
+
+schema:VisualArtwork rdfs:label "visual artwork" .
+
+schema:Hostel rdfs:label "hostel" .
+
+schema:Winery rdfs:label "winery" .
+
+schema:Synagogue rdfs:label "synagogue" .
+
+schema:PublicSwimmingPool rdfs:label "public swimming pool" .
+
+schema:MedicalSymptom rdfs:label "medical symptom" .
+
+schema:MedicalSignOrSymptom rdfs:label "medical sign or symptom" .
+
+schema:ShoppingCenter rdfs:label "shopping center" .
+
+schema:HinduTemple rdfs:label "hindu temple" .
+
+schema:Cemetery rdfs:label "cemetery" .
+
+schema:Mosque rdfs:label "mosque" .
+
+schema:TouristInformationCenter rdfs:label "tourist information center" .
+
+schema:Play rdfs:label "play" .
+
+schema:Rating rdfs:label "rating" .
+
+schema:TravelAgency rdfs:label "travel agency" .
+
+schema:Manuscript rdfs:label "manuscript" .
+
+schema:WebPage rdfs:label "web page" .
+
+schema:Game rdfs:label "game" .
+
+schema:AnimalShelter rdfs:label "animal shelter" .
+
+schema:ProductModel rdfs:label "product model" .
+
+schema:RadioChannel rdfs:label "radio channel" .
+
+schema:FinancialProduct rdfs:label "financial product" .
+
+schema:MusicAlbum rdfs:label "music album" .
+
+schema:MusicPlaylist rdfs:label "music playlist" .
+
+schema:Occupation rdfs:label "occupation" .
+
+schema:RecyclingCenter rdfs:label "recycling center" .
+
+schema:Pharmacy rdfs:label "pharmacy" .
+
+schema:SportsTeam rdfs:label "sports team" .
+
+schema:MovieTheater rdfs:label "movie theater" .
+
+schema:Newspaper rdfs:label "newspaper"@en .
+
+schema:PawnShop rdfs:label "pawn shop" .
+
+schema:SkiResort rdfs:label "ski resort" .
+
+schema:Bakery rdfs:label "bakery" .
+
+schema:BarOrPub rdfs:label "bar or pub" .
+
+schema:ParkingFacility rdfs:label "parking facility" .
+
+schema:MedicalSign rdfs:label "medical sign" .
+
+schema:ComicStory rdfs:label "comic story"@en .
+
+schema:Distillery rdfs:label "distillery" .
+
+schema:Bone rdfs:label "bone" .
+
+schema:School rdfs:label "school" .
+
+schema:DefenceEstablishment rdfs:label "defence establishment" .
+
+schema:EventSeries rdfs:label "event series" .
+
+schema:Blog rdfs:label "blog" .
+
+schema:BusStation rdfs:label "bus station" .
+
+schema:Legislation rdfs:label "legislation" .
+
+schema:PodcastSeries rdfs:label "podcast series" .
+
+schema:Airline rdfs:label "airline" .
+
+schema:WebSite rdfs:label "web site" .
+
+schema:TattooParlor rdfs:label "tattoo parlor" .
+
+schema:VideoGameSeries rdfs:label "video game series" .
+
+schema:BuddhistTemple rdfs:label "buddhist temple" .
+
+schema:PublicationIssue rdfs:label "publication issue" .
+
+schema:Poster rdfs:label "poster" .
+
+schema:DrugLegalStatus rdfs:label "drug legal status" .
+
+schema:OceanBodyOfWater rdfs:label "ocean body of water" .
+
+schema:AudioObject rdfs:label "audio object" .
+
+schema:LandmarksOrHistoricalBuildings rdfs:label "landmarks or historical buildings" .
+
+schema:PerformingArtsTheater rdfs:label "performing arts theater" .
+
+<http://bioschemas.org/ChemicalSubstance> rdfs:label "chemical substance"@en .
+
+schema:ComedyClub rdfs:label "comedy club" .
+
+schema:RadioStation rdfs:label "radio station" .
+
+schema:Restaurant rdfs:label "restaurant" .
+
+schema:City rdfs:label "city" .
+
+schema:Apartment rdfs:label "apartment" .
+
+schema:MobileApplication rdfs:label "mobile application" .
+
+schema:EmploymentAgency rdfs:label "employment agency" .
+
+schema:BeautySalon rdfs:label "beauty salon" .
+
+schema:Thesis rdfs:label "thesis"@en .
+
+schema:Aquarium rdfs:label "aquarium" .
+
+schema:Volcano rdfs:label "volcano" .
+
+schema:MusicVenue rdfs:label "music venue" .
+
+schema:GasStation rdfs:label "gas station" .
+
+schema:Corporation rdfs:label "corporation" .
+
+schema:BankOrCreditUnion rdfs:label "bank or credit union" .
+
+schema:MedicalSpecialty rdfs:label "medical specialty" .
+
+<http://bioschemas.org/Protein> rdfs:label "protein"@en .
+
+<http://bioschemas.org/MolecularEntity> rdfs:label "molecular entity"@en .
+
+schema:Book rdfs:label "book" .
+
+schema:VideoGame rdfs:label "video game" .
+
+schema:Motel rdfs:label "motel" .
+
+schema:ScholarlyArticle rdfs:label "scholarly article" .
+
+schema:Map rdfs:label "map" .
+
+schema:MusicRelease rdfs:label "music release" .
+
+schema:PetStore rdfs:label "pet store" .
+
+schema:VideoObject rdfs:label "video object" .
+
+schema:InfectiousDisease rdfs:label "infectious disease" .
+
+schema:ComicSeries rdfs:label "comic series"@en .
+
+schema:ToyStore rdfs:label "toy store" .
+
+schema:Optician rdfs:label "optician" .
+
+schema:Playground rdfs:label "playground" .
+
+schema:EventVenue rdfs:label "event venue" .
+
+schema:Zoo rdfs:label "zoo" .
+
+schema:copyrightHolder rdfs:label "copyright holder" .
+
+schema:material rdfs:label "material" .
+
+schema:productionCompany rdfs:label "production company" .
+
+schema:servesCuisine rdfs:label "serves cuisine" .
+
+schema:brand rdfs:label "brand" .
+
+schema:countryOfOrigin rdfs:label "country of origin" .
+
+schema:latitude rdfs:label "latitude" .
+
+schema:translator rdfs:label "translator" .
+
+schema:sponsor rdfs:label "sponsor" .
+
+schema:callSign rdfs:label "call sign" .
+
+schema:editor rdfs:label "editor" .
+
+schema:musicReleaseFormat rdfs:label "music release format" .
+
+schema:award rdfs:label "award" .
+
+schema:icaoCode rdfs:label "icao code" .
+
+schema:license rdfs:label "license" .
+
+schema:recordLabel rdfs:label "record label" .
+
+schema:director rdfs:label "director" .
+
+schema:numberOfSeasons rdfs:label "number of seasons" .
+
+schema:gtin rdfs:label "gtin" .
+
+schema:logo rdfs:label "logo" .
+
+schema:image rdfs:label "image" .
+
+schema:musicBy rdfs:label "music by" .
+
+schema:alumniOf rdfs:label "alumni of" .
+
+schema:worksFor rdfs:label "works for" .
+
+schema:isPartOf rdfs:label "is part of" .
+
+schema:hasPart rdfs:label "has part" .
+
+schema:actor rdfs:label "actor" .
+
+schema:contentRating rdfs:label "content rating" .
+
+schema:duns rdfs:label "duns" .
+
+schema:composer rdfs:label "composer" .
+
+schema:position rdfs:label "position" .
+
+schema:numberOfEpisodes rdfs:label "number of episodes" .
+
+schema:minValue rdfs:label "min value" .
+
+schema:legalStatus rdfs:label "legal status" .
+
+schema:spouse rdfs:label "spouse" .
+
+schema:possibleTreatment rdfs:label "possible treatment" .
+
+schema:inLanguage rdfs:label "in language" .
+
+schema:sameAs rdfs:label "same as" .
+
+schema:superEvent rdfs:label "super event" .
+
+schema:subEvent rdfs:label "sub event" .
+
+schema:sport rdfs:label "sport" .
+
+schema:issn rdfs:label "issn" .
+
+schema:operatingSystem rdfs:label "operating system" .
+
+schema:exampleOfWork rdfs:label "example of work" .
+
+schema:workExample rdfs:label "work example" .
+
+schema:width rdfs:label "width" .
+
+schema:about rdfs:label "about" .
+
+schema:connectedTo rdfs:label "connected to" .
+
+schema:deathDate rdfs:label "death date" .
+
+schema:nationality rdfs:label "nationality" .
+
+schema:height rdfs:label "height" .
+
+schema:affiliation rdfs:label "affiliation" .
+
+schema:memberOf rdfs:label "member of" .
+
+schema:parentOrganization rdfs:label "parent organization" .
+
+schema:subOrganization rdfs:label "sub organization" .
+
+schema:weight rdfs:label "weight" .
+
+schema:pagination rdfs:label "pagination" .
+
+schema:numberOfPages rdfs:label "number of pages" .
+
+schema:endDate rdfs:label "end date" .
+
+schema:containsPlace rdfs:label "contains place" .
+
+schema:containedInPlace rdfs:label "contained in place" .
+
+schema:faxNumber rdfs:label "fax number" .
+
+schema:byArtist rdfs:label "by artist" .
+
+schema:contributor rdfs:label "contributor" .
+
+schema:contentLocation rdfs:label "content location" .
+
+schema:parent rdfs:label "parent" .
+
+schema:familyName rdfs:label "family name" .
+
+schema:longitude rdfs:label "longitude" .
+
+schema:geo rdfs:label "geo" .
+
+schema:genre rdfs:label "genre" .
+
+schema:signOrSymptom rdfs:label "sign or symptom" .
+
+schema:givenName rdfs:label "given name" .
+
+schema:homeLocation rdfs:label "home location" .
+
+schema:location rdfs:label "location" .
+
+schema:birthPlace rdfs:label "birth place" .
+
+schema:iataCode rdfs:label "iata code" .
+
+schema:unitCode rdfs:label "unit code" .
+
+schema:depth rdfs:label "depth" .
+
+schema:volumeNumber rdfs:label "volume number" .
+
+schema:url rdfs:label "url" .
+
+schema:startDate rdfs:label "start date" .
+
+schema:duration rdfs:label "duration" .
+
+schema:iswcCode rdfs:label "iswc code" .
+
+schema:telephone rdfs:label "telephone" .
+
+schema:value rdfs:label "value" .
+
+schema:organizer rdfs:label "organizer" .
+
+schema:competitor rdfs:label "competitor" .
+
+schema:knowsLanguage rdfs:label "knows language" .
+
+schema:partOfSeries rdfs:label "part of series" .
+
+schema:issueNumber rdfs:label "issue number" .
+
+schema:netWorth rdfs:label "net worth" .
+
+schema:encodingFormat rdfs:label "encoding format" .
+
+schema:locationCreated rdfs:label "location created" .
+
+schema:author rdfs:label "author" .
+
+schema:creator rdfs:label "creator" .
+
+schema:hasOccupation rdfs:label "has occupation" .
+
+schema:publisher rdfs:label "publisher" .
+
+schema:honorificPrefix rdfs:label "honorific prefix" .
+
+schema:isbn rdfs:label "isbn" .
+
+schema:birthDate rdfs:label "birth date" .
+
+schema:gender rdfs:label "gender" .
+
+schema:children rdfs:label "children" .
+
+schema:maxValue rdfs:label "max value" .
+
+schema:producer rdfs:label "producer" .
+
+schema:alternateName rdfs:label "alternate name" .
+
+schema:foundingDate rdfs:label "founding date" .
+
+schema:founder rdfs:label "founder" .
+
+schema:datePublished rdfs:label "date published" .
+
+schema:broadcastChannelId rdfs:label "broadcast channel id" .
+
+schema:dateCreated rdfs:label "date created" .
+
+schema:owns rdfs:label "owns" .
+
+schema:dissolutionDate rdfs:label "dissolution date" .
+
+schema:releaseOf rdfs:label "release of" .
+
+schema:leiCode rdfs:label "lei code" .
+
+schema:isBasedOn rdfs:label "is based on" .
+
+schema:deathPlace rdfs:label "death place" .
+
+schema:riskFactor rdfs:label "risk factor" .
+
+schema:colorist rdfs:label "colorist"@en .
+
+schema:character rdfs:label "character" .
+
+schema:foundingLocation rdfs:label "founding location" .
+
+schema:elevation rdfs:label "elevation" .
+
+schema:numberOfEmployees rdfs:label "number of employees" .
+
+schema:relevantSpecialty rdfs:label "relevant specialty" .
+
+schema:lyricist rdfs:label "lyricist" .
+
+schema:provider rdfs:label "provider" .
+
+schema:citation rdfs:label "citation" .
+
+schema:partOfSeason rdfs:label "part of season" .
+
+schema:illustrator rdfs:label "illustrator" .
+
+_:x172C16FC295list-schema-Organization-schema-Person-schema-Place-2 rdf:first schema:Person;
+  rdf:rest _:x172C16FC295list-schema-Organization-schema-Person-schema-Place-3 .
+
+_:x172C16FC295list-schema-Organization-schema-Person-schema-Place-1 rdf:first schema:Organization;
+  rdf:rest _:x172C16FC295list-schema-Organization-schema-Person-schema-Place-2 .
+
+_:x172C16FC295list-schema-Event-schema-Organization-2 rdf:first schema:Organization;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Event-schema-Organization-1 rdf:first schema:Event;
+  rdf:rest _:x172C16FC295list-schema-Event-schema-Organization-2 .
+
+_:x172C16FC295list-schema-Brand-schema-Organization-schema-Place-schema-Product-4
+  rdf:first schema:Product;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Brand-schema-Organization-schema-Place-schema-Product-3
+  rdf:first schema:Place;
+  rdf:rest _:x172C16FC295list-schema-Brand-schema-Organization-schema-Place-schema-Product-4 .
+
+_:x172C16FC295list-schema-Brand-schema-Organization-schema-Place-schema-Product-2
+  rdf:first schema:Organization;
+  rdf:rest _:x172C16FC295list-schema-Brand-schema-Organization-schema-Place-schema-Product-3 .
+
+_:x172C16FC295list-schema-Brand-schema-Organization-schema-Place-schema-Product-1
+  rdf:first schema:Brand;
+  rdf:rest _:x172C16FC295list-schema-Brand-schema-Organization-schema-Place-schema-Product-2 .
+
+_:x172C16FC295list-schema-CreativeWork-schema-Product-2 rdf:first schema:Product;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-CreativeWork-schema-Product-1 rdf:first schema:CreativeWork;
+  rdf:rest _:x172C16FC295list-schema-CreativeWork-schema-Product-2 .
+
+_:x172C16FC295list-schema-SportsEvent-schema-SportsOrganization-2 rdf:first schema:SportsOrganization;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-SportsEvent-schema-SportsOrganization-1 rdf:first schema:SportsEvent;
+  rdf:rest _:x172C16FC295list-schema-SportsEvent-schema-SportsOrganization-2 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-7
+  rdf:first schema:VideoGameSeries;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-6
+  rdf:first schema:TVSeries;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-7 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-5
+  rdf:first schema:RadioSeries;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-6 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-4
+  rdf:first schema:MovieSeries;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-5 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-3
+  rdf:first schema:Movie;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-4 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-2
+  rdf:first schema:Episode;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-3 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-1
+  rdf:first schema:CreativeWorkSeason;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-2 .
+
+_:x172C16FC295list-schema-Organization-schema-Person-schema-Product-3 rdf:first schema:Product;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Organization-schema-Person-schema-Product-2 rdf:first schema:Person;
+  rdf:rest _:x172C16FC295list-schema-Organization-schema-Person-schema-Product-3 .
+
+_:x172C16FC295list-schema-Organization-schema-Person-schema-Product-1 rdf:first schema:Organization;
+  rdf:rest _:x172C16FC295list-schema-Organization-schema-Person-schema-Product-2 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-7
+  rdf:first schema:VideoGame;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-6
+  rdf:first schema:TVSeries;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-7 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-5
+  rdf:first schema:RadioSeries;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-6 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-4
+  rdf:first schema:MovieSeries;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-5 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-3
+  rdf:first schema:Movie;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-4 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-2
+  rdf:first schema:Episode;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-3 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-1
+  rdf:first schema:CreativeWorkSeason;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-2 .
+
+schema:CreativeWork :disjointWith schema:Event, schema:Organization, schema:Person,
+    schema:Place .
+
+schema:Event :disjointWith schema:CreativeWork, schema:Organization, schema:Person,
+    schema:Place .
+
+schema:Organization :disjointWith schema:CreativeWork, schema:Event, schema:Person .
+
+schema:Person :disjointWith schema:CreativeWork, schema:Event, schema:Organization,
+    schema:Place .
+
+schema:Place :disjointWith schema:CreativeWork, schema:Event, schema:Person .
+
+_:x172C16FC295list-schema-CreativeWork-schema-MusicGroup-2 rdf:first schema:MusicGroup;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-CreativeWork-schema-MusicGroup-1 rdf:first schema:CreativeWork;
+  rdf:rest _:x172C16FC295list-schema-CreativeWork-schema-MusicGroup-2 .
+
+_:x172C16FC295list-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-3 rdf:first
+    schema:VideoGameSeries;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-2 rdf:first
+    schema:TVSeries;
+  rdf:rest _:x172C16FC295list-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-3 .
+
+_:x172C16FC295list-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-1 rdf:first
+    schema:RadioSeries;
+  rdf:rest _:x172C16FC295list-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-2 .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-2 rdf:first schema:Episode;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-1 rdf:first schema:CreativeWorkSeason;
+  rdf:rest _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-2 .
+
+_:x172C16FC295list-schema-CreativeWork-schema-Organization-schema-Person-schema-Product-4
+  rdf:first schema:Product;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-CreativeWork-schema-Organization-schema-Person-schema-Product-3
+  rdf:first schema:Person;
+  rdf:rest _:x172C16FC295list-schema-CreativeWork-schema-Organization-schema-Person-schema-Product-4 .
+
+_:x172C16FC295list-schema-CreativeWork-schema-Organization-schema-Person-schema-Product-2
+  rdf:first schema:Organization;
+  rdf:rest _:x172C16FC295list-schema-CreativeWork-schema-Organization-schema-Person-schema-Product-3 .
+
+_:x172C16FC295list-schema-CreativeWork-schema-Organization-schema-Person-schema-Product-1
+  rdf:first schema:CreativeWork;
+  rdf:rest _:x172C16FC295list-schema-CreativeWork-schema-Organization-schema-Person-schema-Product-2 .
+
+_:x172C16FC295list-schema-MusicGroup-schema-Person-2 rdf:first schema:Person;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-MusicGroup-schema-Person-1 rdf:first schema:MusicGroup;
+  rdf:rest _:x172C16FC295list-schema-MusicGroup-schema-Person-2 .
+
+_:x172C16FC295list-schema-Person-schema-SportsTeam-2 rdf:first schema:SportsTeam;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Person-schema-SportsTeam-1 rdf:first schema:Person;
+  rdf:rest _:x172C16FC295list-schema-Person-schema-SportsTeam-2 .
+
+_:x172C16FC295list-schema-Brand-schema-Organization-2 rdf:first schema:Organization;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-schema-Brand-schema-Organization-1 rdf:first schema:Brand;
+  rdf:rest _:x172C16FC295list-schema-Brand-schema-Organization-2 .
+
+_:x172C16FC295list-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth-4 rdf:first xsd:gYearMonth;
+  rdf:rest rdf:nil .
+
+_:x172C16FC295list-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth-3 rdf:first xsd:gYear;
+  rdf:rest _:x172C16FC295list-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth-4 .
+
+_:x172C16FC295list-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth-2 rdf:first xsd:dateTime;
+  rdf:rest _:x172C16FC295list-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth-3 .
+
+_:x172C16FC295list-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth-1 rdf:first xsd:date;
+  rdf:rest _:x172C16FC295list-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth-2 .
+
+_:x172C16FC295schema-sponsor-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Event-schema-Organization
+  :unionOf _:x172C16FC295list-schema-CreativeWork-schema-Event-schema-Organization-1 .
+
+_:x172C16FC295schema-colorist-rdfs-domain-owl-unionOf-schema-ComicStory-schema-VisualArtwork
+  :unionOf _:x172C16FC295list-schema-ComicStory-schema-VisualArtwork-1 .
+
+_:x172C16FC295schema-duration-rdfs-domain-owl-unionOf-schema-Event-schema-Movie-schema-MusicRelease
+  :unionOf _:x172C16FC295list-schema-Event-schema-Movie-schema-MusicRelease-1 .
+
+_:x172C16FC295schema-iataCode-rdfs-domain-owl-unionOf-schema-Airline-schema-Airport-schema-City
+  :unionOf _:x172C16FC295list-schema-Airline-schema-Airport-schema-City-1 .
+
+_:x172C16FC295schema-translator-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Event
+  :unionOf _:x172C16FC295list-schema-CreativeWork-schema-Event-1 .
+
+_:x172C16FC295schema-about-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Event
+  :unionOf _:x172C16FC295list-schema-CreativeWork-schema-Event-1 .
+
+_:x172C16FC295schema-icaoCode-rdfs-domain-owl-unionOf-schema-Airline-schema-Airport
+  :unionOf _:x172C16FC295list-schema-Airline-schema-Airport-1 .
+
+_:x172C16FC295schema-composer-rdfs-domain-owl-unionOf-schema-Event-schema-MusicComposition
+  :unionOf _:x172C16FC295list-schema-Event-schema-MusicComposition-1 .
+
+_:x172C16FC295schema-weight-rdfs-domain-owl-unionOf-schema-Person-schema-Product :unionOf
+    _:x172C16FC295list-schema-Person-schema-Product-1 .
+
+_:x172C16FC295schema-pagination-rdfs-domain-owl-unionOf-schema-Article-schema-PublicationIssue-schema-PublicationVolume
+  :unionOf _:x172C16FC295list-schema-Article-schema-PublicationIssue-schema-PublicationVolume-1 .
+
+_:x172C16FC295schema-memberOf-rdfs-domain-owl-unionOf-schema-Organization-schema-Person
+  :unionOf _:x172C16FC295list-schema-Organization-schema-Person-1 .
+
+_:x172C16FC295schema-callSign-rdfs-domain-owl-unionOf-schema-BroadcastService-schema-Person-schema-Vehicle
+  :unionOf _:x172C16FC295list-schema-BroadcastService-schema-Person-schema-Vehicle-1 .
+
+_:x172C16FC295schema-numberOfEpisodes-rdfs-domain-owl-unionOf-schema-CreativeWorkSeason-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries
+  :unionOf _:x172C16FC295list-schema-CreativeWorkSeason-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-1 .
+
+_:x172C16FC295schema-possibleTreatment-rdfs-domain-owl-unionOf-schema-MedicalCondition-schema-MedicalSignOrSymptom
+  :unionOf _:x172C16FC295list-schema-MedicalCondition-schema-MedicalSignOrSymptom-1 .
+
+_:x172C16FC295schema-director-rdfs-domain-owl-unionOf-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries
+  :unionOf _:x172C16FC295list-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries-1 .
+
+_:x172C16FC295schema-height-rdfs-domain-owl-unionOf-schema-Person-schema-Product-schema-VisualArtwork
+  :unionOf _:x172C16FC295list-schema-Person-schema-Product-schema-VisualArtwork-1 .
+
+_:x172C16FC295schema-countryOfOrigin-rdfs-domain-owl-unionOf-schema-Movie-schema-TVEpisode-schema-TVSeason-schema-TVSeries
+  :unionOf _:x172C16FC295list-schema-Movie-schema-TVEpisode-schema-TVSeason-schema-TVSeries-1 .
+
+_:x172C16FC295schema-depth-rdfs-domain-owl-unionOf-schema-Product-schema-VisualArtwork
+  :unionOf _:x172C16FC295list-schema-Product-schema-VisualArtwork-1 .
+
+_:x172C16FC295schema-telephone-rdfs-domain-owl-unionOf-schema-Organization-schema-Person-schema-Place
+  :unionOf _:x172C16FC295list-schema-Organization-schema-Person-schema-Place-1 .
+
+_:x172C16FC295schema-faxNumber-rdfs-domain-owl-unionOf-schema-Organization-schema-Person-schema-Place
+  :unionOf _:x172C16FC295list-schema-Organization-schema-Person-schema-Place-1 .
+
+_:x172C16FC295schema-musicBy-rdfs-domain-owl-unionOf-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries
+  :unionOf _:x172C16FC295list-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-schema-VideoGameSeries-1 .
+
+_:x172C16FC295schema-location-rdfs-domain-owl-unionOf-schema-Event-schema-Organization
+  :unionOf _:x172C16FC295list-schema-Event-schema-Organization-1 .
+
+_:x172C16FC295schema-logo-rdfs-domain-owl-unionOf-schema-Brand-schema-Organization-schema-Place-schema-Product
+  :unionOf _:x172C16FC295list-schema-Brand-schema-Organization-schema-Place-schema-Product-1 .
+
+_:x172C16FC295schema-contributor-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Event
+  :unionOf _:x172C16FC295list-schema-CreativeWork-schema-Event-1 .
+
+_:x172C16FC295schema-material-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Product
+  :unionOf _:x172C16FC295list-schema-CreativeWork-schema-Product-1 .
+
+_:x172C16FC295schema-sport-rdfs-domain-owl-unionOf-schema-SportsEvent-schema-SportsOrganization
+  :unionOf _:x172C16FC295list-schema-SportsEvent-schema-SportsOrganization-1 .
+
+_:x172C16FC295schema-productionCompany-rdfs-domain-owl-unionOf-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries
+  :unionOf _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-1 .
+
+_:x172C16FC295schema-brand-rdfs-domain-owl-unionOf-schema-Organization-schema-Person-schema-Product
+  :unionOf _:x172C16FC295list-schema-Organization-schema-Person-schema-Product-1 .
+
+_:x172C16FC295schema-actor-rdfs-domain-owl-unionOf-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame
+  :unionOf _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-schema-Movie-schema-MovieSeries-schema-RadioSeries-schema-TVSeries-schema-VideoGame-1 .
+
+_:x172C16FC295schema-genre-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-MusicGroup
+  :unionOf _:x172C16FC295list-schema-CreativeWork-schema-MusicGroup-1 .
+
+_:x172C16FC295schema-knowsLanguage-rdfs-domain-owl-unionOf-schema-Organization-schema-Person
+  :unionOf _:x172C16FC295list-schema-Organization-schema-Person-1 .
+
+_:x172C16FC295schema-width-rdfs-domain-owl-unionOf-schema-Product-schema-VisualArtwork
+  :unionOf _:x172C16FC295list-schema-Product-schema-VisualArtwork-1 .
+
+_:x172C16FC295schema-numberOfSeasons-rdfs-domain-owl-unionOf-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries
+  :unionOf _:x172C16FC295list-schema-RadioSeries-schema-TVSeries-schema-VideoGameSeries-1 .
+
+_:x172C16FC295schema-partOfSeries-rdfs-domain-owl-unionOf-schema-CreativeWorkSeason-schema-Episode
+  :unionOf _:x172C16FC295list-schema-CreativeWorkSeason-schema-Episode-1 .
+
+_:x172C16FC295schema-award-rdfs-domain-owl-unionOf-schema-CreativeWork-schema-Organization-schema-Person-schema-Product
+  :unionOf _:x172C16FC295list-schema-CreativeWork-schema-Organization-schema-Person-schema-Product-1 .
+
+_:x172C16FC295schema-lyricist-rdfs-range-owl-unionOf-schema-MusicGroup-schema-Person
+  :unionOf _:x172C16FC295list-schema-MusicGroup-schema-Person-1 .
+
+_:x172C16FC295schema-publisher-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  :unionOf _:x172C16FC295list-schema-Organization-schema-Person-1 .
+
+_:x172C16FC295schema-competitor-rdfs-range-owl-unionOf-schema-Person-schema-SportsTeam
+  :unionOf _:x172C16FC295list-schema-Person-schema-SportsTeam-1 .
+
+_:x172C16FC295schema-composer-rdfs-range-owl-unionOf-schema-MusicGroup-schema-Person
+  :unionOf _:x172C16FC295list-schema-MusicGroup-schema-Person-1 .
+
+_:x172C16FC295schema-provider-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  :unionOf _:x172C16FC295list-schema-Organization-schema-Person-1 .
+
+_:x172C16FC295schema-musicBy-rdfs-range-owl-unionOf-schema-MusicGroup-schema-Person
+  :unionOf _:x172C16FC295list-schema-MusicGroup-schema-Person-1 .
+
+_:x172C16FC295schema-organizer-rdfs-range-owl-unionOf-schema-MusicGroup-schema-Person
+  :unionOf _:x172C16FC295list-schema-MusicGroup-schema-Person-1 .
+
+_:x172C16FC295schema-sponsor-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  :unionOf _:x172C16FC295list-schema-Organization-schema-Person-1 .
+
+_:x172C16FC295schema-brand-rdfs-range-owl-unionOf-schema-Brand-schema-Organization
+  :unionOf _:x172C16FC295list-schema-Brand-schema-Organization-1 .
+
+_:x172C16FC295schema-translator-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  :unionOf _:x172C16FC295list-schema-Organization-schema-Person-1 .
+
+_:x172C16FC295schema-contributor-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  :unionOf _:x172C16FC295list-schema-Organization-schema-Person-1 .
+
+_:x172C16FC295schema-producer-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  :unionOf _:x172C16FC295list-schema-Organization-schema-Person-1 .
+
+_:x172C16FC295schema-copyrightHolder-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  :unionOf _:x172C16FC295list-schema-Organization-schema-Person-1 .
+
+_:x172C16FC295schema-creator-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  :unionOf _:x172C16FC295list-schema-Organization-schema-Person-1 .
+
+_:x172C16FC295schema-author-rdfs-range-owl-unionOf-schema-Organization-schema-Person
+  :unionOf _:x172C16FC295list-schema-Organization-schema-Person-1 .
+
+_:x172C16FC295schema-endDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  :unionOf _:x172C16FC295list-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth-1 .
+
+_:x172C16FC295schema-birthDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  :unionOf _:x172C16FC295list-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth-1 .
+
+_:x172C16FC295schema-startDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  :unionOf _:x172C16FC295list-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth-1 .
+
+_:x172C16FC295schema-dateCreated-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  :unionOf _:x172C16FC295list-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth-1 .
+
+_:x172C16FC295schema-dissolutionDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  :unionOf _:x172C16FC295list-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth-1 .
+
+_:x172C16FC295schema-deathDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  :unionOf _:x172C16FC295list-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth-1 .
+
+_:x172C16FC295schema-datePublished-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  :unionOf _:x172C16FC295list-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth-1 .
+
+_:x172C16FC295schema-foundingDate-rdfs-range-owl-unionOf-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth
+  :unionOf _:x172C16FC295list-xsd-date-xsd-dateTime-xsd-gYear-xsd-gYearMonth-1 .
