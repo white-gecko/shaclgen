@@ -46,9 +46,9 @@ parser = argparse.ArgumentParser(
     
 parser.add_argument("graph", nargs='+',type=str, help="The data graph(s).")
 
-#group = parser.add_mutually_exclusive_group()
-#group.add_argument("-nf", "--nested", action="store_true", help='generates a nested shape file')
-#group.add_argument("-ef", "--extended", action="store_true", help='generates an expanded shape file')
+group = parser.add_mutually_exclusive_group()
+group.add_argument("-nf", "--nested", action="store_true", help='generates a nested shape file')
+group.add_argument("-ef", "--extended", action="store_true", help='generates an expanded shape file')
 parser.add_argument("-o", "--ontology", action="store_true", help='input file(s) or URL(s) is a schema or ontology')
 parser.add_argument("-s", "--serialization", help='result graph serialization, default is turtle. example: -s nt')
 parser.add_argument("-ns","--namespace", nargs='+',help="optional shape namespace declaration. example: -ns http://www.example.com exam")
