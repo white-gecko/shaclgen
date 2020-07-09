@@ -21,6 +21,7 @@ class data_graph():
 
         self.CLASSES = collections.OrderedDict()
         self.PROPS = collections.OrderedDict()
+        self.PROPS_NEW = collections.OrderedDict()
         self.OUT = []
 
         path = 'prefixes/namespaces.json'
@@ -86,13 +87,15 @@ class data_graph():
 
         for class_item in self.CLASSES.keys():
             count = count + 1
-            val = str(self.sh_label_gen(class_item) + "Shape")
-            self.CLASSES[class_item]['label'] = val
-
+            # self.CLASSES[class_item]['label'] = self.sh_label_gen(class_item)
+            if(self.parse_uri(class_item)):
+                self.CLASSES[class_item]['label'] = self.parse_uri(class_item) + "Shape"
+            else: print("## error for class item " + class_item + " line 91-93 of file shaclgen.py")
 
     def extract_props(self):
         self.extract_classes()
         prop = []
+
         for predicate in self.G.predicates(object=None, subject=None):
             prop.append(predicate)
         props = [x for x in prop if x != rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#type')]
@@ -107,7 +110,7 @@ class data_graph():
 
             count = count + 1
             self.PROPS[p]['classes'] = []
-            valProp = str(self.sh_label_gen(p) + "ShapeProperty")
+            valProp = str(self.parse_uri(p))
             self.PROPS[p]['label'] = valProp
             prop_classes = []
 
@@ -120,7 +123,23 @@ class data_graph():
             [uris.append(x) for x in prop_classes if x not in uris]
 
             for x in uris:
-                self.PROPS[p]['classes'].append(self.CLASSES[x]['label'])
+                # Preparing a new Property
+                copyOfP = p
+                if(self.CLASSES[x]['label']):
+                    newProp = copyOfP + self.CLASSES[x]['label'] + "Property"
+                    self.PROPS_NEW[newProp] = {}
+                    self.PROPS_NEW[newProp]['classes'] = []
+                    self.PROPS_NEW[newProp]['classes'].append(self.CLASSES[x]['label'])
+                    self.PROPS_NEW[newProp]['label'] = self.parse_uri(newProp)
+                    self.PROPS_NEW[newProp]['nodekind'] = None
+                    self.PROPS_NEW[newProp]['cardinality'] = None
+                    self.PROPS_NEW[newProp]['path'] = p
+                    # old
+                    self.PROPS[p]['classes'].append(self.CLASSES[x]['label'])
+                else:
+                    print("## else condition for self.CLASSES[x]['label'] " + x + " line 128 of file shaclgen.py")
+
+
 
             if len(self.PROPS[p]['classes']) == 1:
                 self.PROPS[p]['type'] = 'unique'
@@ -131,17 +150,17 @@ class data_graph():
     def extract_contraints(self):
         self.extract_props()
 
-        for prop in self.PROPS.keys():
+        for prop in self.PROPS_NEW.keys():
             types = []
-            for s, p, o in self.G.triples((None, prop, None)):
+            for s, p, o in self.G.triples((None, self.PROPS_NEW[prop]['path'], None)):
                 types.append(type(o))
             if len(set(types)) == 1:
                 if types[0] == URIRef:
-                    self.PROPS[prop]['nodekind'] = 'IRI'
+                    self.PROPS_NEW[prop]['nodekind'] = 'IRI'
                 elif types[0] == BNode:
-                    self.PROPS[prop]['nodekind'] = 'BNode'
+                    self.PROPS_NEW[prop]['nodekind'] = 'BNode'
                 elif types[0] == Literal:
-                    self.PROPS[prop]['nodekind'] = 'Literal'
+                    self.PROPS_NEW[prop]['nodekind'] = 'Literal'
 
     def gen_graph(self, serial='turtle', graph_format=None, namespace=None, verbose=None):
         self.extract_props()
@@ -176,19 +195,19 @@ class data_graph():
             ng.add((EX[label], SH.targetClass, c))
             ng.add((EX[label], SH.nodeKind, SH.BlankNodeOrIRI))
 
-        for p in self.PROPS.keys():
-
-            ng.add((EX[self.PROPS[p]['label']], RDF.type, SH.PropertyShape))
-            ng.add((EX[self.PROPS[p]['label']], SH.path, p))
-            ng.add((EX[self.PROPS[p]['label']], RDF.type, SH.PropertyShape))
-            ng.add((EX[self.PROPS[p]['label']], SH.path, p))
+        for p in self.PROPS_NEW.keys():
+            ng.add((EX[self.PROPS_NEW[p]['label']], RDF.type, SH.PropertyShape))
+            ng.add((EX[self.PROPS_NEW[p]['label']], SH.path, self.PROPS_NEW[p]['path']))
+            # ng.add((EX[self.PROPS_NEW[p]['label']], RDF.type, SH.PropertyShape))
+            # ng.add((EX[self.PROPS_NEW[p]['label']], SH.path, p))
             #
-            for class_prop in self.PROPS[p]['classes']:
-                ng.add((EX[class_prop], SH.property, EX[self.PROPS[p]['label']]))
-            if self.PROPS[p]['nodekind'] == 'IRI':
-                ng.add((EX[self.PROPS[p]['label']], SH.nodeKind, SH.IRI))
-            elif self.PROPS[p]['nodekind'] == 'BNode':
-                ng.add((EX[self.PROPS[p]['label']], SH.nodeKind, SH.BlankNode))
-            elif self.PROPS[p]['nodekind'] == 'Literal':
-                ng.add((EX[self.PROPS[p]['label']], SH.nodeKind, SH.Literal))
+            for class_prop in self.PROPS_NEW[p]['classes']:
+                ng.add((EX[class_prop], SH.property, EX[self.PROPS_NEW[p]['label']]))
+            if self.PROPS_NEW[p]['nodekind'] == 'IRI':
+                ng.add((EX[self.PROPS_NEW[p]['label']], SH.nodeKind, SH.IRI))
+            elif self.PROPS_NEW[p]['nodekind'] == 'BNode':
+                ng.add((EX[self.PROPS_NEW[p]['label']], SH.nodeKind, SH.BlankNode))
+            elif self.PROPS_NEW[p]['nodekind'] == 'Literal':
+                ng.add((EX[self.PROPS_NEW[p]['label']], SH.nodeKind, SH.Literal))
+
         print(ng.serialize(format=serial).decode())
