@@ -4,6 +4,7 @@
 import collections
 import json
 from urllib.parse import urlparse
+from datetime import datetime
 
 import pkg_resources
 import rdflib
@@ -210,4 +211,15 @@ class data_graph():
             elif self.PROPS_NEW[p]['nodekind'] == 'Literal':
                 ng.add((EX[self.PROPS_NEW[p]['label']], SH.nodeKind, SH.Literal))
 
+        # datetime object containing current date and time
+        now = datetime.now()
+        print("now =", now)
+
+        # dd/mm/YY H:M:S
+        dt_string = now.strftime("resources/SHACL_SHAPES_%H_%M_%S_%d_%m_%Y.ttl")
+        print("date and time =", dt_string)
+
         print(ng.serialize(format=serial).decode())
+        f = open(dt_string, "x")
+        f.write(ng.serialize(format=serial).decode())
+        f.close()
