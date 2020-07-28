@@ -67,6 +67,7 @@ def main():
         g.gen_graph(**kwargs)
     else:
         kwargs = {'serial': 'turtle'}
+        print("Starting to load graph into memory....")
         g = data_graph(args.graph)
         print("Graph is parsed....  g = data_graph(args.graph)")
         #        if args.nested:
