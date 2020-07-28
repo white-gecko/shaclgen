@@ -58,6 +58,7 @@ args = parser.parse_args()
 
 def main():
     if args.ontology:
+        print("IF  args.ontology: ")
         g = schema(args.graph)
         kwargs = {'serial': 'turtle'}
         if args.serialization:
@@ -66,6 +67,7 @@ def main():
             kwargs['namespace'] = args.namespace
         g.gen_graph(**kwargs)
     else:
+        print("Else rdf graph....")
         kwargs = {'serial': 'turtle'}
         print("Starting to load graph into memory....")
         g = data_graph(args.graph)
