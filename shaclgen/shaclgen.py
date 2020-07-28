@@ -3,11 +3,12 @@
 
 import collections
 import json
-from urllib.parse import urlparse
 from datetime import datetime
+from urllib.parse import urlparse
 
 import pkg_resources
 import rdflib
+from progressbar import Percentage, ProgressBar,Bar,ETA
 from rdflib import Namespace, URIRef, BNode, Literal
 from rdflib.namespace import RDF
 from rdflib.util import guess_format
@@ -19,7 +20,7 @@ class data_graph():
 
         for graph in args:
             self.G.parse(graph, format=guess_format(graph))
-
+        print(len(self.G))
         self.CLASSES = collections.OrderedDict()
         self.PROPS = collections.OrderedDict()
         self.PROPS_NEW = collections.OrderedDict()
@@ -31,6 +32,7 @@ class data_graph():
         with open(filepath, 'r', encoding='utf-8') as fin:
             self.names = json.load(fin)
         self.namespaces = []
+        print(len(self.G))
 
     def parse_uri(self, URI):
         if '#' in URI:
@@ -78,34 +80,52 @@ class data_graph():
         return label + '_'
 
     def extract_classes(self):
+        print("INFO: extract_classes ...")
         classes = []
         for s, p, o in self.G.triples((None, RDF.type, None)):
             classes.append(o)
-
+        print("INFO:  appended classes in classes array...")
         for c in sorted(classes):
             self.CLASSES[c] = {}
         count = 0
-
-        for class_item in self.CLASSES.keys():
-            count = count + 1
+        print("INFO:  self.CLASSES[c] keys prepared for dict...")
+        print("INFO:  Started iterating over self.Classes.keys dictionary")
+        pbar = ProgressBar()
+        for class_item in pbar(self.CLASSES.keys()):
             # self.CLASSES[class_item]['label'] = self.sh_label_gen(class_item)
-            if(self.parse_uri(class_item)):
+            if (self.parse_uri(class_item)):
                 self.CLASSES[class_item]['label'] = self.parse_uri(class_item) + "Shape"
-            else: print("## error for class item " + class_item + " line 91-93 of file shaclgen.py")
+            else:
+                print("## error for class item " + class_item + " line 91-93 of file shaclgen.py")
+        print("INFO: Loop Finished....")
 
     def extract_props(self):
         self.extract_classes()
         prop = []
+        pbar = ProgressBar()
 
+        print("INFO: Predicate appending ...")
         for predicate in self.G.predicates(object=None, subject=None):
             prop.append(predicate)
-        props = [x for x in prop if x != rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#type')]
 
+        print("INFO: RDF.Type prop loop....")
+        props = [x for x in pbar(prop) if x != rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#type')]
+
+        print("INFO: Started preparing props keys....")
         for p in sorted(props):
             self.PROPS[p] = {}
-
+        print("INFO: Finished preparing props keys....")
         count = 0
-        for p in self.PROPS.keys():
+        print("INFO: Length of Props: " + str(len(self.PROPS)))
+
+        print("INFO: Iterating over PROPS.Keys....")
+        N = len(self.PROPS.keys())
+        print(N)
+
+        pbarr = ProgressBar(widgets=[Bar('>', '[', ']'), ' ', Percentage(), ' ', ETA()], maxval = N)
+
+        for p in pbarr(self.PROPS.keys()):
+
             self.PROPS[p]['nodekind'] = None
             self.PROPS[p]['cardinality'] = None
 
@@ -120,13 +140,17 @@ class data_graph():
                     prop_classes.append(obj1)
 
             uris = []
+            pbarIn = ProgressBar(widgets=[Bar('>', '[', ']'), ' ', Percentage(), ' ', ETA()], maxval = len(prop_classes))
+            [uris.append(x) for x in pbarIn(prop_classes) if x not in uris]
 
-            [uris.append(x) for x in prop_classes if x not in uris]
-
-            for x in uris:
+            counter = 0
+            pbarIn = ProgressBar(widgets=[Bar('>', '[', ']'), ' ', Percentage(), ' ', ETA()], maxval=len(uris))
+            print("INFO: Iterating over URIS")
+            for x in pbarIn(uris):
                 # Preparing a new Property
+                counter = counter + 1
                 copyOfP = p
-                if(self.CLASSES[x]['label']):
+                if (self.CLASSES[x]['label']):
                     newProp = copyOfP + self.CLASSES[x]['label'] + "Property"
                     self.PROPS_NEW[newProp] = {}
                     self.PROPS_NEW[newProp]['classes'] = []
@@ -139,8 +163,6 @@ class data_graph():
                     self.PROPS[p]['classes'].append(self.CLASSES[x]['label'])
                 else:
                     print("## else condition for self.CLASSES[x]['label'] " + x + " line 128 of file shaclgen.py")
-
-
 
             if len(self.PROPS[p]['classes']) == 1:
                 self.PROPS[p]['type'] = 'unique'
@@ -164,11 +186,14 @@ class data_graph():
                     self.PROPS_NEW[prop]['nodekind'] = 'Literal'
 
     def gen_graph(self, serial='turtle', graph_format=None, namespace=None, verbose=None):
-        self.extract_props()
+        # self.extract_props()
+        print("INFO: gen_graph begin .....")
         self.gen_prefix_bindings()
+        print("INFO: gen prefix bindings finished")
         self.extract_contraints()
-        ng = rdflib.Graph()
+        print("INFO: extract_constraints finished")
 
+        ng = rdflib.Graph()
         SH = Namespace('http://www.w3.org/ns/shacl#')
         ng.bind('sh', SH)
 

@@ -68,6 +68,7 @@ def main():
     else:
         kwargs = {'serial': 'turtle'}
         g = data_graph(args.graph)
+        print("Graph is parsed....  g = data_graph(args.graph)")
         #        if args.nested:
         #            kwargs['graph_format'] = 'nf'
         #        elif args.extended:
