@@ -12,11 +12,12 @@ from progressbar import Percentage, ProgressBar,Bar,ETA
 from rdflib import Namespace, URIRef, BNode, Literal
 from rdflib.namespace import RDF
 from rdflib.util import guess_format
-from rdflib.graph import Graph
+
 
 class data_graph():
     def __init__(self, args: list):
-        self.G = Graph('IOMemory')
+        self.G = rdflib.Graph()
+        self.G.open("store", create=True)
         print(args)
         for graph in args:
             self.G.parse(graph, format=guess_format(graph))
