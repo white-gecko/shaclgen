@@ -69,7 +69,7 @@ def main():
     else:
         print("Else rdf graph....")
         kwargs = {'serial': 'turtle'}
-        print("Starting to load graph into memory....")
+        print("Starting to load graph ....")
         g = data_graph(args.graph)
         print("Graph is parsed....  g = data_graph(args.graph)")
         #        if args.nested:
