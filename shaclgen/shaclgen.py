@@ -127,7 +127,7 @@ class data_graph():
         pbarr = ProgressBar(widgets=[Bar('>', '[', ']'), ' ', Percentage(), ' ', ETA()], maxval = N)
 
         for p in pbarr(self.PROPS.keys()):
-
+            print(count)
             self.PROPS[p]['nodekind'] = None
             self.PROPS[p]['cardinality'] = None
 
@@ -142,15 +142,15 @@ class data_graph():
                     prop_classes.append(obj1)
 
             uris = []
-            pbarIn = ProgressBar(widgets=[Bar('>', '[', ']'), ' ', Percentage(), ' ', ETA()], maxval = len(prop_classes))
-            [uris.append(x) for x in pbarIn(prop_classes) if x not in uris]
+            # pbarIn = ProgressBar(widgets=[Bar('>', '[', ']'), ' ', Percentage(), ' ', ETA()], maxval = len(prop_classes))
+            [uris.append(x) for x in prop_classes if x not in uris]
 
-            counter = 0
-            pbarIn = ProgressBar(widgets=[Bar('>', '[', ']'), ' ', Percentage(), ' ', ETA()], maxval=len(uris))
-            print("INFO: Iterating over URIS")
-            for x in pbarIn(uris):
+            # counter = 0
+            # pbarIn = ProgressBar(widgets=[Bar('>', '[', ']'), ' ', Percentage(), ' ', ETA()], maxval=len(uris))
+            # print("INFO: Iterating over URIS")
+            for x in uris:
                 # Preparing a new Property
-                counter = counter + 1
+                # counter = counter + 1
                 copyOfP = p
                 if (self.CLASSES[x]['label']):
                     newProp = copyOfP + self.CLASSES[x]['label'] + "Property"
