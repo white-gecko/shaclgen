@@ -174,8 +174,12 @@ class data_graph():
 
     def extract_contraints(self):
         self.extract_props()
-
-        for prop in self.PROPS_NEW.keys():
+        print("INFO: Props extraction finished...")
+        pbarInCon = ProgressBar(widgets=[Bar('>', '[', ']'), ' ', Percentage(), ' ', ETA()], maxval=len(self.PROPS_NEW.keys()))
+        print("Iterating over extracted Properties")
+        count = 0
+        for prop in pbarInCon(self.PROPS_NEW.keys()):
+            print(count)
             types = []
             for s, p, o in self.G.triples((None, self.PROPS_NEW[prop]['path'], None)):
                 types.append(type(o))
@@ -186,6 +190,7 @@ class data_graph():
                     self.PROPS_NEW[prop]['nodekind'] = 'BNode'
                 elif types[0] == Literal:
                     self.PROPS_NEW[prop]['nodekind'] = 'Literal'
+            count = count + 1
 
     def gen_graph(self, serial='turtle', graph_format=None, namespace=None, verbose=None):
         # self.extract_props()
@@ -194,7 +199,7 @@ class data_graph():
         print("INFO: gen prefix bindings finished")
         self.extract_contraints()
         print("INFO: extract_constraints finished")
-
+        print("INFO: now creating SHACL shapes...")
         ng = rdflib.Graph()
         SH = Namespace('http://www.w3.org/ns/shacl#')
         ng.bind('sh', SH)
