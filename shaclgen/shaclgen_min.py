@@ -23,7 +23,6 @@ class data_graph(Generator):
         self.namespaces.bind("shgen", SHGEN)
         self.shapes_graph_iri = SHGEN
 
-
     def gen_graph(self, namespace=None, implicit_class_target=False):
         logger.info("Start Extraction of the Data Graph")
         ng = rdflib.Graph(namespace_manager=self.namespaces)
@@ -62,9 +61,7 @@ class data_graph(Generator):
         for binding in res:
             if binding["class"] not in class_dict:
                 class_dict[binding["class"]] = {"fwd": [], "inv": []}
-            class_dict[binding["class"]]["fwd"].append(
-                binding["property"]
-            )
+            class_dict[binding["class"]]["fwd"].append(binding["property"])
         query = f"""
         SELECT DISTINCT ?class ?property
         {{
@@ -76,12 +73,9 @@ class data_graph(Generator):
         for binding in res:
             if binding["class"] not in class_dict:
                 class_dict[binding["class"]] = {"fwd": [], "inv": []}
-            class_dict[binding["class"]]["inv"].append(
-                binding["property"]
-            )
+            class_dict[binding["class"]]["inv"].append(binding["property"])
 
         return class_dict
-
 
     def make_shapes(self, shapes_graph):
         """

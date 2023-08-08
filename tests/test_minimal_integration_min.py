@@ -209,6 +209,7 @@ def test_two_object_classes():
     """,
     )
 
+
 def test_property_loop():
     source_graph = Graph()
 
