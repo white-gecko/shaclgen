@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 from .shaclgen import data_graph
+from .shaclgen_min import data_graph as data_graph_min
 from .schema import schema
 
 import click
@@ -17,6 +18,13 @@ import pkg_resources
 @click.option(
     "-o",
     "--ontology",
+    is_flag=True,
+    help="input file(s) or URL(s) is a schema or ontology",
+    default=False,
+)
+@click.option(
+    "-m",
+    "--gen_min",
     is_flag=True,
     help="input file(s) or URL(s) is a schema or ontology",
     default=False,
@@ -73,6 +81,7 @@ import pkg_resources
 def main(
     graphs,
     ontology,
+    gen_min,
     output,
     serial,
     prefixes,
@@ -146,6 +155,8 @@ def main(
     g = None
     if ontology:
         g = schema(source_graph, namespaces)
+    elif gen_min:
+        g = data_graph_min(source_graph, namespaces)
     else:
         g = data_graph(source_graph, namespaces)
     shape_graph = g.gen_graph(
