@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from .shaclgen import data_graph
 from .shaclgen_min import data_graph as data_graph_min
+from .shaclgen_query import data_graph as data_graph_query
 from .schema import schema
 
 import click
@@ -26,7 +27,13 @@ import pkg_resources
     "-m",
     "--gen_min",
     is_flag=True,
-    help="input file(s) or URL(s) is a schema or ontology",
+    help="Generate the shapes with the minimal algorithm",
+    default=False,
+)
+@click.option(
+    "--gen_query",
+    is_flag=True,
+    help="Generate the shapes based on a set of construct queries",
     default=False,
 )
 @click.option(
@@ -157,6 +164,8 @@ def main(
         g = schema(source_graph, namespaces)
     elif gen_min:
         g = data_graph_min(source_graph, namespaces)
+    elif gen_query:
+        g = data_graph_query(source_graph, namespaces)
     else:
         g = data_graph(source_graph, namespaces)
     shape_graph = g.gen_graph(
