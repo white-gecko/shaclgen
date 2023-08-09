@@ -1,0 +1,17 @@
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+ask {
+    ?nodeShape a sh:NodeShape ;
+        sh:nodeKind sh:BlankNodeOrIRI ;
+        sh:targetClass <http://example.org/test/vocab#Class> ;
+        sh:property ?propA, ?propB .
+
+    ?propA a sh:PropertyShape ;
+        sh:datatype xsd:string ;
+        sh:nodeKind sh:Literal ;
+        sh:path <http://example.org/test/vocab#lit_property> .
+
+    ?ropB a sh:PropertyShape ;
+        sh:nodeKind sh:IRI ;
+        sh:path <http://example.org/test/vocab#obj_property> .
+}

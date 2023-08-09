@@ -1,0 +1,5 @@
+@prefix ext: <http://example.org/test/> .
+@prefix extv: <http://example.org/test/vocab#> .
+ext:resource a extv:Class ;
+    extv:lit_property "String" ;
+    extv:obj_property ext:other_resource .

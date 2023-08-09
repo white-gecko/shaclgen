@@ -1,0 +1,3 @@
+<urn:test:resource> a <urn:test:Class> .
+<urn:test:resource_2> a <urn:test:Class> .
+<urn:test:other_resource> a <urn:test:OtherClass> .

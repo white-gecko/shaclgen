@@ -1,0 +1,3 @@
+<urn:test:resource> a <urn:test:Class> ;
+<urn:test:lit_property> "String" ;
+<urn:test:obj_property> <urn:test:other_resource> .

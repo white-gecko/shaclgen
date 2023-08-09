@@ -1,0 +1,13 @@
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+ask {
+    ?nodeShape a sh:NodeShape ;
+        sh:targetClass <urn:test:Class> ;
+        sh:property ?propA, ?propB .
+
+    ?propA a sh:PropertyShape ;
+        sh:path <urn:test:lit_property> .
+
+    ?propB a sh:PropertyShape ;
+        sh:path <urn:test:obj_property> .
+}
