@@ -1,0 +1,2 @@
+<urn:test:resource> a <urn:test:Class> ;
+    <urn:test:data_property_langstr> "Literal"@en .

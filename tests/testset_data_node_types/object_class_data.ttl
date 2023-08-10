@@ -1,0 +1,8 @@
+<urn:test:resource> a <urn:test:Class> ;
+    <urn:test:obj_property_iri> <urn:test:other_resource> ;
+    <urn:test:obj_property_bnode> [a <urn:test:OtherClassC>] ;
+    <urn:test:data_property_int> 4 ;
+    <urn:test:data_property_bool> true ;
+    <urn:test:data_property_str> "Literal" ;
+    <urn:test:data_property_langstr> "Literal"@en .
+<urn:test:other_resource> a <urn:test:OtherClassB> .

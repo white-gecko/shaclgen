@@ -1,0 +1,2 @@
+gen_graph:
+  namespace: ["http://custom.namespace.org/", "custom"]

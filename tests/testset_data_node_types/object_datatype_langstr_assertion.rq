@@ -1,0 +1,13 @@
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+ask {
+    ?nodeShapeA a sh:NodeShape ;
+        sh:nodeKind sh:BlankNodeOrIRI ;
+        sh:property ?data_property_langstr;
+        sh:targetClass <urn:test:Class> .
+
+    ?data_property_langstr a sh:PropertyShape ;
+        sh:datatype rdf:langString ;
+        sh:nodeKind sh:Literal ;
+        sh:path <urn:test:data_property_langstr> .
+}
