@@ -18,7 +18,13 @@ def pytest_generate_tests(metafunc):
     }
     idlist = []
     argvalues = []
-    argnames = ["generator_class", "source_graph", "assertion_query", "init_args", "gen_graph_args"]
+    argnames = [
+        "generator_class",
+        "source_graph",
+        "assertion_query",
+        "init_args",
+        "gen_graph_args",
+    ]
     for scenario in scenarios.items():
         generator_class = scenario[1]["class"]
         for test_set in scenario[1]["sets"]:
@@ -37,20 +43,32 @@ def pytest_generate_tests(metafunc):
                 source_graph.parse(join(test_data_dir, test_data_file), format="turtle")
                 config = {}
                 if isfile(join(test_data_dir, test_config_file)):
-                    with open(join(test_data_dir, test_config_file), "r") as config_file:
+                    with open(
+                        join(test_data_dir, test_config_file), "r"
+                    ) as config_file:
                         try:
                             config = yaml.safe_load(config_file)
                         except yaml.YAMLError as exc:
                             print(exc)
-                with open(join(test_data_dir, test_assertion_file), "r") as assertion_file:
+                with open(
+                    join(test_data_dir, test_assertion_file), "r"
+                ) as assertion_file:
                     argvalues.append(
-                        [generator_class, source_graph, assertion_file.read(), config.get("init", {}) or {}, config.get("gen_graph", {}) or {}]
+                        [
+                            generator_class,
+                            source_graph,
+                            assertion_file.read(),
+                            config.get("init", {}) or {},
+                            config.get("gen_graph", {}) or {},
+                        ]
                     )
     metafunc.parametrize(argnames, argvalues, ids=idlist, scope="class")
 
 
 class TestShapeGeneration:
-    def test_shape_generation(self, generator_class, source_graph, assertion_query, init_args, gen_graph_args):
+    def test_shape_generation(
+        self, generator_class, source_graph, assertion_query, init_args, gen_graph_args
+    ):
         extraction_graph = generator_class(source_graph, **init_args)
         shacl_graph = extraction_graph.gen_graph(**gen_graph_args)
 
