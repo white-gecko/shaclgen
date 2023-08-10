@@ -18,7 +18,7 @@ tasks:
     - poetry run pytest -rP --cov=shaclgen --cov-report=term-missing --numprocesses=auto
 
   benchmark:
-    - poetry run pytest --durations=0
+    - poetry run benchmark
 
   ci:
     cmds:
