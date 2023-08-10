@@ -2,16 +2,13 @@
 name = "shaclgen"
 version = "2.5.2"
 description = "Shacl graph generator: python program to generate template shacl graphs"
-authors = ["Alexis Keely <alexiskeelie@gmail.com>", "Natanael Arndt <natanael.arndt@eccenca.com>", "Miel Vander Sande <miel.vandersande@meemoo.be>"]
+authors = ["Alexis Keely <alexiskeelie@gmail.com>","Natanael Arndt <natanael.arndt@eccenca.com>","Miel Vander Sande <miel.vandersande@meemoo.be>"]
 homepage = "https://github.com/uwlib-cams/shaclgen"
 repository = "https://github.com/uwlib-cams/shaclgen"
 license = 'MIT'
 readme = "README.md"
-keywords = ['Linked Data', 'Semantic Web', 'Python', 'SHACL', 'Shapes', 'Schema', 'Validate']
-classifiers = [
-  'Development Status :: 4 - Beta',
-  'Programming Language :: Python :: 3',
-]
+keywords = ['Linked Data','Semantic Web','Python','SHACL','Shapes','Schema','Validate']
+classifiers = ['Development Status :: 4 - Beta','Programming Language :: Python :: 3']
 
 [tool.poetry.dependencies]
 python = "^3.7"
