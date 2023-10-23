@@ -89,6 +89,7 @@ def main(
     graphs,
     ontology,
     gen_min,
+    gen_query,
     output,
     serial,
     prefixes,
